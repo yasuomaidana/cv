@@ -4,7 +4,7 @@ import  Player from 'react-player';
 import ImageGallery from 'react-image-gallery';
 import 'react-image-gallery/styles/css/image-gallery.css';
 import './CV.scss';
-import YasuoContact from './YasuoContact/YasuoContact';
+
 
 const CV = () => {
   // Sample project videos
@@ -49,7 +49,7 @@ const CV = () => {
 
   return (
     <div className="cv-container">
-      <YasuoContact/>
+      {/* <YasuoContact/> */}
 
       <div className="section">
         <Typography variant="h5">Summary</Typography>
