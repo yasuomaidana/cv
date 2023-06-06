@@ -13,7 +13,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
-    <Container>
+    <Container className="AppContainer">
       <Grid container>
         <Grid
           item
@@ -25,14 +25,13 @@ function App() {
         >
           <Profile />
         </Grid>
-        <Grid item xs 
+        <Grid item xs className="Content"
         // style={{ backgroundColor: "red" }}
         >
           <Header></Header>
           <BrowserRouter>
             <Routes>
               <Route path="/" element={<Resume />} />
-              <Route path="/resume" element={<Resume />} />
               <Route path="/portfolio" element={<Portfolio />} />
             </Routes>
           </BrowserRouter>
