@@ -1,21 +1,20 @@
 import React from 'react';
 import { Typography, List, ListItem, ListItemText } from '@mui/material';
-import  Player from 'react-player';
+import Player  from 'react-player';
 import ImageGallery from 'react-image-gallery';
 import 'react-image-gallery/styles/css/image-gallery.css';
-import './CV.scss';
-
+import './CV.css';
 
 const CV = () => {
   // Sample project videos
   const projectVideos = [
     {
-      url: 'https://www.youtube.com/watch?v=HjTVGrmYySE',
-      title: 'Pick and Place Machine',
+      url: 'https://www.youtube.com/watch?v=abcdefgh',
+      title: 'Project 1',
     },
     {
-      url: 'https://youtu.be/UvoJGhWkylA',
-      title: 'Infrared communication',
+      url: 'https://www.youtube.com/watch?v=ijklmnop',
+      title: 'Project 2',
     },
   ];
 
@@ -49,7 +48,10 @@ const CV = () => {
 
   return (
     <div className="cv-container">
-      {/* <YasuoContact/> */}
+      <Typography variant="h4">Your Name</Typography>
+      <Typography variant="subtitle1">
+        Contact Information: [Your Email Address] | [Phone Number]
+      </Typography>
 
       <div className="section">
         <Typography variant="h5">Summary</Typography>
