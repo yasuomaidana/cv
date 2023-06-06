@@ -21,11 +21,13 @@ function App() {
           sm={12}
           md={4}
           lg={3}
-          style={{ backgroundColor: "blue" }}
+          // style={{ backgroundColor: "blue" }}
         >
           <Profile />
         </Grid>
-        <Grid item xs style={{ backgroundColor: "red" }}>
+        <Grid item xs 
+        // style={{ backgroundColor: "red" }}
+        >
           <Header></Header>
           <BrowserRouter>
             <Routes>
