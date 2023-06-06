@@ -1,0 +1,43 @@
+.MuiTimeline-root {
+    padding: 1px 8%;
+}
+.timeline{
+    padding: 15px;
+    
+    .first{
+        min-height: 80px;
+    }
+
+    .MuiTimelineItem-root{
+        min-height: 0px;
+    }
+
+    .MuiTimelineItem-missingOppositeContent::before{
+        display: none;
+        
+    }
+
+    .dot_header{
+        color: var(--light);
+        background-color: var(--dark);
+        font-size:medium;
+        padding: 6px;
+    }
+
+    .dot_item{
+        color: var(--dark);
+        background-color: var(--dark);
+        font-size: small;
+        padding: 2px;
+    }
+    .timeline_header{
+        padding-top: 7px;
+    }
+
+    .separator_padding{
+        padding-left: 7%;
+    }
+    
+}
+
+

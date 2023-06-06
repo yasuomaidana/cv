@@ -1,0 +1,10 @@
+.AppContainer{
+    margin-top: 2%;
+}
+.Content{
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+    >*{
+        background-color: var(--dark);
+    }
+}
