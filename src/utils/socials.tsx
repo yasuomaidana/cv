@@ -1,7 +1,7 @@
 import React from "react";
 import { GitHub, SvgIconComponent, YouTube, LinkedIn } from "@mui/icons-material";
 
-interface Social{
+export interface Social{
     link:string;
     icon: React.ReactElement<SvgIconComponent>;
     text: string;
@@ -28,4 +28,5 @@ const socials:Socials = {
         text: "MyYoutube"
     }
 }
+
 export default socials;
