@@ -56,7 +56,6 @@
     }
     background-color: $dark;
     border-radius: 10px;
-
   }
 
   .home_icon{
@@ -64,10 +63,14 @@
     display: flex;
     justify-content: center; /* Horizontally center the icon */
     align-items: center;
+
+    > span > svg{
+        font-size: 40px;
+    }
   }
   .header_left{
     margin-right: auto;
-    
+
   }
   .header_right{
     display: flex;
