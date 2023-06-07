@@ -1,7 +1,7 @@
 import React from 'react'
 interface ProfileInfoProps{
     title:string;
-    content:string;
+    content:JSX.Element;
 }
 const ProfileInfo:React.FC<ProfileInfoProps> = (ProfileInfoProps) => {
   return (

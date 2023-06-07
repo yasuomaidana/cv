@@ -1,17 +1,16 @@
 import React from "react";
-import { Typography } from "@mui/material";
+import { Link, Typography } from "@mui/material";
 import TimeLine from "../TimeLine/TimeLine";
 import "./profile.scss";
-import WorkIcon from '@mui/icons-material/Work';
 import ProfileInfo from "./ProfileInfo";
+import ContactsIcon from '@mui/icons-material/Contacts';
 
 const Profile = () => {
   const profile_info = [
-    <ProfileInfo title="Name" content="Yasuo Ignacio Maidana Perez" />,
-    <ProfileInfo title="Birthday" content="Yasuo Ignacio Maidana Perez" />,
-    <ProfileInfo title="Occupation" content="Masters degree student" />,
-    <ProfileInfo title="Email" content="Yasuo Ignacio Maidana Perez" />,
-  ];
+    <ProfileInfo title="Name" content={<>Yasuo Ignacio Maidana Perez</>} />,
+    <ProfileInfo title="Birthday" content={<>06 June 1996</>} />,
+    <ProfileInfo title="Major" content={<>Mechatronics Engineering</>} />,
+    <ProfileInfo  title="Email" content={<Link href="mailto:yasuomaidana@gmail.com">yasuomaidana@gmail</Link>}/> ];
   return (
     <div className="profile container_shadow">
       <div className="profile_name">
@@ -29,7 +28,7 @@ const Profile = () => {
         <TimeLine
           title="Yasuo Ignacio Maidana Pérez"
           children={profile_info}
-          icon={<WorkIcon />}
+          icon={<ContactsIcon />}
         ></TimeLine>
       </div>
     </div>
