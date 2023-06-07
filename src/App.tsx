@@ -28,7 +28,7 @@ function App() {
         // style={{ backgroundColor: "red" }}
         >
           <BrowserRouter>
-          <Header pathname={window.location.pathname}></Header>
+          <Header></Header>
             <Routes>
               <Route path="/" element={<Resume />} />
               <Route path="/portfolio" element={<Portfolio />} />

@@ -8,16 +8,7 @@ import "./Header.scss";
 import { useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
 
-interface HeaderProp {
-  pathname: string;
-}
-const Header: React.FC<HeaderProp> = (headerProp) => {
-  const location = useLocation();
-  const [pathName, setPathName] = useState("");
-
-  useEffect(() => {
-    setPathName(location.pathname);
-  }, [location.pathname]);
+const Header = ( ) => {
 
   return (
     <Navbar sticky="top" expand="lg" className="header">
