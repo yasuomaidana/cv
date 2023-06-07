@@ -1,43 +1,53 @@
 import { HomeRounded } from "@mui/icons-material";
 import React from "react";
 import { Navbar, Nav } from "react-bootstrap";
-import { NavLink } from 'react-router-dom';
+import { NavLink } from "react-router-dom";
 import socials from "../../utils/socials";
 import { SocialComponent } from "./SocialComponent/SocialComponent";
+import "./Header.scss";
+import { useLocation } from "react-router-dom";
+import { useEffect, useState } from "react";
 
 interface HeaderProp {
   pathname: string;
 }
 const Header: React.FC<HeaderProp> = (headerProp) => {
-  const pathName = headerProp.pathname;
-  
+  const location = useLocation();
+  const [pathName, setPathName] = useState("");
+
+  useEffect(() => {
+    setPathName(location.pathname);
+  }, [location.pathname]);
+
   return (
     <Navbar sticky="top" expand="lg" className="header">
-      <Nav.Link as={NavLink} to="/">
-        <Navbar.Brand className="header_home">
+      <NavLink to="/" className={({ isActive, isPending }) => "home_icon "+(isActive ? "home_link_active" : "home_link")
+            }>
+        <Navbar.Brand >
           <HomeRounded />
         </Navbar.Brand>
-      </Nav.Link>
+      </NavLink>
       <Navbar.Toggle />
       <Navbar.Collapse>
-        <Nav>
-          <Nav.Link
-            as={NavLink}
+        <Nav className="header_left">
+          <NavLink
             to="/"
-            className={pathName === "/" ? "active" : ""}
+            className={({ isActive, isPending }) =>
+              isPending ? "pending" : isActive ? "header_active" : "header_link"
+            }
           >
             Home
-          </Nav.Link>
-          <Nav.Link
-            as={NavLink}
-            to="/portfolio"
-            className={pathName === "/portfolio" ? "active" : ""}
-          >
+          </NavLink>
+          <NavLink to="/portfolio" className={({ isActive, isPending }) =>
+              isPending ? "pending" : isActive ? "header_active" : "header_link"
+            }>
             Portfolio
-          </Nav.Link>
+          </NavLink>
         </Nav>
         <div className="header_right">
-        {Object.entries(socials).map(([k,v],i) => <SocialComponent key={i.toString()} social={v}/>)}
+          {Object.entries(socials).map(([k, v], i) => (
+            <SocialComponent key={i.toString()} social={v} />
+          ))}
         </div>
       </Navbar.Collapse>
     </Navbar>
