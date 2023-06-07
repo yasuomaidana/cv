@@ -1,6 +1,11 @@
 .AppContainer{
     margin-top: 2%;
 }
+@media (max-width: 991px){
+    .AppContainer{
+        margin-top: 1%;
+    }   
+}
 .Content{
     padding-left: 2.5%;
     padding-right: 2.5%;
