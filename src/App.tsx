@@ -1,5 +1,4 @@
 import React from "react";
-import logo from "./logo.svg";
 import "./App.scss";
 import { Container, Grid } from "@mui/material";
 import Profile from "./components/Profile/Profile";
@@ -28,8 +27,8 @@ function App() {
         <Grid item xs className="Content"
         // style={{ backgroundColor: "red" }}
         >
-          <Header></Header>
           <BrowserRouter>
+          <Header pathname={window.location.pathname}></Header>
             <Routes>
               <Route path="/" element={<Resume />} />
               <Route path="/portfolio" element={<Portfolio />} />
