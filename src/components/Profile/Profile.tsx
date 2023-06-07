@@ -7,10 +7,10 @@ import ContactsIcon from '@mui/icons-material/Contacts';
 
 const Profile = () => {
   const profile_info = [
-    <ProfileInfo title="Name" content={<>Yasuo Ignacio Maidana Perez</>} />,
-    <ProfileInfo title="Birthday" content={<>06 June 1996</>} />,
-    <ProfileInfo title="Major" content={<>Mechatronics Engineering</>} />,
-    <ProfileInfo  title="Email" content={<Link href="mailto:yasuomaidana@gmail.com">yasuomaidana@gmail</Link>}/> ];
+    <ProfileInfo key={1} title="Name" content={<>Yasuo Ignacio Maidana Perez</>} />,
+    <ProfileInfo key={2} title="Birthday" content={<>06 June 1996</>} />,
+    <ProfileInfo key={3} title="Major" content={<>Mechatronics Engineering</>} />,
+    <ProfileInfo  key={4} title="Email" content={<Link href="mailto:yasuomaidana@gmail.com">yasuomaidana@gmail</Link>}/> ];
   return (
     <div className="profile container_shadow">
       <div className="profile_name">

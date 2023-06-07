@@ -11,6 +11,7 @@ import "./TimeLine.scss";
 
 interface ItemProps {
   content: React.ReactElement;
+  key?:string
 }
 interface TimeLineProps {
   title: string;
@@ -33,7 +34,7 @@ const TimeLine: React.FC<TimeLineProps> = (TimeLineProps) => {
         </TimelineContent>
       </TimelineItem>
       {/*  */}
-      {TimeLineProps.children.map((kid, index)=>(<Kid content={kid} key={index}></Kid>))}
+      {TimeLineProps.children.map((kid, index)=>(<Kid content={kid} key={index.toString()}></Kid>))}
       
     </Timeline>
   );
