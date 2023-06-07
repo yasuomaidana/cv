@@ -15,3 +15,24 @@
     --danger: #fe2518;
 }
 
+$primary: #2d3961;
+$secondary: #f8c2fc;;
+$success:       #1bc675;
+$info:          #eae7e9;
+$warning:       #ecd416;
+$danger:        #fe2518;
+$light:         #e2dad9;
+$dark:          #5c2c37;
+
+$theme-colors: (
+  "primary":    $primary,
+  "secondary":  $secondary,
+  "success":    $success,
+  "info":       $info,
+  "warning":    $warning,
+  "danger":     $danger,
+  "light":      $light,
+  "dark":       $dark
+);
+
+@import "../node_modules/bootstrap/scss/bootstrap"
