@@ -12,6 +12,8 @@ const Home = () => {
       <hr/>
       <BoxWithTitle title="Skills" content={<>Random jijitl help me!!!</>}/>
       <hr/>
+      <BoxWithTitle title="Achievements" content={<>Random jijitl help me!!!</>}/>
+      <hr/>
     </>
   );
 };

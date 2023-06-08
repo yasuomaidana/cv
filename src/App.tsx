@@ -9,6 +9,7 @@ import Footer from "./components/Footer/Footer";
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home/Home";
+import Certifications from "./pages/Certifications/Certifications";
 
 const App: React.FC = () => {
   const [isSmallScreen, setIsSmallScreen] = useState<boolean>(false);
@@ -48,8 +49,8 @@ const App: React.FC = () => {
             <main>
               <Routes>
                 <Route path="/" element={<Home />} />
-                <Route path="/resume" element={<Resume />} />
                 <Route path="/portfolio" element={<Portfolio />} />
+                <Route path="/certifications" element={<Certifications />} />
               </Routes>
             </main>
           </BrowserRouter>

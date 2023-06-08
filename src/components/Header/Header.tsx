@@ -7,6 +7,16 @@ import { SocialComponent } from "./SocialComponent/SocialComponent";
 import "./Header.scss";
 import Profile from "../Profile/Profile";
 
+const SectionLink = (title: string, link: string) => 
+  <NavLink
+    to={link}
+    className={({ isActive, isPending }) =>
+      isActive ? "header_active" : "header_link"
+    }
+  >
+    {title}
+  </NavLink>
+;
 const Header = () => {
   const location = useLocation();
   const [path, setPath] = useState(location.pathname);
@@ -37,47 +47,23 @@ const Header = () => {
   return (
     <>
       <Navbar sticky="top" expand="lg" className="header">
-          <NavLink
-            to="/"
-            className={({ isActive, isPending }) =>
-              "home_icon " + (isActive ? "home_link_active" : "home_link")
-            }
-          >
-            <Navbar.Brand>
-              <HomeRounded />
-            </Navbar.Brand>
-          </NavLink>
+        <NavLink
+          to="/"
+          className={({ isActive, isPending }) =>
+            "home_icon " + (isActive ? "home_link_active" : "home_link")
+          }
+        >
+          <Navbar.Brand>
+            <HomeRounded />
+          </Navbar.Brand>
+        </NavLink>
         <Navbar.Toggle />
         <Navbar.Collapse>
           <Nav className="header_left">
             {/* <Navbar.Toggle className="menu_toggler"> */}
-              <NavLink
-                to="/resume"
-                className={({ isActive, isPending }) =>
-                  isPending
-                    ? "pending"
-                    : isActive
-                    ? "header_active"
-                    : "header_link"
-                }
-              >
-                Resume
-              </NavLink>
+            {SectionLink("Portfolio","/portfolio")}
             {/* </Navbar.Toggle> */}
-            {/* <Navbar.Toggle className="menu_toggler"> */}
-            <NavLink
-              to="/portfolio"
-              className={({ isActive, isPending }) =>
-                isPending
-                  ? "pending"
-                  : isActive
-                  ? "header_active"
-                  : "header_link"
-              }
-            >
-              Portfolio
-            </NavLink>
-            {/* </Navbar.Toggle> */}
+            {SectionLink("Certifications","/certifications")}
           </Nav>
           <div className="header_right">
             {Object.entries(socials).map(([k, v], i) => (
