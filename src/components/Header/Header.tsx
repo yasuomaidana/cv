@@ -37,20 +37,20 @@ const Header = () => {
   return (
     <>
       <Navbar sticky="top" expand="lg" className="header">
-        <NavLink
-          to="/"
-          className={({ isActive, isPending }) =>
-            "home_icon " + (isActive ? "home_link_active" : "home_link")
-          }
-        >
-          <Navbar.Brand>
-            <HomeRounded />
-          </Navbar.Brand>
-        </NavLink>
+          <NavLink
+            to="/"
+            className={({ isActive, isPending }) =>
+              "home_icon " + (isActive ? "home_link_active" : "home_link")
+            }
+          >
+            <Navbar.Brand>
+              <HomeRounded />
+            </Navbar.Brand>
+          </NavLink>
         <Navbar.Toggle />
         <Navbar.Collapse>
           <Nav className="header_left">
-            <Navbar.Toggle className="menu_toggler">
+            {/* <Navbar.Toggle className="menu_toggler"> */}
               <NavLink
                 to="/resume"
                 className={({ isActive, isPending }) =>
@@ -63,8 +63,8 @@ const Header = () => {
               >
                 Resume
               </NavLink>
-            </Navbar.Toggle>
-            <Navbar.Toggle className="menu_toggler">
+            {/* </Navbar.Toggle> */}
+            {/* <Navbar.Toggle className="menu_toggler"> */}
             <NavLink
               to="/portfolio"
               className={({ isActive, isPending }) =>
@@ -77,7 +77,7 @@ const Header = () => {
             >
               Portfolio
             </NavLink>
-            </Navbar.Toggle>
+            {/* </Navbar.Toggle> */}
           </Nav>
           <div className="header_right">
             {Object.entries(socials).map(([k, v], i) => (
