@@ -11,7 +11,6 @@ const BoxWithTitle:React.FC<BoxWithTitleProps> = (props) => {
     <Grid container className="section">
         <div className=" mb_30">
           <Grid item className="section_title">
-            <span></span>
             <Typography variant="h6" className="text">
               {title}
             </Typography>
