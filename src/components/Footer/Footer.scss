@@ -10,7 +10,13 @@
     min-height: 70px;
     border-radius: 8px;
     padding: 20px 25px;
-
+    a{
+        color: $info;
+        font-weight: lighter;
+        border-radius: 3px;
+        padding: 3px;
+        text-decoration: none;
+    }
     .footer_copyright{
         font-size: small;
         text-align: end;

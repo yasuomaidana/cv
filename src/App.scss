@@ -22,3 +22,12 @@ main{
     box-shadow: 0px 0px 10px rgba($primary, .75);
     padding: 1em;
 }
+
+.section_title{
+    position: relative;
+    display: inline-block;
+    padding: 0 3px;
+    > Typography{
+        font-size: 18px;
+    }
+}

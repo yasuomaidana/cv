@@ -3,6 +3,7 @@
     border-radius: 6px;
     width: 100%;
     display: inline-block;
+    text-overflow: clip;
 }
 
 .profile_name{
@@ -32,7 +33,6 @@
         transform: translate(-15%, 25%) scale(2.5);
     }
 }
-
 
 #root > div > div > div.MuiGrid-root.MuiGrid-item.MuiGrid-grid-xs-12.MuiGrid-grid-sm-12.MuiGrid-grid-md-4.MuiGrid-grid-lg-3.css-3p2wky-MuiGrid-root > div > div.profile_information > ul > li:nth-child(5) > div.MuiTypography-root.MuiTypography-body1.MuiTimelineContent-root.MuiTimelineContent-positionRight.css-18y2uza-MuiTypography-root-MuiTimelineContent-root > a{
     text-decoration: none;
