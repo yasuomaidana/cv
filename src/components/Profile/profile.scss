@@ -1,3 +1,4 @@
+@import "../../scss/colors";
 .profile{
     background-color: var(--light);
     border-radius: 6px;
@@ -23,7 +24,9 @@
         color: var(--dark);
     }
 }
-
+.profile_image_frame{
+    padding: 1em !important;
+}
 .profile_image{
     margin-top: -10px;
     overflow: hidden;
