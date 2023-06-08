@@ -32,11 +32,13 @@ function App() {
         >
           <BrowserRouter>
             <Header></Header>
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/resume" element={<Resume />} />
-              <Route path="/portfolio" element={<Portfolio />} />
-            </Routes>
+            <main>
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/resume" element={<Resume />} />
+                <Route path="/portfolio" element={<Portfolio />} />
+              </Routes>
+            </main>
           </BrowserRouter>
           <Footer></Footer>
         </Grid>
