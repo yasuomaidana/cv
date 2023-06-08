@@ -1,14 +1,8 @@
 @import "../../node_modules/bootstrap/scss/bootstrap";
-
 @import "colors";
 @import "./custom_tags.scss";
 .AppContainer{
     margin-top: 2%;
-}
-@media (max-width: 991px){
-    .AppContainer{
-        margin-top: 1%;
-    }   
 }
 .Content{
     padding-left: 2.5%;
@@ -53,4 +47,13 @@ main{
     line-height: 22px !important;
     white-space: pre-line;
     
+}
+
+@media (max-width: 991px){
+    .AppContainer{
+        margin-top: 1%;
+    }
+    main{
+        margin-top: 2%;
+    }   
 }

@@ -34,9 +34,7 @@ const App: React.FC = () => {
         <Grid
           item
           xs={12}
-          sm={12}
           md={4}
-          lg={3}
         >
           {!isSmallScreen && <Profile />}
         </Grid>
