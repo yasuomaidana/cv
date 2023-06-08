@@ -4,7 +4,7 @@ import { Container, Grid } from "@mui/material";
 import Profile from "./components/Profile/Profile";
 import Header from "./components/Header/Header";
 import Portfolio from "./pages/Portfolio/Portfolio";
-import Resume from "./pages/Resume/Resume";
+import Resume from "./pages/Home/Resume/Resume";
 import Footer from "./components/Footer/Footer";
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
@@ -20,7 +20,6 @@ function App() {
           sm={12}
           md={4}
           lg={3}
-          // style={{ backgroundColor: "blue" }}
         >
           <Profile />
         </Grid>
@@ -28,7 +27,6 @@ function App() {
           item
           xs
           className="Content"
-          // style={{ backgroundColor: "red" }}
         >
           <BrowserRouter>
             <Header></Header>
