@@ -11,7 +11,6 @@ import "./TimeLine.scss";
 
 interface ItemProps {
   content: React.ReactElement;
-  key?:string
 }
 interface TimeLineProps {
   title: string;
@@ -49,11 +48,11 @@ export const CustomTimeLineSeparator = () => {
   );
 };
 
-export const CustomTimeLineItem: React.FC<ItemProps> = (ItemProps) => {
+export const CustomTimeLineItem: React.FC<ItemProps> = (ItemProps, key) => {
   return (
     <TimelineItem>
       <CustomTimeLineSeparator />
-      <TimelineContent>{ItemProps.content}</TimelineContent>
+      <TimelineContent key={key}>{ItemProps.content}</TimelineContent>
     </TimelineItem>
   );
 };
