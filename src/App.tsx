@@ -8,7 +8,7 @@ import Resume from "./pages/Resume/Resume";
 import Footer from "./components/Footer/Footer";
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-
+import Home from "./pages/Home/Home";
 
 function App() {
   return (
@@ -24,13 +24,17 @@ function App() {
         >
           <Profile />
         </Grid>
-        <Grid item xs className="Content"
-        // style={{ backgroundColor: "red" }}
+        <Grid
+          item
+          xs
+          className="Content"
+          // style={{ backgroundColor: "red" }}
         >
           <BrowserRouter>
-          <Header></Header>
+            <Header></Header>
             <Routes>
-              <Route path="/" element={<Resume />} />
+              <Route path="/" element={<Home />} />
+              <Route path="/resume" element={<Resume />} />
               <Route path="/portfolio" element={<Portfolio />} />
             </Routes>
           </BrowserRouter>

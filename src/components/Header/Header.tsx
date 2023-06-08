@@ -20,12 +20,12 @@ const Header = ( ) => {
       <Navbar.Collapse>
         <Nav className="header_left">
           <NavLink
-            to="/"
+            to="/resume"
             className={({ isActive, isPending }) =>
               isPending ? "pending" : isActive ? "header_active" : "header_link"
             }
           >
-            Home
+            Resume
           </NavLink>
           <NavLink to="/portfolio" className={({ isActive, isPending }) =>
               isPending ? "pending" : isActive ? "header_active" : "header_link"
