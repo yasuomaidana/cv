@@ -1,5 +1,5 @@
 @import "colors";
-@import "../node_modules/bootstrap/scss/bootstrap";
+@import "../../node_modules/bootstrap/scss/bootstrap";
 .AppContainer{
     margin-top: 2%;
 }
@@ -14,7 +14,7 @@
 }
 
 main{
-    background-color: rgba($light, 0.05);
+    background-color: $background;
     min-height: 100vh;
     margin-bottom: 2%;
     border-radius: 10px;
@@ -27,7 +27,21 @@ main{
     position: relative;
     display: inline-block;
     padding: 0 3px;
-    > Typography{
+    .text{
         font-size: 18px;
+        font-weight: 600;
+        position: relative;
+        margin: 0;
+        color: $dark;
+    }
+    span{
+        position: absolute;
+        width: 100%;
+        background-color: $primary;
+        opacity: 0.7;
+        height: 7px;
+        bottom: 0;
+        left: 0;
+        border-radius: 1px 1px 4px 4px;
     }
 }
