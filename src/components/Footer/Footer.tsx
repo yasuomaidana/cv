@@ -1,12 +1,16 @@
 import { Typography } from '@mui/material'
 import CodeIcon from '@mui/icons-material/Code';
 import "./Footer.scss"
-
+import {contact} from "../../utils/contact"
 const Footer = () => {
   return (
     <div className='footer'>
       <div className='left'>
-        <Typography className='footer_name'>Yasuo Maidana</Typography>
+        <Typography className='footer_name'>
+          {contact.shortest_name}
+          <br/>
+          <a href={"mailto:"+contact.email}>{contact.email}</a>
+        </Typography>
       </div>
       <div className='right'>
         <Typography className='footer_copyright'>
