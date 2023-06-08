@@ -34,7 +34,7 @@ const TimeLine: React.FC<TimeLineProps> = (TimeLineProps) => {
         </TimelineContent>
       </TimelineItem>
       {/*  */}
-      {TimeLineProps.children.map((kid, index)=>(<Kid content={kid} key={index.toString()}></Kid>))}
+      {TimeLineProps.children.map((kid, index)=>(<CustomTimeLineItem content={kid} key={index.toString()}></CustomTimeLineItem>))}
       
     </Timeline>
   );
@@ -49,7 +49,7 @@ export const CustomTimeLineSeparator = () => {
   );
 };
 
-export const Kid: React.FC<ItemProps> = (ItemProps) => {
+export const CustomTimeLineItem: React.FC<ItemProps> = (ItemProps) => {
   return (
     <TimelineItem>
       <CustomTimeLineSeparator />
