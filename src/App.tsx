@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./scss/App.scss";
 import { Container, Grid } from "@mui/material";
 import Profile from "./components/Profile/Profile";
@@ -10,7 +10,24 @@ import Footer from "./components/Footer/Footer";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home/Home";
 
-function App() {
+const App: React.FC = () => {
+  const [isSmallScreen, setIsSmallScreen] = useState<boolean>(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      const screenWidth = window.innerWidth;
+      setIsSmallScreen(screenWidth <= 991); // Adjust the screen size threshold as needed
+      
+    };
+
+    window.addEventListener("resize", handleResize);
+    handleResize();
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, [isSmallScreen]);
+
   return (
     <Container className="AppContainer">
       <Grid container>
@@ -21,7 +38,7 @@ function App() {
           md={4}
           lg={3}
         >
-          <Profile />
+          {!isSmallScreen && <Profile />}
         </Grid>
         <Grid
           item
