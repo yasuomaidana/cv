@@ -86,4 +86,46 @@
   .header {
     margin-top: 2%;
   }
+  .navbar-collapse{
+    padding-top: 1em;
+    text-align: center;
+    background-color: $dark;
+    padding-bottom: 1em;
+  }
+  .header {
+    background-color: $light;
+    .header_link {
+      color: $info;
+      padding: 6px;
+      &:hover {
+        color: $primary;
+        background-color: $light;
+      }
+    }
+    .header_active {
+      color: $white;
+      font-weight: bolder;
+      padding: 6px;
+    }
+  
+
+    .home_link_active{
+      .navbar-brand{
+          color: $light;
+      }
+      background-color: $dark;
+      border-radius: 10px;
+    }
+    .header_right{
+      display: block;
+      align-items: center !important;
+      > a > .MuiSvgIcon-root{
+          color: $info;
+      }
+    }
+  }
+}
+
+.menu_toggler{
+  border: 0;
 }
