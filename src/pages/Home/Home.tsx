@@ -9,7 +9,6 @@ const Home = () => {
       <BoxWithTitle title="About me" content={about_me}/>
       <hr/>
       <BoxWithTitle title="Resume" content={<Resume/>}/>
-      <BoxWithTitle title="Education" content={<>Random jijitl help me!!!</>}/>
       <hr/>
       <BoxWithTitle title="Skills" content={<>Random jijitl help me!!!</>}/>
       <hr/>
