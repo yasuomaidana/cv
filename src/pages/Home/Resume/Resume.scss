@@ -1,0 +1,49 @@
+@import "../../../scss/colors";
+@import "../../../scss/custom_tags.scss";
+
+.resume_experience {
+  height: 55vh; /* Set the desired height */
+  overflow-y: auto; /* Add a vertical scroll bar when content exceeds the height */
+  border-radius: 8px;
+  box-shadow: 0px 0px 5px rgba($primary, .65);
+  position: relative;
+  &::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: $gray-400;
+    border-radius: 10px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $gray-500;
+    border-radius: 10px;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: $gray-600;
+    border-radius: 10px;
+  }
+
+  &::-webkit-scrollbar-thumb:active {
+    background: $primary;
+    border-radius: 10px;
+  }
+  ul{
+    position: relative;
+    li:first-child {
+        list-style-type: none; /* Remove default bullet points */
+        padding: 8px; /* Add padding to the list items */
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+        background-color: rgba($background,1);
+        z-index: 1; /* Ensure the sticky item appears on top */
+        opacity: 1;
+      }
+      li{
+        z-index: 0;
+      }
+  }
+}
