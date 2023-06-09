@@ -163,6 +163,15 @@ export const experiences:Experiences ={
                 end:"December 2020"
             }
 
+        },
+        {
+            place:"Coursera",
+            title:"Self study courses",
+            description:"I've been practicing and studying topics related to computer science",
+            duration:{
+                start:"December 2020",
+                end:"Now"
+            }
         }
     ]
 }
