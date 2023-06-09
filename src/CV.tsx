@@ -1,34 +1,47 @@
 import React from 'react';
 import { Typography, List, ListItem, ListItemText } from '@mui/material';
 import Player  from 'react-player';
-import ImageGallery from 'react-image-gallery';
+import ImageGallery, { ReactImageGalleryItem } from 'react-image-gallery';
 import 'react-image-gallery/styles/css/image-gallery.css';
-import './CV.css';
 
+
+// .image-gallery-slides {
+//   line-height: 0;
+//   overflow: hidden;
+//   position: relative;
+//   white-space: nowrap;
+//   height: 400px;
+//   text-align: center;
+// }
 const CV = () => {
   // Sample project videos
   const projectVideos = [
     {
-      url: 'https://www.youtube.com/watch?v=abcdefgh',
+      url: 'https://www.youtube.com/watch?v=k2dnUS41NQs',
       title: 'Project 1',
     },
     {
-      url: 'https://www.youtube.com/watch?v=ijklmnop',
+      url: 'https://www.youtube.com/watch?v=k2dnUS41NQs',
       title: 'Project 2',
     },
   ];
 
   // Sample project images
-  const projectImages = [
+  const projectImages: ReactImageGalleryItem[] = [
     {
-      original: 'path_to_image_1.jpg',
-      thumbnail: 'path_to_image_1_thumbnail.jpg',
+      original: 'https://smaller-pictures.appspot.com/images/dreamstime_xxl_65780868_small.jpg',
+      thumbnail: 'https://smaller-pictures.appspot.com/images/dreamstime_xxl_65780868_small.jpg',
       description: 'Project 1',
     },
     {
-      original: 'path_to_image_2.jpg',
-      thumbnail: 'path_to_image_2_thumbnail.jpg',
-      description: 'Project 2',
+      original: 'https://i3.ytimg.com/vi/k2dnUS41NQs/maxresdefault.jpg',
+      thumbnail: 'https://i3.ytimg.com/vi/k2dnUS41NQs/maxresdefault.jpg',
+      description: 'Project 2  Description',
+      renderItem: () => (
+        <div className="video-wrapper">
+          <Player url="https://www.youtube.com/watch?v=k2dnUS41NQs" controls  className="video-player"/>
+        </div>
+      ),
     },
   ];
 
@@ -164,8 +177,15 @@ const CV = () => {
 
       <div className="section">
         <Typography variant="h5">Project Images</Typography>
-        <ImageGallery items={projectImages} showPlayButton={false} showFullscreenButton={false} />
+        <ImageGallery  items={projectImages} showPlayButton={false} showFullscreenButton={false} />
       </div>
+      <ImageGallery  items={projectImages} showPlayButton={false} showFullscreenButton={false} renderItem={(item) => (
+         <div className="image-gallery-image">
+          <img src={item.thumbnail} alt="rand"/>
+          <div className="image-gallery-description">{item.description}</div>
+         </div>
+      )
+      }/>
     </div>
   );
 };

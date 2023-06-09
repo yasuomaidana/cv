@@ -1,8 +1,9 @@
 import React from 'react'
+import CV from '../../CV'
 
 const Portfolio = () => {
   return (
-    <div>Portfolio</div>
+    <CV/>
   )
 }
 
