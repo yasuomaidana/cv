@@ -7,16 +7,19 @@ import { SocialComponent } from "./SocialComponent/SocialComponent";
 import "./Header.scss";
 import Profile from "../Profile/Profile";
 
-const SectionLink = (title: string, link: string) => 
-  <NavLink
+const add_toggle = (isSmall:boolean, component:JSX.Element) => 
+isSmall? <Navbar.Toggle className="menu_toggler">{component}</Navbar.Toggle> : component;
+
+
+const SectionLink = (title: string, link: string, isSmall: boolean) => 
+  add_toggle(isSmall, <NavLink
     to={link}
     className={({ isActive, isPending }) =>
       isActive ? "header_active" : "header_link"
     }
   >
     {title}
-  </NavLink>
-;
+  </NavLink>);
 const Header = () => {
   const location = useLocation();
   const [path, setPath] = useState(location.pathname);
@@ -47,7 +50,7 @@ const Header = () => {
   return (
     <>
       <Navbar sticky="top" expand="lg" className="header">
-        <NavLink
+        {add_toggle(isSmallScreen, <NavLink
           to="/"
           className={({ isActive, isPending }) =>
             "home_icon " + (isActive ? "home_link_active" : "home_link")
@@ -56,14 +59,14 @@ const Header = () => {
           <Navbar.Brand>
             <HomeRounded />
           </Navbar.Brand>
-        </NavLink>
+        </NavLink>)}
         <Navbar.Toggle />
         <Navbar.Collapse>
           <Nav className="header_left">
             {/* <Navbar.Toggle className="menu_toggler"> */}
-            {SectionLink("Portfolio","/portfolio")}
+            {SectionLink("Portfolio","/portfolio", isSmallScreen)}
             {/* </Navbar.Toggle> */}
-            {SectionLink("Certifications","/certifications")}
+            {SectionLink("Certifications","/certifications", isSmallScreen)}
           </Nav>
           <div className="header_right">
             {Object.entries(socials).map(([k, v], i) => (
