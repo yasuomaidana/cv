@@ -3,16 +3,8 @@ import { Typography, List, ListItem, ListItemText } from '@mui/material';
 import Player  from 'react-player';
 import ImageGallery, { ReactImageGalleryItem } from 'react-image-gallery';
 import 'react-image-gallery/styles/css/image-gallery.css';
+import "./CV.scss"
 
-
-// .image-gallery-slides {
-//   line-height: 0;
-//   overflow: hidden;
-//   position: relative;
-//   white-space: nowrap;
-//   height: 400px;
-//   text-align: center;
-// }
 const CV = () => {
   // Sample project videos
   const projectVideos = [
@@ -40,6 +32,7 @@ const CV = () => {
       renderItem: () => (
         <div className="video-wrapper">
           <Player url="https://www.youtube.com/watch?v=k2dnUS41NQs" controls  className="video-player"/>
+          <div className="image-gallery-description">Project 1</div>
         </div>
       ),
     },
@@ -179,7 +172,7 @@ const CV = () => {
         <Typography variant="h5">Project Images</Typography>
         <ImageGallery  items={projectImages} showPlayButton={false} showFullscreenButton={false} />
       </div>
-      <ImageGallery  items={projectImages} showPlayButton={false} showFullscreenButton={false} renderItem={(item) => (
+      <ImageGallery  autoPlay={true} items={projectImages} slideDuration={5000} slideInterval={10000} infinite={true} showPlayButton={true} showFullscreenButton={false} renderItem={(item) => (
          <div className="image-gallery-image">
           <img src={item.thumbnail} alt="rand"/>
           <div className="image-gallery-description">{item.description}</div>

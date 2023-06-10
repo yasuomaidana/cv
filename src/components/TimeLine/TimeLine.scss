@@ -27,7 +27,9 @@
 
     .dot_item{
         color: var(--dark);
-        background-color: var(--dark);
+        // background-color: var(--dark);
+        border-color: var(--dark);
+        background-color: rgba(0,0,0 , 0);
         font-size: small;
         padding: 2px;
     }
