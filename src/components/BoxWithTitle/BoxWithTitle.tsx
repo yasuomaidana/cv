@@ -17,9 +17,9 @@ const BoxWithTitle:React.FC<BoxWithTitleProps> = (props) => {
           </Grid>
         </div>
         <Grid item xs={12}>
-          <Typography variant="body2" component={"div"} className={"about_me_text"}>
+          
            {props.content}
-          </Typography>
+          
         </Grid>
       </Grid>
   )
