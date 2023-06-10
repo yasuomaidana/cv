@@ -5,6 +5,17 @@
     width: 100%;
     display: inline-block;
     text-overflow: clip;
+
+    @media (max-width: 991px){
+        .timeline{
+            .first{
+                padding-left: 0px;
+            }
+            .separator_padding{
+                padding-left: 16px;
+            }
+        }   
+    }
 }
 
 .profile_name{
@@ -41,3 +52,4 @@
     text-decoration: none;
     color: var(--primary);
 }
+

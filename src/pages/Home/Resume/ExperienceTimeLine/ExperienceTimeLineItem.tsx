@@ -1,5 +1,5 @@
 import React from 'react'
-import { Experience } from '../../../utils/resume_info'
+import { Experience } from '../../../../utils/resume_info'
 import { TimelineContent } from '@mui/lab';
 import { Typography } from '@mui/material';
 import "./ExperienceTimeLineItem.scss"

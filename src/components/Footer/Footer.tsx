@@ -9,7 +9,7 @@ const Footer = () => {
         <Typography className='footer_name'>
           {contact.shortest_name}
           <br/>
-          <a href={"mailto:"+contact.email}>{contact.email}</a>
+          <a className='mail' href={"mailto:"+contact.email}>{contact.email}</a>
         </Typography>
       </div>
       <div className='right'>

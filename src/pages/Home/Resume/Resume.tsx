@@ -3,7 +3,7 @@ import React from 'react'
 import TimeLine from '../../../components/TimeLine/TimeLine'
 import { School, Work } from '@mui/icons-material'
 import { experiences } from '../../../utils/resume_info'
-import ExperienceTimeLineItem from './ExperienceTimeLineItem'
+import ExperienceTimeLineItem from './ExperienceTimeLine/ExperienceTimeLineItem'
 import "./Resume.scss";
 const Resume = () => {
   const workExperiences = experiences.workExperience.map((exp,i) => <ExperienceTimeLineItem  experience={exp} key={i}/>)
