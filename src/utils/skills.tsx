@@ -38,7 +38,7 @@ export const skills:Skills = {
             {
                 title:"Simulation desing (Matlab, Python)"
             },{
-                title: "Web apps"
+                title: "Web apps development"
             }
         ]
     },
@@ -79,7 +79,7 @@ export const skills:Skills = {
         title:"Machine Learning",
         subSkills:[
             {
-                title:"Computer Vision (OpenCV, Python Keras, Pytorch)"
+                title:"Computer Vision (OpenCV, Keras, Pytorch)"
             },
             {
                 title:"Web scrapping"

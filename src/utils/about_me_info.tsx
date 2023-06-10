@@ -1,5 +1,7 @@
+import Typography from "@mui/material/Typography";
+
 export const about_me = (
-  <>
+  <Typography variant="body2" component={"div"} className={"about_me_text"}>
     <p>
       I'm Yasuo an engineer that loves programming, robotics, research, 3D
       printing ... and breaking things.
@@ -18,5 +20,5 @@ export const about_me = (
       </li>
       <li>And compassion to integrate ourselfs and others to society.</li>
     </ul>
-  </>
+  </Typography>
 );
