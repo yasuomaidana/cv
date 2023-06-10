@@ -3,6 +3,7 @@ import "./Home.scss";
 import BoxWithTitle from "../../components/BoxWithTitle/BoxWithTitle";
 import { about_me } from "../../utils/about_me_info";
 import Resume from "./Resume/Resume";
+import Skills from "./Skills/SkillsComponent";
 const Home = () => {
   return (
     <>
@@ -10,7 +11,7 @@ const Home = () => {
       <hr/>
       <BoxWithTitle title="Resume" content={<Resume/>}/>
       <hr/>
-      <BoxWithTitle title="Skills" content={<>Random jijitl help me!!!</>}/>
+      <BoxWithTitle title="Skills" content={<Skills/>}/>
       <hr/>
       <BoxWithTitle title="Achievements" content={<>Random jijitl help me!!!</>}/>
       <hr/>
