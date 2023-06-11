@@ -4,6 +4,7 @@ import BoxWithTitle from "../../components/BoxWithTitle/BoxWithTitle";
 import { about_me } from "../../utils/about_me_info";
 import Resume from "./Resume/Resume";
 import Skills from "./Skills/SkillsComponent";
+import AchievementsComponent from "./Resume/Achievements/AchievementsComponent";
 const Home = () => {
   return (
     <>
@@ -13,7 +14,7 @@ const Home = () => {
       <hr/>
       <BoxWithTitle title="Skills" content={<Skills/>}/>
       <hr/>
-      <BoxWithTitle title="Achievements" content={<>Random jijitl help me!!!</>}/>
+      <BoxWithTitle title="Achievements" content={<AchievementsComponent/>}/>
       <hr/>
     </>
   );

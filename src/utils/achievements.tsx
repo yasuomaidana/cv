@@ -1,48 +1,49 @@
-interface Achivement{
+import WorkspacePremiumIcon from '@mui/icons-material/WorkspacePremium';
+import EmojiEventsIcon from '@mui/icons-material/EmojiEvents';
+import RecordVoiceOverIcon from '@mui/icons-material/RecordVoiceOver';
+
+
+export interface Achievement{
     title:String;
-    image:JSX.Element;
+    achievement_image: string|JSX.Element;
     institution: String;
     date:String;
 }
 
-const achivements:Achivement[] = [
+
+
+export const achievements:Achievement[] = [
     {
         title: "Student Development Diploma",
-        image: <></>,
+        achievement_image: <EmojiEventsIcon/>,
         institution: "Instituto Tecnológico y de Estudios Superiores de Monterrey",
         date: "December 2020",
     },
     {
         title: "Mitacs internship program participation",
-        image: <></>,
+        achievement_image: <WorkspacePremiumIcon/>,
         institution: "Mitacs - Concordia",
         date: "November 2018",
     },
     {
-        title: "Conference paper publication: Statistical Evaluation of the Positioning Error in Sequential Localization Techniques for Sensor Networks",
-        image: <></>,
-        institution: "Proceedings of the 3rd International Electronic Conference on Sensors and Applications",
-        date: "November 2016",
-    },
-    {
-        title: "Participation at: \"Future Societies, Global Citizens\" internation conference.",
-        image: <></>,
+        title: "\"Future Societies, Global Citizens\" international conference participation.",
+        achievement_image: <RecordVoiceOverIcon/>,
         institution: "Universitas 21 - The university of Edinburgh",
-        date: "July 27",
+        date: "July 2017",
     },{
-        title: "Top Academic Mentor",
-        image: <></>,
+        title: "Top Academic Mentor Nomination",
+        achievement_image: <WorkspacePremiumIcon/>,
         institution: "MAES - Instituto Tecnológico y de Estudios Superiores de Monterrey",
         date: "February 2018",
     },{
-        title: "Top Academic Mentor",
-        image: <></>,
-        institution: "MAES - Instituto Tecnológico y de Estudios Superiores de Monterrey",
-        date: "February 2018",
-    },{
-        title: "Enterpeneur",
-        image: <></>,
+        title: "Participation in entrepreneurship competition",
+        achievement_image: <WorkspacePremiumIcon/>,
         institution: "INC - Instituto Tecnológico y de Estudios Superiores de Monterrey",
         date: "November 2018",
+    },{
+        title: "Master's Degree Scholarship",
+        achievement_image: <EmojiEventsIcon/>,
+        institution: "Jasso - Shizuoka University",
+        date: "November 2022",
     }
 ]
