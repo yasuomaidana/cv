@@ -9,11 +9,11 @@ const Resume = () => {
   const workExperiences = experiences.workExperience.map((exp,i) => <ExperienceTimeLineItem  experience={exp} key={i}/>)
   const educationExperiences = experiences.schoolExperience.map((exp,i) => <ExperienceTimeLineItem  experience={exp} key={i}/>)
   return (
-    <Grid container>
+    <Grid container className='resume'>
       <Grid item sm={12} md={6} className="resume_experience">
         <TimeLine title='Professional Experience' icon={<Work/>} children={workExperiences}></TimeLine>
       </Grid>
-      <Grid item sm={12} md={6}>
+      <Grid item sm={12} md={6} className="resume_academic">
       <TimeLine title='Academic Background' icon={<School/>} children={educationExperiences}></TimeLine>
       </Grid>
     </Grid>
