@@ -14,9 +14,9 @@ const SkillComponent:React.FC<SkillComponentProps> = (coreSkill,key) => {
         <div className='skill'>
             {skill.icon}
             <Typography className='skill_title' variant='h6'>{skill.title}</Typography>
-            <Typography className='skill_description' variant='body2'>
+            <Typography component="div" className='skill_description' variant='body2'>
             <ul>
-                {Object.entries(skill.subSkills).map(([key,subSkill]) => <li>{subSkill.title}</li>)}
+                {Object.entries(skill.subSkills).map(([key,subSkill]) => <li key={key}>{subSkill.title}</li>)}
             </ul>
             </Typography>
         </div>
