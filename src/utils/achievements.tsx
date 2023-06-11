@@ -26,7 +26,7 @@ export const achievements:Achievement[] = [
         date: "November 2018",
     },
     {
-        title: "\"Future Societies, Global Citizens\" international conference participation.",
+        title: "\"Future Societies, Global Citizens\" International conference participation.",
         achievement_image: <RecordVoiceOverIcon/>,
         institution: "Universitas 21 - The university of Edinburgh",
         date: "July 2017",
@@ -44,6 +44,6 @@ export const achievements:Achievement[] = [
         title: "Master's Degree Scholarship",
         achievement_image: <EmojiEventsIcon/>,
         institution: "Jasso - Shizuoka University",
-        date: "November 2022",
+        date: "October 2022",
     }
 ]

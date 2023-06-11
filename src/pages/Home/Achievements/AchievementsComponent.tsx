@@ -1,6 +1,6 @@
 import { Grid } from "@mui/material";
 import React from "react";
-import { achievements } from "../../../../utils/achievements";
+import { achievements } from "../../../utils/achievements";
 import AchievementComponent from "./AchievementComponent";
 
 const AchievementsComponent = () => {

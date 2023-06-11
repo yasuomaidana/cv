@@ -1,6 +1,6 @@
 import { Avatar, Grid, Typography } from '@mui/material'
 import React from 'react'
-import { Achievement } from '../../../../utils/achievements';
+import { Achievement } from '../../../utils/achievements';
 import "./AchievementComponent.scss"
 interface AcvhieveComponentProps {
     achieve: Achievement;
