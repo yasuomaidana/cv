@@ -4,7 +4,8 @@ import BoxWithTitle from "../../components/BoxWithTitle/BoxWithTitle";
 import { about_me } from "../../utils/about_me_info";
 import Resume from "./Resume/Resume";
 import Skills from "./Skills/SkillsComponent";
-import AchievementsComponent from "./Resume/Achievements/AchievementsComponent";
+import AchievementsComponent from "./Achievements/AchievementsComponent";
+import PublicationsComponent from "./Publications/PublicationsComponent";
 const Home = () => {
   return (
     <>
@@ -16,6 +17,7 @@ const Home = () => {
       <hr/>
       <BoxWithTitle title="Achievements" content={<AchievementsComponent/>}/>
       <hr/>
+      <BoxWithTitle title="Publications" content={<PublicationsComponent/>}/>
     </>
   );
 };
