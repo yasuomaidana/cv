@@ -30,11 +30,22 @@ export const achievements:Achievement[] = [
         achievement_image: <RecordVoiceOverIcon/>,
         institution: "Universitas 21 - The university of Edinburgh",
         date: "July 2017",
+    },
+    {
+        title: "\"47th Research and Development Congress\" Conference participation.",
+        achievement_image: <RecordVoiceOverIcon/>,
+        institution: "Instituo Tecnológico y de Estudios Superiores de Monterrey",
+        date: "March 2017",
     },{
-        title: "Top Academic Mentor Nomination",
+        title: "Best Academic Mentor Nomination",
         achievement_image: <WorkspacePremiumIcon/>,
         institution: "MAES - Instituto Tecnológico y de Estudios Superiores de Monterrey",
         date: "February 2018",
+    },{
+        title: "Workshop on Telecomunnication Principles - Speaker",
+        achievement_image: <RecordVoiceOverIcon/>,
+        institution: "Instituto Tecnológico y de Estudios Superiores de Monterrey",
+        date: "November 2019",
     },{
         title: "Participation in entrepreneurship competition",
         achievement_image: <WorkspacePremiumIcon/>,
