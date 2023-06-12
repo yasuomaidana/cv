@@ -2,11 +2,10 @@
 
 .custom_item{
     &.active{
-        color: $primary;
-        border-color: $primary;
+        color: $primary !important;
     }
 }
 
 .MuiTabs-indicator{
-    background-color: $dark;
+    background-color: $dark !important;
 }   
