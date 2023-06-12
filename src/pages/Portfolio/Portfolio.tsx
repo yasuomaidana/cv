@@ -9,10 +9,24 @@ import {
 } from "../../utils/portfolio";
 import PortfolioItemComponent from "./PortfolioItemComponent";
 import "./Portfolio.scss";
+import ProjectDialog from "./ProjectDialog";
 
 const Portfolio = () => {
   const [tabValue, setTabValue] = useState("All");
   const [isSmallScreen, setIsSmallScreen] = useState<boolean>(false);
+  const [projectDialogOpen, setProjectDialogOpen] = useState(false);
+  const [selectedPortfolio, setselectedPortfolio] = useState<PortFolioItem|null>(null);
+
+  const handleProjectDialogToggle = () => {
+    setProjectDialogOpen((prevOpen) => !prevOpen);
+  };
+
+
+  const handleSelectedPortfolio = (portfolio:PortFolioItem) =>{
+    setselectedPortfolio(portfolio);
+  }
+
+  
   useEffect(() => {
     const handleResize = () => {
       const screenWidth = window.innerWidth;
@@ -38,9 +52,9 @@ const Portfolio = () => {
     />
   );
 
-  const renderAll = (items: PortFolioItem[]) => {
+  const renderAll = () => {
     return portfolioItems.map((item, key) => (
-      <PortfolioItemComponent item={item} key={key} />
+      <PortfolioItemComponent item={item} key={key} handleToggle={handleProjectDialogToggle} handlePortfolioSelection={handleSelectedPortfolio}/>
     ))
   };
   const portfolioContainer = (selectedTab: string = "All") => (
@@ -69,9 +83,10 @@ const Portfolio = () => {
       </Grid>
       <Grid item xs={12}>
         <Grid container spacing={2}>
-          {tabValue.toString() === "All" && renderAll(portfolioItems)}
+          {tabValue.toString() === "All" && renderAll()}
         </Grid>
       </Grid>
+      {selectedPortfolio && <ProjectDialog open={projectDialogOpen} item={selectedPortfolio} handle_toggle={handleProjectDialogToggle}/>}
     </>
   );
 
