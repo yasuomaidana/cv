@@ -1,0 +1,12 @@
+@import "../../scss/colors";
+
+.custom_item{
+    &.active{
+        color: $primary;
+        border-color: $primary;
+    }
+}
+
+.MuiTabs-indicator{
+    background-color: $dark;
+}   
