@@ -13,16 +13,16 @@ const ProjectDialog:React.FC<ProjectDialogProps> = (props) => {
   return (
     <Dialog open={props.open} onClose={props.handle_toggle} fullWidth maxWidth="lg">
         <DialogTitle>{item.title}</DialogTitle>
-        {typeof(item.thumbnail) === "string" && <img src={item.thumbnail} alt={item.title}/>}
+        {typeof(item.thumbnail) === "string" && <img src={item.thumbnail} alt={item.title} className='project_dialog_image'/>}
         <DialogContent>
             {item.description}
         </DialogContent>
-        {
-            item.links && 
-                <DialogActions>
-                    {item.links.map((link,key)=> <a key={key} href={link.link} target='_blank' rel='noreferrer'>{link.icon}</a>)}
-                </DialogActions>
-        }
+        {<DialogActions>
+            {item.links?.map((link,key)=> 
+            <a key={key} href={link.link} target='_blank' rel='noreferrer'
+            className='project_dialog_icon'
+            >{link.icon}</a>)}
+        </DialogActions>}
     </Dialog>
   )
 }
