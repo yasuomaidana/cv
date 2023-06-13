@@ -1,10 +1,21 @@
 @import "../../../scss/colors";
-
+.project_dialog_title{
+    color: $primary !important;
+}
+.project_dialog_content{
+    font-size: larger !important;
+}
 .project_dialog_actions {
     justify-content: center !important;
 
     .project_dialog_icon{
         color: $dark;
         cursor: pointer;
+     .MuiSvgIcon-root{
+        font-size: 60px;
+     }
+     .MuiSvgIcon-root:hover{
+        color: $primary;
+     }   
     }
 }
