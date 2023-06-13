@@ -96,7 +96,6 @@ const PortfolioMediaGallery: React.FC<PortfolioMediaGallerProps> = (
       infinite={true}
       showNav={false}
       onThumbnailClick={(event, index)=> {
-        setVideoPlaying(false); 
         imageGalleryRef.current?.slideToIndex(index); 
         imageGalleryRef.current?.play(false);
       imageGalleryRef.current?.pause(true);}}
