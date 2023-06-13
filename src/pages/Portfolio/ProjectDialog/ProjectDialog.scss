@@ -1,0 +1,10 @@
+@import "../../../scss/colors";
+
+.project_dialog_actions {
+    justify-content: center !important;
+
+    .project_dialog_icon{
+        color: $dark;
+        cursor: pointer;
+    }
+}

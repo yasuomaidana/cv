@@ -2,6 +2,7 @@ import { Dialog, DialogActions, DialogContent, DialogTitle } from '@mui/material
 import React from 'react'
 import { PortFolioItem } from '../../../utils/portfolio';
 import PortfolioMediaGallery from './MediaGallery/PortfolioMediaGallery';
+import "./ProjectDialog.scss";
 
 interface ProjectDialogProps{
     open:boolean;
@@ -18,7 +19,7 @@ const ProjectDialog:React.FC<ProjectDialogProps> = (props) => {
         <DialogContent>
             {item.description}
         </DialogContent>
-        {<DialogActions>
+        {<DialogActions className='project_dialog_actions'>
             {item.links?.map((link,key)=> 
             <a key={key} href={link.link} target='_blank' rel='noreferrer'
             className='project_dialog_icon'
