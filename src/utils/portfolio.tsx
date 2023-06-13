@@ -54,7 +54,7 @@ export const portfolioItems:PortFolioItem[] = [
         ]
     },
     {
-        tags: [PortfolioTag.Robotics, PortfolioTag.Coding, PortfolioTag.Electronics],
+        tags: [PortfolioTag.Robotics],
         thumbnail: <Code/>,
         title: "Pick and Place Machine",
         description: "This prototype is capable of holding electronic components and placing them into the working area. We incorporated a laser led to simulate micro soldering using laser technique",

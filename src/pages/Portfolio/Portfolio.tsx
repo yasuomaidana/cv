@@ -15,18 +15,17 @@ const Portfolio = () => {
   const [tabValue, setTabValue] = useState("All");
   const [isSmallScreen, setIsSmallScreen] = useState<boolean>(false);
   const [projectDialogOpen, setProjectDialogOpen] = useState(false);
-  const [selectedPortfolio, setselectedPortfolio] = useState<PortFolioItem|null>(null);
+  const [selectedPortfolio, setselectedPortfolio] =
+    useState<PortFolioItem | null>(null);
 
   const handleProjectDialogToggle = () => {
     setProjectDialogOpen((prevOpen) => !prevOpen);
   };
 
-
-  const handleSelectedPortfolio = (portfolio:PortFolioItem) =>{
+  const handleSelectedPortfolio = (portfolio: PortFolioItem) => {
     setselectedPortfolio(portfolio);
-  }
+  };
 
-  
   useEffect(() => {
     const handleResize = () => {
       const screenWidth = window.innerWidth;
@@ -41,8 +40,6 @@ const Portfolio = () => {
     };
   }, [isSmallScreen]);
 
-  
-
   const renderTagFromTab = (tab: string, key: number) => (
     <Tab
       key={key}
@@ -51,11 +48,26 @@ const Portfolio = () => {
       className={tabValue === tab ? "custom_item active" : "custom_item"}
     />
   );
-
+  const renderItem = (item: PortFolioItem, key: number) => (
+    <PortfolioItemComponent
+      item={item}
+      key={key}
+      handleToggle={handleProjectDialogToggle}
+      handlePortfolioSelection={handleSelectedPortfolio}
+    />
+  );
   const renderAll = () => {
-    return portfolioItems.map((item, key) => (
-      <PortfolioItemComponent item={item} key={key} handleToggle={handleProjectDialogToggle} handlePortfolioSelection={handleSelectedPortfolio}/>
-    ))
+    return portfolioItems.map((item, key) => renderItem(item, key));
+  };
+
+  const renderByTag = (tag: string) => {
+    return portfolioItems
+      .filter((item, index) =>
+        item.tags
+          .map((tagi) => tagi.valueOf().toLowerCase())
+          .includes(tag.toLowerCase())
+      )
+      .map((item, key) => renderItem(item, key));
   };
   const portfolioContainer = (selectedTab: string = "All") => (
     <>
@@ -83,10 +95,18 @@ const Portfolio = () => {
       </Grid>
       <Grid item xs={12}>
         <Grid container spacing={2}>
-          {tabValue.toString() === "All" && renderAll()}
+          {tabValue.toString() === "All"
+            ? renderAll()
+            : renderByTag(tabValue.toString())}
         </Grid>
       </Grid>
-      {selectedPortfolio && <ProjectDialog open={projectDialogOpen} item={selectedPortfolio} handle_toggle={handleProjectDialogToggle}/>}
+      {selectedPortfolio && (
+        <ProjectDialog
+          open={projectDialogOpen}
+          item={selectedPortfolio}
+          handle_toggle={handleProjectDialogToggle}
+        />
+      )}
     </>
   );
 
