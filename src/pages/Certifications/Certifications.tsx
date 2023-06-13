@@ -1,8 +1,9 @@
 import React from 'react'
+import CV from '../../CV'
 
 const Certifications = () => {
   return (
-    <div>Certifications</div>
+    <CV/>
   )
 }
 

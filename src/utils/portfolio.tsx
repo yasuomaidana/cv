@@ -8,12 +8,18 @@ export enum PortfolioTag{
     Electronics = "Electronics"
 }
 
-export interface PortFolioMedia{
-    portfolioMedia : string | {
-        youtube_link:string;
-        youtube_tumbnail:string;
-    }
+export interface ImageMedia {
+    image_link:string;
+    image_description:string;
 }
+
+export interface YoutubeMedia {
+    youtube_id:string;
+    description:string;
+    thumbnail:string;
+}
+
+export type PortFolioMedia = ImageMedia | YoutubeMedia;
 
 export interface PortFolioItem {
     tags : PortfolioTag[];
@@ -29,9 +35,16 @@ export const portfolioItems:PortFolioItem[] = [
         thumbnail: port_folio_image,
         title: "Pick and Place Machine",
         description: "This prototype is capable of holding electronic components and placing them into the working area. We incorporated a laser led to simulate micro soldering using laser technique",
+        portFolioMedia:[
+            {
+                youtube_id:"https://www.youtube.com/watch?v=HjTVGrmYySE",
+                description:"Pick and place wireless testing",
+                thumbnail:"https://img.youtube.com/vi/HjTVGrmYySE/maxresdefault.jpg"
+            }
+        ],
         links: [
             {
-                link:"https://www.youtube.com/watch?v=HjTVGrmYySE&ab_channel=YasuoIgnacioMaidanaP%C3%A9rez",
+                link:"https://www.youtube.com/watch?v=HjTVGrmYySE",
                 icon: <YouTube/>
             }
         ]

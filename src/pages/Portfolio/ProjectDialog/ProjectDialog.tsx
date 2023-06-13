@@ -1,6 +1,6 @@
 import { Dialog, DialogActions, DialogContent, DialogTitle } from '@mui/material'
 import React from 'react'
-import { PortFolioItem } from '../../utils/portfolio';
+import { PortFolioItem } from '../../../utils/portfolio';
 
 interface ProjectDialogProps{
     open:boolean;

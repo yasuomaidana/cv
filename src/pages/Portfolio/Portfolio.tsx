@@ -7,9 +7,9 @@ import {
   PortfolioTag,
   portfolioItems,
 } from "../../utils/portfolio";
-import PortfolioItemComponent from "./PortfolioItemComponent";
+import PortfolioItemComponent from "./Item/PortfolioItemComponent";
 import "./Portfolio.scss";
-import ProjectDialog from "./ProjectDialog";
+import ProjectDialog from "./ProjectDialog/ProjectDialog";
 
 const Portfolio = () => {
   const [tabValue, setTabValue] = useState("All");

@@ -8,7 +8,7 @@ import {
   Typography,
 } from "@mui/material";
 import React from "react";
-import { PortFolioItem } from "../../utils/portfolio";
+import { PortFolioItem } from "../../../utils/portfolio";
 import { Code, SvgIconComponent } from "@mui/icons-material";
 import "./PortfolioItemComponent.scss";
 
@@ -51,7 +51,7 @@ const PortfolioItemComponent: React.FC<PortfolioItemComponentProps> = (
       <Grow in timeout={1000}>
         <Card className="portfolio_card" onClick={() => handleClick(props)}>
           <CardActionArea>
-            {renderMedia(item.thumbnail)}
+            {renderMedia(item.thumbnail, item.title)}
             <CardContent>
               <Typography className="portfolio_title">{item.title}</Typography>
               <Typography variant="body2" className="portfolio_description">
