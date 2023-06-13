@@ -40,6 +40,10 @@ export const portfolioItems:PortFolioItem[] = [
                 youtube_id:"https://www.youtube.com/watch?v=HjTVGrmYySE",
                 description:"Pick and place wireless testing",
                 thumbnail:"https://img.youtube.com/vi/HjTVGrmYySE/maxresdefault.jpg"
+            }, 
+            {
+                image_link:port_folio_image,
+                image_description:"aaa"
             }
         ],
         links: [

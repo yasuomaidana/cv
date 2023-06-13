@@ -1,6 +1,7 @@
 import { Dialog, DialogActions, DialogContent, DialogTitle } from '@mui/material'
 import React from 'react'
 import { PortFolioItem } from '../../../utils/portfolio';
+import PortfolioMediaGallery from './MediaGallery/PortfolioMediaGallery';
 
 interface ProjectDialogProps{
     open:boolean;
@@ -13,7 +14,7 @@ const ProjectDialog:React.FC<ProjectDialogProps> = (props) => {
   return (
     <Dialog open={props.open} onClose={props.handle_toggle} fullWidth maxWidth="lg">
         <DialogTitle>{item.title}</DialogTitle>
-        {typeof(item.thumbnail) === "string" && <img src={item.thumbnail} alt={item.title} className='project_dialog_image'/>}
+        {props.item.portFolioMedia && <PortfolioMediaGallery props={item.portFolioMedia}/>}
         <DialogContent>
             {item.description}
         </DialogContent>
