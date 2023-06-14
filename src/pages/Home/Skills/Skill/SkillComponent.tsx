@@ -10,7 +10,7 @@ const SkillComponent:React.FC<SkillComponentProps> = (coreSkill,key) => {
     const skill = coreSkill.coreSkill
   return (
     
-    <Grid key={key} item xs={12} md = {4} justifyItems={'space-around'}>
+    <Grid key={key} item xs={6} md = {4} justifyItems={'space-around'}>
         <div className='skill'>
             {skill.icon}
             <Typography className='skill_title' variant='h6'>{skill.title}</Typography>

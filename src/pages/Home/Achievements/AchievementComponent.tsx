@@ -19,7 +19,7 @@ const AchievementComponent:React.FC<AcvhieveComponentProps> = (prompts,key) => {
     const achieve = prompts.achieve
     return (
 
-        <Grid key={key} item xs={12} md = {4} alignItems={'center'} className='achievement'>
+        <Grid key={key} item xs={6} md = {4} alignItems={'center'} className='achievement'>
             {image_builder(achieve)}
             <Typography className='achievemnt_title' variant='body2'>{achieve.title}</Typography>
             <Typography className='achievemnt_institution' variant='body2'>{achieve.institution}</Typography>
