@@ -1,0 +1,9 @@
+@import "../../../scss/colors";
+.certification_timeline{
+    .MuiTimelineOppositeContent-root{
+        flex: 0.2 !important
+    }
+    .MuiTimelineDot-root{
+        background-color: $dark;
+    }
+}
