@@ -10,11 +10,14 @@ import {
 } from "@mui/material";
 
 import { MainCertification } from "../../../utils/certifications";
-interface CertificationItemProps{
-    certificate:MainCertification;
+interface CertificationItemProps {
+  certificate: MainCertification;
 }
-const CertificationItem:React.FC<CertificationItemProps> = (props,key) => {
-  const renderSimpleCertificate = (certificate: MainCertification) => (
+const CertificationItem: React.FC<CertificationItemProps> = (props, key) => {
+  const renderCertificate = (
+    certificate: MainCertification,
+    content: JSX.Element
+  ) => (
     <Card>
       <CardHeader
         avatar={
@@ -31,7 +34,12 @@ const CertificationItem:React.FC<CertificationItemProps> = (props,key) => {
         }
         subheader={"Issued " + certificate.date}
       />
-
+      {content}
+    </Card>
+  );
+  const renderSimpleCertificate = (certificate: MainCertification) =>
+    renderCertificate(
+      certificate,
       <CardActions>
         <Button
           component="a"
@@ -45,13 +53,16 @@ const CertificationItem:React.FC<CertificationItemProps> = (props,key) => {
           See certificate
         </Button>
       </CardActions>
-    </Card>
-  );
+    );
 
   return (
     <Grid item xs={12} md={6}>
       <Grow in timeout={1000}>
-        {renderSimpleCertificate(props.certificate)}
+        {props.certificate.child_certifications ? (
+          <Card>Childrens</Card>
+        ) : (
+          renderSimpleCertificate(props.certificate)
+        )}
       </Grow>
     </Grid>
   );

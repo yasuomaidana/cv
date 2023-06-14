@@ -9,7 +9,7 @@ export interface MainCertification extends Certification{
     icon:string;
     child_certifications?:Certification[];
 }
-export const certifications = [{
+export const certifications:MainCertification[] = [{
     title: "This will be a very long title, this should cut it",
     icon: fox,
     date: " today",
@@ -20,5 +20,27 @@ export const certifications = [{
     icon: fox,
     date: " today",
     url: "https://www.google.com"
+},
+{
+    title: "With children title",
+    icon: fox,
+    date: " today",
+    url: "https://www.google.com",
+    child_certifications:[{
+        title: "Child 1",
+    date: " today",
+    url: "https://www.google.com",
+    }]
+},
+{
+    title: "With children title 2",
+    icon: fox,
+    date: " today",
+    url: "https://www.google.com",
+    child_certifications:[{
+        title: "Child 3",
+    date: " today",
+    url: "https://www.google.com",
+    }]
 }
 ]
