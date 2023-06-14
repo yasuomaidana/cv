@@ -4,7 +4,8 @@
 .resume_experience, .resume_academic{
   height: 65vh; /* Set the desired height */
 }
-.resume_experience {
+
+@mixin convertToScrollable {
   overflow-y: auto; /* Add a vertical scroll bar when content exceeds the height */
   border-radius: 8px;
   box-shadow: 0px 0px 5px rgba($primary, .65);
@@ -44,4 +45,14 @@
         opacity: 1;
       }
   }
+}
+.resume_experience {
+  @include convertToScrollable();
+}
+
+@media (max-width: 991px){
+  .resume_academic{
+    margin-top: 0.5em !important;
+    @include convertToScrollable();
+  }  
 }
