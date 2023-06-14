@@ -1,4 +1,5 @@
 @import "../../scss/colors";
+@import "../../scss/custom_tags.scss";
 .navbar{
     padding: 0;
   }
@@ -82,7 +83,7 @@
   }
 }
 
-@media (max-width: 991px) {
+@media (max-width: $break-point) {
   .header {
     margin-top: 2%;
   }

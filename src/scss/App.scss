@@ -52,7 +52,7 @@ main{
     
 }
 
-@media (max-width: 991px){
+@media (max-width: $break-point){
     .AppContainer{
         margin-top: 1%;
     }

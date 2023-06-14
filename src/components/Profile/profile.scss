@@ -1,4 +1,6 @@
 @import "../../scss/colors";
+@import "../../scss/custom_tags.scss";
+
 .profile{
     background-color: var(--light);
     border-radius: 6px;
@@ -6,7 +8,7 @@
     display: inline-block;
     text-overflow: clip;
 
-    @media (max-width: 991px){
+    @media (max-width: $break-point){
         .timeline{
             .first{
                 padding-left: 0px;

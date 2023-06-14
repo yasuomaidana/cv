@@ -16,8 +16,7 @@ const App: React.FC = () => {
   useEffect(() => {
     const handleResize = () => {
       const screenWidth = window.innerWidth;
-      setIsSmallScreen(screenWidth <= 991); // Adjust the screen size threshold as needed
-      
+      setIsSmallScreen(screenWidth <= 992); // Adjust the screen size threshold as needed
     };
 
     window.addEventListener("resize", handleResize);
@@ -31,18 +30,14 @@ const App: React.FC = () => {
   return (
     <Container className="AppContainer">
       <Grid container>
-        <Grid
-          item
-          xs={12}
-          md={4}
-        >
-          {!isSmallScreen && <Profile />}
-        </Grid>
-        <Grid
-          item
-          xs
-          className="Content"
-        >
+        {!isSmallScreen && (
+          <Grid item xs={12} md={4}>
+            {" "}
+            <Profile />
+          </Grid>
+        )}
+
+        <Grid item xs className="Content">
           <BrowserRouter>
             <Header></Header>
             <main>
@@ -58,6 +53,6 @@ const App: React.FC = () => {
       </Grid>
     </Container>
   );
-}
+};
 
 export default App;

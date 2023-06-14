@@ -28,7 +28,7 @@ const Header = () => {
   useEffect(() => {
     const handleResize = () => {
       const screenWidth = window.innerWidth;
-      setIsSmallScreen(screenWidth <= 991); // Adjust the screen size threshold as needed
+      setIsSmallScreen(screenWidth <= 992); // Adjust the screen size threshold as needed
     };
 
     window.addEventListener("resize", handleResize);

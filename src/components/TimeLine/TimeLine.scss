@@ -1,3 +1,5 @@
+@import "../../scss/custom_tags.scss";
+
 .MuiTimeline-root {
     padding: 1px 8%;
 }
@@ -38,7 +40,7 @@
         padding-left: 30px;
     }
 
-    @media (max-width: 991px){
+    @media (max-width: $break-point){
         .first{
             padding-left: 1px !important;
         }

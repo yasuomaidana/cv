@@ -50,9 +50,9 @@
   @include convertToScrollable();
 }
 
-@media (max-width: 991px){
+@media (max-width: $break-point){
   .resume_academic{
     margin-top: 0.5em !important;
-    @include convertToScrollable();
+    height: min-content;
   }  
 }
