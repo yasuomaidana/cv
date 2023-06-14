@@ -14,7 +14,10 @@ import {
   styled,
 } from "@mui/material";
 
-import { MainCertification } from "../../../utils/certifications";
+import {
+  Certification,
+  MainCertification,
+} from "../../../utils/certifications";
 import { useState } from "react";
 import Timeline from "@mui/lab/Timeline/Timeline";
 import TimelineItem from "@mui/lab/TimelineItem/TimelineItem";
@@ -23,7 +26,7 @@ import TimelineConnector from "@mui/lab/TimelineConnector/TimelineConnector";
 import TimelineContent from "@mui/lab/TimelineContent/TimelineContent";
 import TimelineSeparator from "@mui/lab/TimelineSeparator/TimelineSeparator";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import "./CertificationItem.scss"
+import "./CertificationItem.scss";
 import TimelineOppositeContent from "@mui/lab/TimelineOppositeContent/TimelineOppositeContent";
 
 interface CertificationItemProps {
@@ -81,7 +84,7 @@ const CertificationItem: React.FC<CertificationItemProps> = (props, key) => {
       <CardActions>
         <Button
           component="a"
-          style={{ marginLeft: "auto" }}
+          className="button_certificate"
           size="small"
           color="secondary"
           href={certificate.url}
@@ -93,12 +96,52 @@ const CertificationItem: React.FC<CertificationItemProps> = (props, key) => {
       </CardActions>
     );
 
+  const renderChildItem = (child: Certification, key: number) => (
+    <TimelineItem key={key}>
+      <TimelineOppositeContent color="textSecondary">
+        {child.date}
+      </TimelineOppositeContent>
+      <TimelineSeparator>
+        <TimelineDot />
+        <TimelineConnector />
+      </TimelineSeparator>
+
+      <TimelineContent>
+        <Typography
+          className="children_title"
+          variant="h6"
+          fontStyle={"italic"}
+          fontWeight={"bold"}
+        >
+          {child.title}
+        </Typography>
+        <Button
+          component="a"
+          size="small"
+          color="secondary"
+          href={child.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="children_see button_certificate"
+        >
+          See certificate
+        </Button>
+      </TimelineContent>
+    </TimelineItem>
+  );
+
   const renderWithChildCertificate = (certificate: MainCertification) =>
     renderCertificate(
       certificate,
       <>
         <CardActions disableSpacing>
-          <Typography variant="subtitle2">Certificates</Typography>
+          <Typography
+            component={"div"}
+            variant="subtitle2"
+            className="show_certificates_text"
+          >
+            Certificates
+          </Typography>
           <ExpandMore
             expand={expanded}
             onClick={handleExpandClick}
@@ -108,41 +151,24 @@ const CertificationItem: React.FC<CertificationItemProps> = (props, key) => {
             <ExpandMoreIcon />
           </ExpandMore>
           <Button
-          component="a"
-          style={{ marginLeft: "auto" }}
-          size="small"
-          color="secondary"
-          href={certificate.url}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          See certificate
-        </Button>
+            component="a"
+            className="button_certificate"
+            size="small"
+            color="secondary"
+            href={certificate.url}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            See certificate
+          </Button>
         </CardActions>
         <Collapse in={expanded} timeout="auto" unmountOnExit>
           <CardContent>
-          <Timeline className="certification_timeline"
-    >
-      <TimelineItem>
-        <TimelineOppositeContent color="textSecondary">
-          09:30 am
-        </TimelineOppositeContent>
-        <TimelineSeparator>
-          <TimelineDot />
-          <TimelineConnector />
-        </TimelineSeparator>
-        <TimelineContent>Eat</TimelineContent>
-      </TimelineItem>
-      <TimelineItem>
-        <TimelineOppositeContent color="textSecondary">
-          10:00 am
-        </TimelineOppositeContent>
-        <TimelineSeparator>
-          <TimelineDot />
-        </TimelineSeparator>
-        <TimelineContent>Code</TimelineContent>
-      </TimelineItem>
-    </Timeline>
+            <Timeline className="certification_timeline">
+              {certificate.child_certifications?.map((child, key) =>
+                renderChildItem(child, key)
+              )}
+            </Timeline>
           </CardContent>
         </Collapse>
       </>
