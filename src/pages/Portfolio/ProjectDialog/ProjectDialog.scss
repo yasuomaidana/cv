@@ -1,7 +1,14 @@
 @import "../../../scss/colors";
+@import "../../../scss/custom_tags.scss";
 .project_dialog_title{
     color: $primary !important;
 }
+@media (max-width: $sm){
+    .project_dialog_title{
+        font-size: 1em !important;
+    }
+}
+
 .project_dialog_content{
     font-size: larger !important;
 }

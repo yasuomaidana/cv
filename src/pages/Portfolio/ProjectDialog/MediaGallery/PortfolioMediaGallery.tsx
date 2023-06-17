@@ -26,7 +26,7 @@ const PortfolioMediaGallery: React.FC<PortfolioMediaGallerProps> = (
   const handleGalleryPause = () => {
     // Access and control the ImageGallery component using the ref
     if (imageGalleryRef.current) {
-      imageGalleryRef.current.play(true);
+      // imageGalleryRef.current.play(true);
     }
   };
 
@@ -57,6 +57,8 @@ const PortfolioMediaGallery: React.FC<PortfolioMediaGallerProps> = (
                 className="video-player"
                 onPlay={handleVideoPlay}
                 onPause={handleVideoPause}
+                width={"100%"}
+                height={"100%"}
               />
               <div className="image-gallery-description">
                 {portfolioItem.description}
@@ -92,7 +94,7 @@ const PortfolioMediaGallery: React.FC<PortfolioMediaGallerProps> = (
       showFullscreenButton={false}
       slideDuration={1500}
       slideInterval={500}
-      autoPlay={!isVideoPlaying}
+      autoPlay={false}
       infinite={true}
       showNav={false}
       onThumbnailClick={(event, index)=> {
