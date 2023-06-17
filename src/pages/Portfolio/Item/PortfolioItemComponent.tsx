@@ -47,7 +47,7 @@ const PortfolioItemComponent: React.FC<PortfolioItemComponentProps> = (
   };
   const max_length = 180;
   return (
-    <Grid item key={key} md={4}>
+    <Grid item key={key} md={4} sm={6} xs={12}>
       <Grow in timeout={1000}>
         <Card className="portfolio_card" onClick={() => handleClick(props)}>
           <CardActionArea>
