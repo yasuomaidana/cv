@@ -6,6 +6,7 @@ import socials from "../../utils/socials";
 import { SocialComponent } from "./SocialComponent/SocialComponent";
 import "./Header.scss";
 import Profile from "../Profile/Profile";
+import { md } from "../../utils/breakpoints";
 
 
 const Header = () => {
@@ -32,7 +33,7 @@ const Header = () => {
   useEffect(() => {
     const handleResize = () => {
       const screenWidth = window.innerWidth;
-      setIsSmallScreen(screenWidth <= 992); // Adjust the screen size threshold as needed
+      setIsSmallScreen(screenWidth <= md); // Adjust the screen size threshold as needed
     };
 
     window.addEventListener("resize", handleResize);

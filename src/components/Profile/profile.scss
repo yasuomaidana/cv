@@ -8,7 +8,7 @@
     display: inline-block;
     text-overflow: clip;
 
-    @media (max-width: $break-point){
+    @media (max-width: $md){
         .timeline{
             .first{
                 padding-left: 0px;

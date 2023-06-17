@@ -10,6 +10,7 @@ import {
 import PortfolioItemComponent from "./Item/PortfolioItemComponent";
 import "./Portfolio.scss";
 import ProjectDialog from "./ProjectDialog/ProjectDialog";
+import { md } from "../../utils/breakpoints";
 
 const Portfolio = () => {
   const [tabValue, setTabValue] = useState("All");
@@ -29,7 +30,7 @@ const Portfolio = () => {
   useEffect(() => {
     const handleResize = () => {
       const screenWidth = window.innerWidth;
-      setIsSmallScreen(screenWidth <= 992); // Adjust the screen size threshold as needed
+      setIsSmallScreen(screenWidth <= md); // Adjust the screen size threshold as needed
     };
 
     window.addEventListener("resize", handleResize);

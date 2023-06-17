@@ -40,7 +40,7 @@
         padding-left: 30px;
     }
 
-    @media (max-width: $break-point){
+    @media (max-width: $md){
         .first{
             padding-left: 1px !important;
         }

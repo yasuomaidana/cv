@@ -9,6 +9,7 @@ import Footer from "./components/Footer/Footer";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home/Home";
 import Certifications from "./pages/Certifications/Certifications";
+import { md } from "./utils/breakpoints";
 
 const App: React.FC = () => {
   const [isSmallScreen, setIsSmallScreen] = useState<boolean>(false);
@@ -16,7 +17,7 @@ const App: React.FC = () => {
   useEffect(() => {
     const handleResize = () => {
       const screenWidth = window.innerWidth;
-      setIsSmallScreen(screenWidth <= 992); // Adjust the screen size threshold as needed
+      setIsSmallScreen(screenWidth <= md); // Adjust the screen size threshold as needed
     };
 
     window.addEventListener("resize", handleResize);

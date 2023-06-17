@@ -1,8 +1,7 @@
 @import "../../../scss/colors";
 @import "../../../scss/custom_tags.scss";
-
-.resume_experience, .resume_academic{
-  height: 65vh; /* Set the desired height */
+.resume_academic{
+  height: min-content;
 }
 
 @mixin convertToScrollable {
@@ -46,13 +45,22 @@
       }
   }
 }
+
 .resume_experience {
+  margin-top: 0.5em !important;
   @include convertToScrollable();
 }
 
-@media (max-width: $break-point){
-  .resume_academic{
-    margin-top: 0.5em !important;
-    height: min-content;
-  }  
+@mixin generateExperienceHeigh($breakpoint, $height){
+  @media (min-width: $breakpoint){
+    .resume_experience{
+      height: $height;
+    }  
+  }
 }
+
+@include generateExperienceHeigh($xs, 60vh);
+@include generateExperienceHeigh($sm, 50vh);
+@include generateExperienceHeigh($md, 93vh);
+@include generateExperienceHeigh($lg, 72vh);
+@include generateExperienceHeigh($xl, 70vh);

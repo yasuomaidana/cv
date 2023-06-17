@@ -29,7 +29,7 @@
         }
     }
 
-    @media (max-width: $break-point) {
+    @media (max-width: $md) {
         display: block;
         .mail{
             font-size: smaller !important;
