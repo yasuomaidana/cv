@@ -3,11 +3,6 @@
 .project_dialog_title{
     color: $primary !important;
 }
-@media (max-width: $sm){
-    .project_dialog_title{
-        font-size: 1em !important;
-    }
-}
 
 .project_dialog_content{
     font-size: larger !important;
@@ -24,5 +19,28 @@
      .MuiSvgIcon-root:hover{
         color: $primary;
      }   
+    }
+}
+
+@media (max-width: $sm){
+    .project_dialog_title{
+        .MuiTypography-root{
+            font-size: 1em !important;    
+        }
+    }
+    .project_dialog_content{
+        font-size: medium !important;
+    }
+    .project_dialog_actions {
+        
+    
+        .project_dialog_icon{
+        
+        
+         .MuiSvgIcon-root{
+            font-size: 45px;
+         }
+         
+        }
     }
 }

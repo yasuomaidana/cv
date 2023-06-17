@@ -23,13 +23,6 @@ const PortfolioMediaGallery: React.FC<PortfolioMediaGallerProps> = (
     }
   };
 
-  const handleGalleryPause = () => {
-    // Access and control the ImageGallery component using the ref
-    if (imageGalleryRef.current) {
-      // imageGalleryRef.current.play(true);
-    }
-  };
-
   const handleVideoPlay = () => {
     setVideoPlaying(true);
     handleGalleryPlay();
@@ -37,7 +30,6 @@ const PortfolioMediaGallery: React.FC<PortfolioMediaGallerProps> = (
 
   const handleVideoPause = () => {
     setVideoPlaying(false);
-    handleGalleryPause();
   };
 
   if (portfolioMedia === undefined) return null;
@@ -57,6 +49,7 @@ const PortfolioMediaGallery: React.FC<PortfolioMediaGallerProps> = (
                 className="video-player"
                 onPlay={handleVideoPlay}
                 onPause={handleVideoPause}
+                playing = {isVideoPlaying}
                 width={"100%"}
                 height={"100%"}
               />
@@ -98,9 +91,11 @@ const PortfolioMediaGallery: React.FC<PortfolioMediaGallerProps> = (
       infinite={true}
       showNav={false}
       onThumbnailClick={(event, index)=> {
+        setVideoPlaying(false);
         imageGalleryRef.current?.slideToIndex(index); 
         imageGalleryRef.current?.play(false);
-      imageGalleryRef.current?.pause(true);}}
+      imageGalleryRef.current?.pause(true);
+      }}
     />
   );
 };
