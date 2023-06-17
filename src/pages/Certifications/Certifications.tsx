@@ -7,7 +7,17 @@ const Certifications = () => {
   const certifications_container = () =>
   <Grid container spacing={2}>
     
-    {certifications.map((certificate,key)=><CertificationItem certificate={certificate} key={key}/>)}
+    {certifications.sort((a, b) => {
+  // Place MainCertifications with child_certifications first
+  if (a.child_certifications && !b.child_certifications) {
+    return -1;
+  } else if (!a.child_certifications && b.child_certifications) {
+    return 1;
+  }
+
+  // Sort by date in descending order
+  return new Date(b.date).getTime() - new Date(a.date).getTime();
+}).map((certificate,key)=><CertificationItem certificate={certificate} key={key}/>)}
     
   </Grid>
   return (

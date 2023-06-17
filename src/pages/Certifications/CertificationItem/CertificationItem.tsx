@@ -121,6 +121,7 @@ const CertificationItem: React.FC<CertificationItemProps> = (props, key) => {
           variant="h6"
           fontStyle={"italic"}
           fontWeight={"bold"}
+          fontSize={{ xs: "smaller", sm: "small" }}
         >
           {child.title}
         </Typography>
@@ -184,7 +185,7 @@ const CertificationItem: React.FC<CertificationItemProps> = (props, key) => {
     );
 
   return (
-    <Grid item sm={6} xs={12} lg={4}>
+    <Grid item sm={6} xs={12} lg={4} >
       <Grow in timeout={1000}>
         {props.certificate.child_certifications
           ? renderWithChildCertificate(props.certificate)

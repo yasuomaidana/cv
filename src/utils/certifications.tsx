@@ -104,12 +104,6 @@ export const certifications: MainCertification[] = [
     url: "https://coursera.org/share/15d8d803b71f530299d82f730238c2a7",
   },
   {
-    icon: university_of_michigan,
-    title: "Capstone: Retrieving, Processing, and Visualizing Data with Python",
-    date: "Jan 2021",
-    url: "https://coursera.org/share/f9b12f8c733f5884397bd65639db7b32",
-  },
-  {
     icon: deeplearning_ai,
     title: "Deep Learning",
     date: "Jan 2021",
@@ -123,45 +117,48 @@ export const certifications: MainCertification[] = [
   },
   {
     icon: university_of_michigan,
-    title: "Programming for Everybody (Getting Started with Python)",
-    date: "Jan 2021",
-    url: "https://coursera.org/share/13feabf06c4421951899391b5f2298f7",
-  },
-  {
-    icon: university_of_michigan,
     title: "Python Classes and Inheritance",
     date: "Jan 2021",
     url: "https://coursera.org/share/73910e24a4b2a790f6afd977feed9dc2",
   },
   {
     icon: university_of_michigan,
-    title: "Python Data Structures",
-    date: "Jan 2021",
-    url: "https://coursera.org/share/fc8f411ff20e23976eddc203430a60cf",
-  },
-  {
-    icon: university_of_michigan,
     title: "Python for Everybody",
     date: "Jan 2021",
     url: "https://coursera.org/share/4994b6a184c8e3f64e7907ab3e1cec77",
+    child_certifications:[
+        {
+            title: "Capstone: Retrieving, Processing, and Visualizing Data with Python",
+            date: "Jan 2021",
+            url: "https://coursera.org/share/f9b12f8c733f5884397bd65639db7b32",
+          },
+          {
+            title: "Python Data Structures",
+            date: "Jan 2021",
+            url: "https://coursera.org/share/fc8f411ff20e23976eddc203430a60cf",
+          },
+          {
+            title: "Programming for Everybody (Getting Started with Python)",
+            date: "Jan 2021",
+            url: "https://coursera.org/share/13feabf06c4421951899391b5f2298f7",
+          },
+          {
+            title: "Using Python to Access Web Data",
+            date: "Jan 2021",
+            url: "https://coursera.org/share/a8bff6149b521197fd2673cdbd50f5d5",
+          },
+          {
+            title: "Using Databases with Python",
+            date: "Jan 2021",
+            url: "https://coursera.org/share/0293a0b4421367b7d44daed0ee1b0e21",
+          }
+    ]
   },
   {
     icon: deeplearning_ai,
     title: "Sequence Models",
     date: "Jan 2021",
     url: "https://coursera.org/share/8777a4c863d428c667d5685d1d5aa4ca",
-  },
-  {
-    icon: university_of_michigan,
-    title: "Using Databases with Python",
-    date: "Jan 2021",
-    url: "https://coursera.org/share/0293a0b4421367b7d44daed0ee1b0e21",
-  },
-  {
-    icon: university_of_michigan,
-    title: "Using Python to Access Web Data",
-    date: "Jan 2021",
-    url: "https://coursera.org/share/a8bff6149b521197fd2673cdbd50f5d5",
   },
   {
     icon: deeplearning_ai,
