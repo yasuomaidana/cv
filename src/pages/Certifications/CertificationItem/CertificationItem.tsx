@@ -65,15 +65,24 @@ const CertificationItem: React.FC<CertificationItemProps> = (props, key) => {
           <Avatar
             alt={certificate.title}
             src={certificate.icon}
-            sx={{ width: 80, height: 80 }}
+            sx={{
+              width: { sm: 60, md: 40 },
+              height: { sm: 60, md: 40 },
+            }}
           />
         }
         title={
-          <Typography variant="h6" fontStyle={"italic"} fontWeight={"bold"}>
+          <Typography
+            variant="h6"
+            fontStyle={"italic"}
+            fontWeight={"bold"}
+            fontSize={{ xs: "small", sm: "medium" }}
+          >
             {certificate.title}
           </Typography>
         }
         subheader={"Issued " + certificate.date}
+        sx={{ overflow: "clip", textOverflow: "ellipsis"}}
       />
       {content}
     </Card>
@@ -175,7 +184,7 @@ const CertificationItem: React.FC<CertificationItemProps> = (props, key) => {
     );
 
   return (
-    <Grid item xs={12} md={6}>
+    <Grid item sm={6} xs={12} lg={4}>
       <Grow in timeout={1000}>
         {props.certificate.child_certifications
           ? renderWithChildCertificate(props.certificate)
