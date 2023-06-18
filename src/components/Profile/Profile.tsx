@@ -24,7 +24,14 @@ const Profile = () => {
     <div className="profile container_shadow">
       <div className="profile_name">
         <Typography className="name">{contact.shortest_name}</Typography>
-        <Typography className="title">{contact.job}</Typography>
+        <Typography className="title">
+          {contact.job.split("\n").map((line, index) => (
+            <React.Fragment key={index}>
+              {line}
+              {index !== contact.job.length - 1 && <br />}
+            </React.Fragment>
+          ))}
+        </Typography>
       </div>
       <div className="profile_image_frame">
         <figure className="profile_image">
