@@ -1,3 +1,4 @@
+import EngineeringIcon from '@mui/icons-material/Engineering';
 export const contact = {
     full_name: "Yasuo Ignacio Maidana Pérez",
     short_name: "Yasuo I. Maidana P.",
@@ -5,6 +6,7 @@ export const contact = {
     email: "yasuo.maidana@vulpuxmecatroncus.com",
     birthday: "22 June 1996",
     major: "Mechatronics Engineering",
-    job: "Master's of Engineering (M1) \nShizuoka University, Japan"
+    job: "Master's of Engineering (M1) \nShizuoka University, Japan",
+    icon: <EngineeringIcon />
 }
 

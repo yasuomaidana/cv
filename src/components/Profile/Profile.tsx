@@ -3,7 +3,6 @@ import { Link, Typography } from "@mui/material";
 import TimeLine from "../TimeLine/TimeLine";
 import "./profile.scss";
 import ProfileInfo from "./ProfileInfo";
-import ContactsIcon from "@mui/icons-material/Contacts";
 import { contact } from "../../utils/contact";
 const Profile = () => {
   const profile_info = [
@@ -45,7 +44,7 @@ const Profile = () => {
         <TimeLine
           title={contact.full_name}
           children={profile_info}
-          icon={<ContactsIcon />}
+          icon={contact.icon}
         ></TimeLine>
       </div>
     </div>
