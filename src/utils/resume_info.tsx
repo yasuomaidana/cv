@@ -90,7 +90,7 @@ export const experiences:Experiences ={
         {
             place:"Encora",
             title: "Software Developer",
-            description: "Full stack software developer (Java Spring, JSTL, Microsoft SQL Server)\nCollaborated cross-functionally with multiple departments.",
+            description: "Full stack software developer (Java Spring, JSTL, Microsoft SQL Server)\nCross-functionally collaboration with multiple departments.",
             duration:{
                 start: "March 2021",
                 end:"September 2022"
@@ -100,7 +100,7 @@ export const experiences:Experiences ={
         {
             place:"Tecnologico de Monterrey",
             title: "IT Intern",
-            description: "Designing of new tools collaborative work.\nDesign of web application using Google Apps.",
+            description: "Desig of new collaborative work tools.\nDesign of web application using Google Apps.",
             duration:{
                 start: "May 2020",
                 end:"December 2020"
@@ -109,7 +109,7 @@ export const experiences:Experiences ={
         {
             place:"BBVA",
             title: "Assistant in Discipline's department (Part Time)",
-            description: "Research on Artificial Intelligence applications in banking and insurers bussiness.\nProcesses auditor.",
+            description: "Research on Artificial Intelligence applications in banking and insurers businesses.\nProcesses auditor.",
             duration:{
                 start: "July 2019",
                 end:"October 2019"
@@ -118,7 +118,7 @@ export const experiences:Experiences ={
         {
             place:"Nemak",
             title: "Lean Engineering Assistant",
-            description: "LEAN proccess analysis to improve plant productivity.",
+            description: "LEAN analysis to improve plant productivity.",
             duration:{
                 start: "May 2019",
                 end:"July 2019"
@@ -136,7 +136,7 @@ export const experiences:Experiences ={
         {
             place:"Mitacs - Concordia University",
             title: "Research Assistant",
-            description: "Technical support to master degree student.\nModifying and operation a 3D printer to print with experimental materials.",
+            description: "Technical support to a master's degree student\nModification and operation of a 3D printer to print with experimental materials.",
             duration:{
                 start: "July 2018",
                 end:"October 2018"
@@ -157,7 +157,7 @@ export const experiences:Experiences ={
         {
             place:"Instituto Tecnológico y De Estudios Superiores de Monterrey",
             title:"Mechatronic's Engineering",
-            description:"Academic mentor.\nPresident of my university's Japanese Culture Club",
+            description:"Academic Excellence Mentor.\nMinor in research and innovation.\nResearch assistant in the telecommunications and networks group.\nPresident of my university's Japanese Culture Club",
             duration:{
                 start:"August 2014",
                 end:"December 2020"
@@ -167,7 +167,7 @@ export const experiences:Experiences ={
         {
             place:"Coursera",
             title:"Self study courses",
-            description:"I've been practicing and studying topics related to computer science",
+            description:"Computer science and electronics related topics studies.",
             duration:{
                 start:"December 2020",
                 end:"Now"
