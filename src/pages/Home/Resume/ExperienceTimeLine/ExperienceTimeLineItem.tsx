@@ -16,7 +16,7 @@ const ExperienceTimeLineItem:React.FC<ExperienceTimeLineItemProps> = (props, key
     <TimelineContent key={key}>
       <Typography className="experience_item_title">{experienceTitle} - {place}</Typography>
       <Typography variant='caption' className='experience_item_date'>{duration}</Typography>
-      <Typography variant='body2' className="experience_item_description">{description}</Typography>
+      <Typography variant='body2' className="experience_item_description">{description.split("\n").map((line, ind)=><span key={ind}>{line}<br/></span>)}</Typography>
     </TimelineContent>
   )
 }
