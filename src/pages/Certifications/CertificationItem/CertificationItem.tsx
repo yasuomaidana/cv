@@ -59,7 +59,7 @@ const CertificationItem: React.FC<CertificationItemProps> = (props, key) => {
     certificate: MainCertification,
     content: JSX.Element
   ) => (
-    <Card>
+    <Card className={props.certificate.child_certifications ? "withChildren":""}>
       <CardHeader
         avatar={
           <Avatar
@@ -185,7 +185,7 @@ const CertificationItem: React.FC<CertificationItemProps> = (props, key) => {
     );
 
   return (
-    <Grid item sm={expanded? 12:6} xs={12} lg={expanded? 6:4} className={props.certificate.child_certifications ? "withChildren":""}>
+    <Grid item sm={expanded? 12:6} xs={12} lg={expanded? 6:4}>
       <Grow in timeout={1000}>
         {props.certificate.child_certifications
           ? renderWithChildCertificate(props.certificate)
