@@ -49,40 +49,10 @@ export const certifications: MainCertification[] = [
     url: "https://www.coursera.org/account/accomplishments/verify/C4WP4PLHUYM8",
   },
   {
-    icon: university_of_colorado_boulder,
-    title: "Magnetics for Power Electronic Converters",
-    date: "Sep 2022",
-    url: "https://www.coursera.org/account/accomplishments/verify/XQ9466L3Q7TY",
-  },
-  {
-    icon: university_of_colorado_boulder,
-    title: "Power Electronics",
-    date: "Sep 2022",
-    url: "https://www.coursera.org/account/accomplishments/specialization/7WGKTBXWCNJB",
-  },
-  {
-    icon: university_of_colorado_boulder,
-    title: "Converter Control",
-    date: "Aug 2022",
-    url: "https://coursera.org/verify/VK29TYKHVAF4",
-  },
-  {
     icon: the_hong_kong_university_of_science_and_technology,
     title: "Differential Equations for Engineers",
     date: "Aug 2022",
     url: "https://coursera.org/verify/KTMJENJDXS5S",
-  },
-  {
-    icon: university_of_colorado_boulder,
-    title: "Converter Circuits",
-    date: "Jul 2022",
-    url: "https://coursera.org/verify/8SDH5VWQ9MNC",
-  },
-  {
-    icon: university_of_colorado_boulder,
-    title: "Introduction to Power Electronics",
-    date: "Jun 2022",
-    url: "https://coursera.org/verify/SBZZD73UH9CD",
   },
   {
     icon: the_hong_kong_university_of_science_and_technology,
@@ -96,24 +66,6 @@ export const certifications: MainCertification[] = [
       "Multiplatform Mobile App Development with Web Technologies: Ionic and Cordova",
     date: "Apr 2021",
     url: "https://coursera.org/share/4be2c5c82ccb9e8680e1252c857259c9",
-  },
-  {
-    icon: the_hong_kong_university_of_science_and_technology,
-    title: "Front-End JavaScript Frameworks: Angular",
-    date: "Feb 2021",
-    url: "https://coursera.org/share/15d8d803b71f530299d82f730238c2a7",
-  },
-  {
-    icon: deeplearning_ai,
-    title: "Deep Learning",
-    date: "Jan 2021",
-    url: "https://coursera.org/share/a6476b812fae761ab7c684d7ce461541",
-  },
-  {
-    icon: the_hong_kong_university_of_science_and_technology,
-    title: "Front-End Web UI Frameworks and Tools: Bootstrap 4",
-    date: "Jan 2021",
-    url: "https://coursera.org/share/01dfba02c1a97ed19414ab735fab892b",
   },
   {
     icon: university_of_michigan,
@@ -156,15 +108,88 @@ export const certifications: MainCertification[] = [
   },
   {
     icon: deeplearning_ai,
-    title: "Sequence Models",
+    title: "Deep Learning",
     date: "Jan 2021",
-    url: "https://coursera.org/share/8777a4c863d428c667d5685d1d5aa4ca",
+    url: "https://coursera.org/share/a6476b812fae761ab7c684d7ce461541",
+    child_certifications:[
+      {
+        title: "Sequence Models",
+        date: "Jan 2021",
+        url: "https://coursera.org/share/8777a4c863d428c667d5685d1d5aa4ca",
+      },
+      {
+        title: "Structuring Machine Learning Projects",
+        date: "Aug 2020",
+        url: "https://www.coursera.org/account/accomplishments/certificate/D67QPH7DCJSH",
+      },
+      {
+        title:
+          "Improving Deep Neural Networks: Hyperparameter tuning, Regularization and Optimization",
+        date: "Aug 2020",
+        url: "https://www.coursera.org/account/accomplishments/certificate/77S7RKE2KAJ3",
+      },
+      {
+        title: "Convolutional Neural Networks",
+        date: "Oct 2020",
+        url: "https://coursera.org/share/8702783db7c596c050c113cabee4ef63",
+      },
+      {
+        title: "Neural Networks and Deep Learning",
+        date: "Aug 2020",
+        url: "https://www.coursera.org/account/accomplishments/certificate/XDEQBJWP32L5",
+      }
+    ]
   },
   {
-    icon: deeplearning_ai,
-    title: "Convolutional Neural Networks",
-    date: "Oct 2020",
-    url: "https://coursera.org/share/8702783db7c596c050c113cabee4ef63",
+    icon: the_hong_kong_university_of_science_and_technology,
+    title: "Full Stack Web Development with Angular",
+    date: "Jun 2021",
+    url: "https://coursera.org/verify/specialization/D2GUFAMBG7MM",
+    child_certifications:[
+      {
+        title: "Front-End JavaScript Frameworks: Angular",
+        date: "Feb 2021",
+        url: "https://coursera.org/share/15d8d803b71f530299d82f730238c2a7",
+      },
+      {
+        title: "Front-End Web UI Frameworks and Tools: Bootstrap 4",
+        date: "Jan 2021",
+        url: "https://coursera.org/share/01dfba02c1a97ed19414ab735fab892b",
+      },
+      {
+        title: "Server-side Development with NodeJS, Express and MongoDB",
+        date: "Jun 2021",
+        url: "https://coursera.org/verify/9SCK5JUE6J8F",
+      }
+    ]
+  },
+  {
+    icon: university_of_colorado_boulder,
+    title: "Power Electronics",
+    date: "Sep 2022",
+    url: "https://www.coursera.org/account/accomplishments/specialization/7WGKTBXWCNJB",
+    child_certifications:[
+      {
+        title: "Converter Control",
+        date: "Aug 2022",
+        url: "https://coursera.org/verify/VK29TYKHVAF4",
+      },
+      {
+        title: "Magnetics for Power Electronic Converters",
+        date: "Sep 2022",
+        url: "https://www.coursera.org/account/accomplishments/verify/XQ9466L3Q7TY",
+      },
+      {
+        title: "Introduction to Power Electronics",
+        date: "Jun 2022",
+        url: "https://coursera.org/verify/SBZZD73UH9CD",
+      },
+      {
+        title: "Converter Circuits",
+        date: "Jul 2022",
+        url: "https://coursera.org/verify/8SDH5VWQ9MNC",
+      }
+    ]
   },
   {
     icon: google,
@@ -177,31 +202,12 @@ export const certifications: MainCertification[] = [
     title: "Troubleshooting and Debugging Techniques",
     date: "Sep 2020",
     url: "https://www.coursera.org/account/accomplishments/certificate/85EJGEVJQ8YG",
-  },
-  {
-    icon: deeplearning_ai,
-    title:
-      "Improving Deep Neural Networks: Hyperparameter tuning, Regularization and Optimization",
-    date: "Aug 2020",
-    url: "https://www.coursera.org/account/accomplishments/certificate/77S7RKE2KAJ3",
-  },
+  }, 
   {
     icon: google,
     title: "Introduction to Git and GitHub",
     date: "Aug 2020",
     url: "https://www.coursera.org/account/accomplishments/certificate/NCLD2LUPREMQ",
-  },
-  {
-    icon: deeplearning_ai,
-    title: "Neural Networks and Deep Learning",
-    date: "Aug 2020",
-    url: "https://www.coursera.org/account/accomplishments/certificate/XDEQBJWP32L5",
-  },
-  {
-    icon: deeplearning_ai,
-    title: "Structuring Machine Learning Projects",
-    date: "Aug 2020",
-    url: "https://www.coursera.org/account/accomplishments/certificate/D67QPH7DCJSH",
   },
   {
     icon: coursera,

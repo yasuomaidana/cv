@@ -185,7 +185,7 @@ const CertificationItem: React.FC<CertificationItemProps> = (props, key) => {
     );
 
   return (
-    <Grid item sm={6} xs={12} lg={4} >
+    <Grid item sm={expanded? 12:6} xs={12} lg={expanded? 6:4} className={props.certificate.child_certifications ? "withChildren":""}>
       <Grow in timeout={1000}>
         {props.certificate.child_certifications
           ? renderWithChildCertificate(props.certificate)
