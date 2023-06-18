@@ -1,5 +1,6 @@
 import { SvgIconComponent, YouTube } from "@mui/icons-material";
-import port_folio_image from "../assets/images/fox.jpg"
+import pick_and_place_thumbnail from "../assets/images/portfolio/pick and place/thumbnail.jpg";
+import pick_and_place_bomb from "../assets/images/portfolio/pick and place/bomb.jpeg"
 import { Code } from "@mui/icons-material";
 
 export enum PortfolioTag{
@@ -32,18 +33,21 @@ export interface PortFolioItem {
 export const portfolioItems:PortFolioItem[] = [
     {
         tags: [PortfolioTag.Robotics, PortfolioTag.Coding, PortfolioTag.Electronics],
-        thumbnail: port_folio_image,
+        thumbnail: pick_and_place_thumbnail,
         title: "Pick and Place Machine",
         description: "This prototype is capable of holding electronic components and placing them into the working area. We incorporated a laser led to simulate micro soldering using laser technique",
         portFolioMedia:[
             {
                 youtube_id:"https://www.youtube.com/watch?v=HjTVGrmYySE",
-                description:"Pick and place wireless testing",
+                description:"Pick and place wireless demo",
                 thumbnail:"https://img.youtube.com/vi/HjTVGrmYySE/maxresdefault.jpg"
-            }, 
+            },{
+                image_link:pick_and_place_thumbnail,
+                image_description:"Pick and place machine"
+            },
             {
-                image_link:port_folio_image,
-                image_description:"aaa"
+                image_link:pick_and_place_bomb,
+                image_description:"Machine bomb"
             }
         ],
         links: [

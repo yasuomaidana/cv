@@ -1,52 +1,67 @@
 @import "../../../../../node_modules/react-image-gallery/styles/css/image-gallery.css";
 @import "../../../../scss/custom_tags.scss";
 
-.image-gallery-thumbnail-image{
-    max-height: 10vh;
-    max-width: 100%;
-    object-fit: contain;
+.image-gallery-thumbnail-image {
+  max-height: 10vh;
+  max-width: 100%;
+  object-fit: contain;
 }
 
 $height: 40vh;
 
-.image-gallery-slides{
-    height: $height;
+.image-gallery-slides {
+  height: $height;
+  max-width: 100%;
+}
+
+.image-gallery {
+  align-items: center;
+  align-self: center;
+}
+
+.image-gallery-slide {
+  &.center {
+    height: $height !important;
+    background-color: white;
+  }
+  .image-gallery-thumbnail-image {
     max-width: 100%;
+    max-height: $height;
+    object-fit: contain;
+  }
+  .video-wrapper {
+    height: $height;
+    min-width: 40vw;
+    .video-player {
+      width: 100%;
+    }
+  }
 }
 
-.image-gallery{
-    align-items: center;
-    align-self: center;
-}
-
-
-
-.image-gallery-slide{
-    &.center{
+@mixin generateHeight($breaker, $height) {
+  @media (max-width: $breaker) {
+    .image-gallery-slides {
+      height: $height;
+    }
+    .image-gallery-slide {
+      &.center {
         height: $height !important;
-        background-color: white; 
-    }
-    .image-gallery-thumbnail-image{
-        max-width: 100%;
+      }
+      .image-gallery-thumbnail-image {
+        
         max-height: $height;
-        object-fit: contain;
-    }    
-    .video-wrapper{
+      }
+      .video-wrapper {
         height: $height;
-        min-width: 40vw;
-        .video-player{
-            width: 100%;
-        }
+      }
     }
+  }
 }
 
-.image-gallery{
-    align-items: center;
-    align-self: center;
+.image-gallery {
+  align-items: center;
+  align-self: center;
 }
 
-// @include generateHeigh($xs, 60vh);
-// @include generateHeigh($sm, 50vh);
-// @include generateHeigh($md, 93vh);
-// @include generateHeigh($lg, 72vh);
-// @include generateHeigh($xl, 70vh);
+
+@include generateHeight($sm, 25vh);
