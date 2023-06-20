@@ -15,6 +15,8 @@ YoutubeMedia = namedtuple("YoutubeMedia", "youtube_id description thumbnail")
 ImageMedia = namedtuple("ImageMedia", "image_link image_description")
 Link = namedtuple("Link", "link icon")
 
+images_paths = []
+
 class PortfolioTag(Enum):
     Coding = 1
     Robotics = 2
@@ -43,9 +45,21 @@ def read_info(directory_root,filename):
     file.close()
     return(info)
 
-def get_images(files):
+def is_image_file(filename):
+    image_extensions = ['.jpg', '.jpeg', '.png', '.gif', '.bmp']
+    _, ext = os.path.splitext(filename)
+    return ext.lower() in image_extensions
+
+def get_images(root, files, project_name):
     
-    pass
+    files = list(filter(lambda x: is_image_file(x), files))
+    if len(files) ==0: return []
+    image_descriptions = list(map(lambda fn: os.path.splitext(fn)[0], files))
+    filenames = map(lambda fn: fn.replace(" ", "_").lower(),image_descriptions)
+    filenames = list(map(lambda fn : fn+"_img" if fn != "thumb" else project_name+"_thumb", filenames))
+    image_paths_ = list(map(lambda file: os.path.join(root,file).replace("src","..").replace("\\","/"), files))
+    
+    return [ImageMedia(fn,ds)._asdict() for fn,ds in zip(filenames,image_descriptions)]
 
 def get_tags(directory_root):
     return read_info(directory_root,"category")
@@ -117,7 +131,7 @@ for root, directories, files in os.walk("src/assets/portfolio"):
     tags = get_tags(root) 
     links = get_links(root)
     
-    print(files)
+    images = get_images(root,files,title)
 
     media = []
     print(f"title: {title}")
@@ -131,6 +145,7 @@ for root, directories, files in os.walk("src/assets/portfolio"):
     if links is not None: youtube_links = process_youtube_links(links)
 
     media += youtube_links
+    media += get_images(root,files,title) 
     print("----Object----")
     
     item = PortFolioItem(format_tag(tags), "thumbnail-value",media,title,"descr", formated_links)
