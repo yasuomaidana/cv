@@ -55,8 +55,11 @@ def get_images(root, files, project_name):
     files = list(filter(lambda x: is_image_file(x), files))
     if len(files) ==0: return []
     image_descriptions = list(map(lambda fn: os.path.splitext(fn)[0], files))
-    filenames = map(lambda fn: fn.replace(" ", "_").lower(),image_descriptions)
-    filenames = list(map(lambda fn : fn+"_img" if fn != "thumb" else project_name+"_thumb", filenames))
+
+    filenames = map(lambda fn : fn+"_img" if fn != "thumb" else project_name+"_thumb", image_descriptions)
+    filenames = map(lambda fn: str(fn).lower().replace(" ", "_"),filenames)
+    filenames = list(map(lambda fn : re.sub(r'^\d+',"",fn), filenames))
+    
     image_paths_ = list(map(lambda file: os.path.join(root,file).replace("src","..").replace("\\","/"), files))
     images_paths.extend((fn,ip) for fn,ip in zip(filenames,image_paths_))
     return [ImageMedia(fn,ds)._asdict() for fn,ds in zip(filenames,image_descriptions)]
@@ -123,7 +126,7 @@ def format_link(link):
     return Link(link, link_type)._asdict()
 
 def print_import(images):
-    f = "import {} from \"{}\""
+    f = "import {} from \"{}\";"
     for i in images:
         print(f.format(*i))
 
@@ -136,8 +139,6 @@ for root, directories, files in os.walk("src/assets/portfolio"):
     tags = get_tags(root) 
     links = get_links(root)
     
-    images = get_images(root,files,title)
-
     media = []
     print(f"title: {title}")
     print(f"tags:{tags}")
@@ -145,12 +146,13 @@ for root, directories, files in os.walk("src/assets/portfolio"):
 
     formated_links = None
     youtube_links = []
-
+    images_ = get_images(root,files,title) 
+    
     if links: formated_links = [format_link(link) for link in links]
     if links is not None: youtube_links = process_youtube_links(links)
 
     media += youtube_links
-    media += get_images(root,files,title) 
+    media += images_
     print("----Object----")
     
     item = PortFolioItem(format_tag(tags), "thumbnail-value",media,title,"descr", formated_links)
