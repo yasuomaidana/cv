@@ -54,7 +54,8 @@ def get_images(root, files, project_name):
     
     files = list(filter(lambda x: is_image_file(x), files))
     if len(files) ==0: return []
-    image_descriptions = list(map(lambda fn: os.path.splitext(fn)[0], files))
+    image_descriptions = map(lambda fn: os.path.splitext(fn)[0], files)
+    image_descriptions = list(map(lambda id: project_name+"_thumb" if id=="thumb" else id, image_descriptions))
 
     filenames = map(lambda fn : fn+"_img" if fn != "thumb" else project_name+"_thumb", image_descriptions)
     filenames = map(lambda fn: str(fn).lower().replace(" ", "_"),filenames)
@@ -130,6 +131,16 @@ def print_import(images):
     for i in images:
         print(f.format(*i))
 
+
+def select_thumbnail(yt_links, img_links, categories):
+    for i in img_links:
+        if "thumb" in i["image_link"]:
+            return i["image_link"]
+    if len(yt_links)>0:
+        return yt_links[0]["thumbnail"]
+    else:
+        return categories[0].lower()+"_icon"
+    
 links_collections = []
 
 for root, directories, files in os.walk("src/assets/portfolio"):
@@ -147,20 +158,20 @@ for root, directories, files in os.walk("src/assets/portfolio"):
     formated_links = None
     youtube_links = []
     images_ = get_images(root,files,title) 
-    
+
     if links: formated_links = [format_link(link) for link in links]
     if links is not None: youtube_links = process_youtube_links(links)
 
+    
     media += youtube_links
     media += images_
     print("----Object----")
     
-    item = PortFolioItem(format_tag(tags), "thumbnail-value",media,title,"descr", formated_links)
+    item = PortFolioItem(format_tag(tags), select_thumbnail(youtube_links, images_, tags),media,title,"descr", formated_links)
     item_dict = item._asdict()
-    json_data = json.dumps(item_dict, cls=EnumEncoder)
+    json_data = json.dumps(item_dict, cls=EnumEncoder, indent=4)
     print(json_data)
     print("--"*15)
     print('\n')
-    break
 
 print_import(images_paths)
