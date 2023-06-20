@@ -29,7 +29,7 @@ export interface PortFolioItem {
     thumbnail: string | React.ReactElement<SvgIconComponent>;
     portFolioMedia?: PortFolioMedia[];
     title: string;
-    description: string;
+    description: string | JSX.Element;
     links? : {link:string; icon:React.ReactElement<SvgIconComponent>}[]
 }
 export const portfolioItems:PortFolioItem[] = [
@@ -63,7 +63,7 @@ export const portfolioItems:PortFolioItem[] = [
         tags: [PortfolioTag.Robotics],
         thumbnail: <Code/>,
         title: "Pick and Place Machine",
-        description: "This prototype is capable of holding electronic components and placing them into the working area. We incorporated a laser led to simulate micro soldering using laser technique",
+        description: <><p><p>"This prototype is capable of holding electronic components and placing them into the working area. We incorporated a laser led to simulate micro soldering using laser technique"</p><p><p>"This prototype is capable of holding electronic components and placing them into the working area. We incorporated a laser led to simulate micro soldering using laser technique"</p></p></p></>,
         links: [
             {
                 link:"https://www.youtube.com/watch?v=HjTVGrmYySE",

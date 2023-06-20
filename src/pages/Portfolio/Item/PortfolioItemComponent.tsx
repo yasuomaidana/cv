@@ -45,6 +45,34 @@ const PortfolioItemComponent: React.FC<PortfolioItemComponentProps> = (
     props.handleToggle();
     props.handlePortfolioSelection(item);
   };
+  const extractTextFromElement = (element: React.ReactNode): string => {
+    if (typeof element === 'string') {
+      return element;
+    }
+  
+    if (Array.isArray(element)) {
+      return element.map(extractTextFromElement).join('');
+    }
+  
+    if (React.isValidElement(element)) {
+      const { children } = element.props;
+      if (children) {
+        return extractTextFromElement(children);
+      }
+    }
+  
+    return '';
+  };
+
+  const renderSimpleStringContent = (content:string) => content.length <= max_length ? content: content.substring(0, max_length) + " ..."
+  const renderContent = (content:string|JSX.Element) =>{
+    if (typeof(content) === "string"){
+      return <>{renderSimpleStringContent(content)}</>
+    }else{
+      const text = extractTextFromElement(content);
+      return renderSimpleStringContent(text)
+    }
+  }
   const max_length = 180;
   return (
     <Grid item key={key} md={4} sm={6} xs={12}>
@@ -55,9 +83,7 @@ const PortfolioItemComponent: React.FC<PortfolioItemComponentProps> = (
             <CardContent>
               <Typography className="portfolio_title">{item.title}</Typography>
               <Typography variant="body2" className="portfolio_description">
-                {
-                typeof item.description == 'string' && item.description.length <= max_length ? item.description
-                  : item.description.substring(0, max_length) + " ..."}
+                {renderContent(item.description)}
               </Typography>
             </CardContent>
           </CardActionArea>
