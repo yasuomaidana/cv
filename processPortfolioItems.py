@@ -119,10 +119,14 @@ def get_youtube_video_title(url):
 def process_youtube_link(link):
     pattern_shorts = r"shorts/([-_\w]+)"
     pattern_watch = r"watch\?v=([-_\w]+)"
+    weird_pattern = r"\.be\/([-_\w]+)"
     thumbnail = ""
     if re.search(pattern_shorts,link):
         identifier = re.search(pattern_shorts, link).group(1)
         thumbnail = f"https://i.ytimg.com/vi/{identifier}/maxresdefault.jpg"
+    elif re.search(weird_pattern,link):
+        identifier = re.search(weird_pattern, link).group(1)
+        thumbnail = f"https://img.youtube.com/vi/{identifier}/maxresdefault.jpg"
     else: 
         identifier = re.search(pattern_watch, link).group(1)
         thumbnail = f"https://img.youtube.com/vi/{identifier}/maxresdefault.jpg"

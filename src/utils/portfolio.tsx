@@ -1,5 +1,6 @@
 import { Article, Bolt, ControlCamera, GitHub, SvgIconComponent, YouTube } from "@mui/icons-material";
 import { Code } from "@mui/icons-material";
+import PrecisionManufacturingIcon from '@mui/icons-material/PrecisionManufacturing';
 import RecordVoiceOverIcon from '@mui/icons-material/RecordVoiceOver';
 import big_3d_printer_assembly_img from "../assets/portfolio/3D Printer assembly and modification/Big 3D printer assembly.jpg";
 import extrude_holder_modification_img from "../assets/portfolio/3D Printer assembly and modification/Extrude holder modification.jpg";
@@ -26,13 +27,15 @@ import race_participation_thumb_img from "../assets/portfolio/Race participation
 import talkshow_thumb_img from "../assets/portfolio/Talkshow/thumb.jpg";
 import presenting_my_algorithm_img from "../assets/portfolio/Universitas 21 Participation conference/Presenting my algorithm.jpg";
 import presenting_my_research_at_edinburgh_img from "../assets/portfolio/Universitas 21 Participation conference/Presenting my research at Edinburgh.jpg";
-const youtube_icon = <YouTube/>
-const github_icon = <GitHub/>
-const article = <Article/>
-const control_icon = <ControlCamera/>
-const coding_icon = <Code/>
-const speak_icon = <RecordVoiceOverIcon/>
-const electronics_icon = <Bolt/>
+
+const youtube_icon = <YouTube/>;
+const github_icon = <GitHub/>;
+const article = <Article/>;
+const control_icon = <ControlCamera/>;
+const coding_icon = <Code/>;
+const speak_icon = <RecordVoiceOverIcon/>;
+const electronics_icon = <Bolt/>;
+const robotics_icon = <PrecisionManufacturingIcon/>;
 
 export enum PortfolioTag{
     Coding = "Coding",
@@ -141,27 +144,32 @@ export const portfolioItems:PortFolioItem[] = [{
             PortfolioTag.Robotics,
             PortfolioTag.Electronics
         ],
-        "thumbnail": "https://i.ytimg.com/vi/kmFrTyMYOhA/maxresdefault.jpg",
+        "thumbnail": "https://i.ytimg.com/vi/Sk8VfzU36gk/maxresdefault.jpg",
         "portFolioMedia": [
+            {
+                "youtube_id": "https://youtube.com/shorts/Sk8VfzU36gk",
+                "description": "3D Printer part detection",
+                "thumbnail": "https://i.ytimg.com/vi/Sk8VfzU36gk/maxresdefault.jpg"
+            },
             {
                 "youtube_id": "https://youtube.com/shorts/kmFrTyMYOhA",
                 "description": "3D Printing with camera",
                 "thumbnail": "https://i.ytimg.com/vi/kmFrTyMYOhA/maxresdefault.jpg"
             },
             {
-                "image_link":  d_printer_assembly_img,
+                "image_link": d_printer_assembly_img,
                 "image_description": "3D printer assembly"
             },
             {
-                "image_link":  heat_bed_holder_img,
+                "image_link": heat_bed_holder_img,
                 "image_description": "Heat bed holder"
             },
             {
-                "image_link":  programming_3d_printer_img,
+                "image_link": programming_3d_printer_img,
                 "image_description": "Programming 3D printer"
             },
             {
-                "image_link":  zaxis_img,
+                "image_link": zaxis_img,
                 "image_description": "zaxis"
             }
         ],
@@ -178,6 +186,28 @@ export const portfolioItems:PortFolioItem[] = [{
             },
             {
                 "link": "https://github.com/yasuomaidana/3DPrinter_CV",
+                "icon": github_icon
+            }
+        ]
+    },{
+        "tags": [
+            PortfolioTag.Coding
+        ],
+        "thumbnail": coding_icon,
+        "portFolioMedia": [],
+        "title": "Computer vision",
+        "description": "Here you will find some programs done while practicing computer vision.",
+        "links": [
+            {
+                "link": "https://youtu.be/iTgGmqYT8Ys",
+                "icon": youtube_icon
+            },
+            {
+                "link": "https://github.com/yasuomaidana/computer_vision_Python",
+                "icon": github_icon
+            },
+            {
+                "link": "https://github.com/yasuomaidana/practiceCV",
                 "icon": github_icon
             }
         ]
@@ -213,7 +243,7 @@ export const portfolioItems:PortFolioItem[] = [{
             PortfolioTag.Robotics,
             PortfolioTag.Coding
         ],
-        "thumbnail": "https://i.ytimg.com/vi/sPqlvP9rh7g/maxresdefault.jpg",
+        "thumbnail": robotics_icon,
         "portFolioMedia": [
             {
                 "youtube_id": "https://youtube.com/shorts/sPqlvP9rh7g",
@@ -345,28 +375,6 @@ export const portfolioItems:PortFolioItem[] = [{
             {
                 "link": "https://youtube.com/shorts/gG_ksPUJqSk",
                 "icon": youtube_icon
-            }
-        ]
-    },{
-        "tags": [
-            PortfolioTag.Coding
-        ],
-        "thumbnail": coding_icon,
-        "portFolioMedia": [],
-        "title": "Computer vision",
-        "description": "Here you will find some programs done while practicing computer vision.",
-        "links": [
-            {
-                "link": "https://youtu.be/iTgGmqYT8Ys",
-                "icon": youtube_icon
-            },
-            {
-                "link": "https://github.com/yasuomaidana/computer_vision_Python",
-                "icon": github_icon
-            },
-            {
-                "link": "https://github.com/yasuomaidana/practiceCV",
-                "icon": github_icon
             }
         ]
     },{
