@@ -39,7 +39,7 @@ def read_info(directory_root,filename):
     if not os.path.exists(path): 
         return None
     
-    with open(path) as file:
+    with open(path, 'r',encoding='utf-8') as file:
         for line in file.readlines():
             info.append(line.replace("\n",""))
     file.close()
@@ -141,6 +141,9 @@ def print_import(images):
     for i in images:
         print(f.format(*i))
 
+def writes_import(images):
+    f = "import {} from \"{}\";\n"
+    return [f.format(*i) for i in images]
 
 def select_thumbnail(yt_links, img_links, categories):
     for i in img_links:
@@ -152,17 +155,13 @@ def select_thumbnail(yt_links, img_links, categories):
         return categories[0].lower()+"_icon"
     
 links_collections = []
+json_data = []
 
 
-print_import(images_paths)
-
-print("==="*15)
-print("==="*15)
-print()
-print()
 for root, directories, files in os.walk("src/assets/portfolio"):
     if os.path.basename(root) == "portfolio": continue
     title = os.path.basename(root)
+    print(title)
     tags = get_tags(root) 
     links = get_links(root)
     
@@ -181,8 +180,11 @@ for root, directories, files in os.walk("src/assets/portfolio"):
     
     item = PortFolioItem(format_tag(tags), select_thumbnail(youtube_links, images_, tags),media,title,process_text_file(root), formated_links)
     item_dict = item._asdict()
-    json_data = json.dumps(item_dict, cls=EnumEncoder, indent=4)
-    print(json_data)
-    
-    
+    json_data.append(json.dumps(item_dict, cls=EnumEncoder, indent=4))
+        
 
+with open("processedPortFolioItems.json","w") as outfile:
+    outfile.writelines(writes_import(images_paths))
+    outfile.writelines(json_data)
+    
+outfile.close()
