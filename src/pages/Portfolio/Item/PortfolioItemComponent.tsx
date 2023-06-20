@@ -55,8 +55,8 @@ const PortfolioItemComponent: React.FC<PortfolioItemComponentProps> = (
             <CardContent>
               <Typography className="portfolio_title">{item.title}</Typography>
               <Typography variant="body2" className="portfolio_description">
-                {item.description.length <= max_length
-                  ? item.description
+                {
+                typeof item.description == 'string' && item.description.length <= max_length ? item.description
                   : item.description.substring(0, max_length) + " ..."}
               </Typography>
             </CardContent>

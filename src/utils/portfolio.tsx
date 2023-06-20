@@ -1,12 +1,14 @@
 import { SvgIconComponent, YouTube } from "@mui/icons-material";
-import pick_and_place_thumbnail from "../assets/portfolio/pick and place/thumbnail.jpg";
-import pick_and_place_bomb from "../assets/portfolio/pick and place/bomb.jpeg"
+import pick_and_place_thumbnail from "../assets/portfolio/Pick and Place Machine/thumb.jpg";
+import pick_and_place_bomb from "../assets/portfolio/Pick and Place Machine/Machine Bomb.jpeg"
 import { Code } from "@mui/icons-material";
 
 export enum PortfolioTag{
     Coding = "Coding",
     Robotics = "Robotics",
-    Electronics = "Electronics"
+    Electronics = "Electronics",
+    Control = "Control",
+    Other = "Other"
 }
 
 export interface ImageMedia {

@@ -1,0 +1,6 @@
+Here you can find some projects where I have been practicing my full stack programming skills.
+Some techonolgies used are:
+No-relational databases: Mongo
+Backend: Node - express
+Frontend: Angular, React (Javascrpt, Typescript)
+Docker

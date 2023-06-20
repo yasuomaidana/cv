@@ -1,0 +1,1 @@
+In this project we simulated a line follower car by using coppelia simulator and a PID controller that ensure an steady velocity while following the line.

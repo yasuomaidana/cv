@@ -1,0 +1,3 @@
+In this project we built a car that uses a NI-Myrio board.
+We used that board to get wireless connection by using wifi and tcp-ip.
+We controlled the car using Nintendo switch controllers, and we also controlled some servomotors to place some box in a given place.

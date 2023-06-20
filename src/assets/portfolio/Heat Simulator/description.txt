@@ -1,0 +1,1 @@
+In this I simulated a building and its interaction with outside environment. The temperature control will be done by opening and closing some windows. This program will be done using Matlab and MatlabSimulink

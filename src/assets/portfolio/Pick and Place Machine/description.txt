@@ -1,0 +1,5 @@
+This prototype simulates a car that has an alcohol sensor.
+Here when the alcohol sensor reaches a given threshold it will disable manual control and will enter into automatic mode. 
+In the automatic mode it will follow a given route.
+The concept is to design a car that detects when the driver has been drinking and doesn't not allow him to drive.
+Personally, I think that this should be a MUST by law characteristic when the autonomous vehicles technology has matured.

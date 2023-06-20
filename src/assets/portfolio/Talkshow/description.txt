@@ -1,0 +1,3 @@
+I presented a workshop about antennas and telecomunications.
+In that workshop I explained the key parts and process of a telecomunication systems. 
+As an excersice we sent a signal by using infrared leds.

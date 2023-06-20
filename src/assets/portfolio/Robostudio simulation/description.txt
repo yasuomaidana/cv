@@ -1,0 +1,3 @@
+In this project we are simulating a MacbookPro line assembly.
+We designed the tools used by ABB robots. We also designed the working cell. 
+You can also see another robot simulation.
