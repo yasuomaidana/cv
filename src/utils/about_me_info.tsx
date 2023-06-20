@@ -23,13 +23,11 @@ export const about_me = (
       I enjoy programming too much that I worked professionally in that industry
       for a while. My first contact with programming was through simulations,
       and since then it has become one of my favorite hobbies.
-      <br />I also love machine learning-related topics, I found very
-      interesting the analysis of our way of thinking and how to replicate it.
+      <br />I also love machine learning related topics, I find the analysis of our way of thinking and how to replace it very interesting.
     </p>
 
     <p>
-      I'm always looking for opportunities/exciting projects where I can learn
-      new things and mix my current knowledge.
+    I'm always looking for opportunities/exciting projects where I can learn new thing and integrate my current knowledge
     </p>
   </Typography>
 );
