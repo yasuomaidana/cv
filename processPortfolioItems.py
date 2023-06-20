@@ -43,9 +43,12 @@ def read_info(directory_root,filename):
     file.close()
     return(info)
 
+def get_images(files):
+    
+    pass
+
 def get_tags(directory_root):
     return read_info(directory_root,"category")
-
 
 def get_links(directory_root):
     return read_info(directory_root,"links")
@@ -97,7 +100,6 @@ def process_youtube_link(link):
         thumbnail = f"https://img.youtube.com/vi/{identifier}/maxresdefault.jpg"
     return YoutubeMedia(link,get_youtube_video_title(link),thumbnail)._asdict()
 
-
 def process_youtube_links(links):
     to_convert = filter(is_youtube_link,links)
     return list(map(process_youtube_link,to_convert))
@@ -105,13 +107,18 @@ def process_youtube_links(links):
 def format_link(link):
     link_type =  "youtube_icon" if is_youtube_link(link) else extract_domain(link)+"_icon"
     return Link(link, link_type)._asdict()
+
 links_collections = []
+
 for root, directories, files in os.walk("src/assets/portfolio"):
     if os.path.basename(root) == "portfolio": continue
     print("--"*15)
     title = os.path.basename(root)
     tags = get_tags(root) 
     links = get_links(root)
+    
+    print(files)
+
     media = []
     print(f"title: {title}")
     print(f"tags:{tags}")
@@ -133,8 +140,3 @@ for root, directories, files in os.walk("src/assets/portfolio"):
     print("--"*15)
     print('\n')
     break
-
-# for i in links_collections:
-#     for j in i:
-#         if (is_youtube_link(j)):
-#             print(j)
