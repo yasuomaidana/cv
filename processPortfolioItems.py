@@ -100,7 +100,7 @@ def process_youtube_link(link):
 
 def process_youtube_links(links):
     to_convert = filter(is_youtube_link,links)
-    print(list(map(process_youtube_link,to_convert)))
+    return list(map(process_youtube_link,to_convert))
 
 def format_link(link):
     link_type =  "youtube_icon" if is_youtube_link(link) else extract_domain(link)+"_icon"
@@ -112,21 +112,27 @@ for root, directories, files in os.walk("src/assets/portfolio"):
     title = os.path.basename(root)
     tags = get_tags(root) 
     links = get_links(root)
+    media = []
     print(f"title: {title}")
     print(f"tags:{tags}")
     print(f"links:{links}")
+
     formated_links = None
+    youtube_links = []
+
     if links: formated_links = [format_link(link) for link in links]
-    if links is not None: process_youtube_links(links)
+    if links is not None: youtube_links = process_youtube_links(links)
+
+    media += youtube_links
     print("----Object----")
     
-    item = PortFolioItem(format_tag(tags),"portFolioMedia","media",title,"descr", formated_links)
+    item = PortFolioItem(format_tag(tags), "thumbnail-value",media,title,"descr", formated_links)
     item_dict = item._asdict()
     json_data = json.dumps(item_dict, cls=EnumEncoder)
     print(json_data)
     print("--"*15)
     print('\n')
-
+    break
 
 # for i in links_collections:
 #     for j in i:
