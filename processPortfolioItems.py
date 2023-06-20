@@ -8,6 +8,8 @@ import json
 from collections import namedtuple
 import os
 
+import requests
+
 PortFolioItem = namedtuple("PortFolioItem","tags thumbnail portFolioMedia title description links")
 YoutubeMedia = namedtuple("YoutubeMedia", "youtube_id description thumbnail")
 ImageMedia = namedtuple("ImageMedia", "image_link image_description")
@@ -73,6 +75,32 @@ def extract_domain(link):
     return match.group(1)
   else:
     return None
+  
+def get_youtube_video_title(url):
+    response = requests.get(url)
+    soup = BeautifulSoup(response.text, 'html.parser')
+    title_element = soup.select_one('meta[name="title"]')
+    if title_element:
+        return title_element['content']
+    else:
+        return None
+
+def process_youtube_link(link):
+    pattern_shorts = r"shorts/([-_\w]+)"
+    pattern_watch = r"watch\?v=([-_\w]+)"
+    thumbnail = ""
+    if re.search(pattern_shorts,link):
+        identifier = re.search(pattern_shorts, link).group(1)
+        thumbnail = f"https://i.ytimg.com/vi/{identifier}/maxresdefault.jpg"
+    else: 
+        identifier = re.search(pattern_watch, link).group(1)
+        thumbnail = f"https://img.youtube.com/vi/{identifier}/maxresdefault.jpg"
+    return YoutubeMedia(link,get_youtube_video_title(link),thumbnail)._asdict()
+
+
+def process_youtube_links(links):
+    to_convert = filter(is_youtube_link,links)
+    print(list(map(process_youtube_link,to_convert)))
 
 def format_link(link):
     link_type =  "youtube_icon" if is_youtube_link(link) else extract_domain(link)+"_icon"
@@ -89,7 +117,7 @@ for root, directories, files in os.walk("src/assets/portfolio"):
     print(f"links:{links}")
     formated_links = None
     if links: formated_links = [format_link(link) for link in links]
-    if links is not None: links_collections.append(links)
+    if links is not None: process_youtube_links(links)
     print("----Object----")
     
     item = PortFolioItem(format_tag(tags),"portFolioMedia","media",title,"descr", formated_links)
@@ -100,7 +128,7 @@ for root, directories, files in os.walk("src/assets/portfolio"):
     print('\n')
 
 
-for i in links_collections:
-    for j in i:
-        if (is_youtube_link(j)):
-            print(j)
+# for i in links_collections:
+#     for j in i:
+#         if (is_youtube_link(j)):
+#             print(j)
