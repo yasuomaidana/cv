@@ -1,0 +1,29 @@
+This page:  https://github.com/yasuomaidana/cv
+Machine learning practice: https://github.com/yasuomaidana/introduction-to-machine-learning, https://github.com/yasuomaidana/MachineLearning
+Computer vision: https://github.com/yasuomaidana/computer_vision_Python, https://github.com/yasuomaidana/practiceCV, https://www.youtube.com/watch?v=iTgGmqYT8Ys&ab_channel=YasuoIgnacioMaidanaP%C3%A9rez
+
+Micronaut practice: https://github.com/yasuomaidana/mp-to-do-app
+Front end practice: React practice: https://github.com/yasuomaidana/introduciton_to_react, https://github.com/yasuomaidana/FullStackWebDevelopmentCourse
+
+Spring security practice: https://github.com/yasuomaidana/SpringSecuirty, https://github.com/yasuomaidana/Spring-Course
+Space Vector Modulation analysis and explanation: https://github.com/yasuomaidana/inverter_variables_analyzer, https://github.com/yasuomaidana/PWM-analysis
+Installer creation: https://github.com/yasuomaidana/GimelStudio
+
+Coppelia simulation: https://github.com/yasuomaidana/miniproyectoControl
+
+Rubick Color detector and solver: https://github.com/yasuomaidana/rubick_CVS_ColorDetector
+Heat simulator: https://github.com/yasuomaidana/heat_simulator
+
+water leak detection: https://github.com/yasuomaidana/waterLeakDetection
+
+ARX simulation: https://github.com/yasuomaidana/proyectocontrol
+
+
+Gcode modifier: https://github.com/yasuomaidana/GcodeModifier
+
+
+infrared comunication: https://www.youtube.com/watch?v=UvoJGhWkylA&ab_channel=YasuoIgnacioMaidanaP%C3%A9rez
+
+Robostudio simulation:https://www.youtube.com/watch?v=t4dSEgFsC7k&ab_channel=YasuoIgnacioMaidanaP%C3%A9rez
+
+Robot simulations: https://www.youtube.com/watch?v=H91mjzYlOIs&ab_channel=YasuoIgnacioMaidanaP%C3%A9rez

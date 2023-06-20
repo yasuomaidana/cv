@@ -1,6 +1,6 @@
 import { SvgIconComponent, YouTube } from "@mui/icons-material";
-import pick_and_place_thumbnail from "../assets/images/portfolio/pick and place/thumbnail.jpg";
-import pick_and_place_bomb from "../assets/images/portfolio/pick and place/bomb.jpeg"
+import pick_and_place_thumbnail from "../assets/portfolio/pick and place/thumbnail.jpg";
+import pick_and_place_bomb from "../assets/portfolio/pick and place/bomb.jpeg"
 import { Code } from "@mui/icons-material";
 
 export enum PortfolioTag{
@@ -40,7 +40,7 @@ export const portfolioItems:PortFolioItem[] = [
             {
                 youtube_id:"https://www.youtube.com/watch?v=HjTVGrmYySE",
                 description:"Pick and place wireless demo",
-                thumbnail:"https://img.youtube.com/vi/HjTVGrmYySE/maxresdefault.jpg"
+                thumbnail:"https://img.youtube.com/vi/HjTVGrmYySE/maxresdefault.jpg" //https://i.ytimg.com/vi/uqGu26pprZs/maxres2.jpg
             },{
                 image_link:pick_and_place_thumbnail,
                 image_description:"Pick and place machine"
@@ -64,7 +64,7 @@ export const portfolioItems:PortFolioItem[] = [
         description: "This prototype is capable of holding electronic components and placing them into the working area. We incorporated a laser led to simulate micro soldering using laser technique",
         links: [
             {
-                link:"https://www.youtube.com/watch?v=HjTVGrmYySE&ab_channel=YasuoIgnacioMaidanaP%C3%A9rez",
+                link:"https://www.youtube.com/watch?v=HjTVGrmYySE",
                 icon: <YouTube/>
             }
         ]
