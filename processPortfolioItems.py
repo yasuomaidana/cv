@@ -156,20 +156,18 @@ links_collections = []
 
 print_import(images_paths)
 
-
+print("==="*15)
+print("==="*15)
+print()
+print()
 for root, directories, files in os.walk("src/assets/portfolio"):
     if os.path.basename(root) == "portfolio": continue
-    print("--"*15)
     title = os.path.basename(root)
     tags = get_tags(root) 
     links = get_links(root)
     
     media = []
-    print(f"title: {title}")
-    print(f"tags:{tags}")
-    print(f"links:{links}")
-    print(process_text_file(root))
-
+    
     formated_links = None
     youtube_links = []
     images_ = get_images(root,files,title) 
@@ -180,13 +178,11 @@ for root, directories, files in os.walk("src/assets/portfolio"):
     
     media += youtube_links
     media += images_
-    print("----Object----")
     
     item = PortFolioItem(format_tag(tags), select_thumbnail(youtube_links, images_, tags),media,title,process_text_file(root), formated_links)
     item_dict = item._asdict()
     json_data = json.dumps(item_dict, cls=EnumEncoder, indent=4)
     print(json_data)
-    print("--"*15)
-    print('\n')
+    
     
 
