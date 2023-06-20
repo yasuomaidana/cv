@@ -1,7 +1,7 @@
 import { Article, Bolt, ControlCamera, GitHub, SvgIconComponent, YouTube } from "@mui/icons-material";
 import { Code } from "@mui/icons-material";
 import PrecisionManufacturingIcon from '@mui/icons-material/PrecisionManufacturing';
-import RecordVoiceOverIcon from '@mui/icons-material/RecordVoiceOver';
+// import RecordVoiceOverIcon from '@mui/icons-material/RecordVoiceOver';
 import big_3d_printer_assembly_img from "../assets/portfolio/3D Printer assembly and modification/Big 3D printer assembly.jpg";
 import extrude_holder_modification_img from "../assets/portfolio/3D Printer assembly and modification/Extrude holder modification.jpg";
 import d_printer_assembly_and_modification_thumb_img from "../assets/portfolio/3D Printer assembly and modification/thumb.jpeg";
@@ -33,7 +33,7 @@ const github_icon = <GitHub/>;
 const article = <Article/>;
 const control_icon = <ControlCamera/>;
 const coding_icon = <Code/>;
-const speak_icon = <RecordVoiceOverIcon/>;
+// const speak_icon = <RecordVoiceOverIcon/>;
 const electronics_icon = <Bolt/>;
 const robotics_icon = <PrecisionManufacturingIcon/>;
 
@@ -72,8 +72,13 @@ export const portfolioItems:PortFolioItem[] = [{
         PortfolioTag.Electronics,
         PortfolioTag.Coding
     ],
-    "thumbnail": pick_and_place_machine_thumb_img,
+    "thumbnail": "https://img.youtube.com/vi/HjTVGrmYySE/maxresdefault.jpg",
     "portFolioMedia": [
+        {
+            "youtube_id": "https://www.youtube.com/watch?v=HjTVGrmYySE",
+            "description": "Pick and place machine",
+            "thumbnail": "https://img.youtube.com/vi/HjTVGrmYySE/maxresdefault.jpg"
+        },
         {
             "image_link":  machine_bomb_img,
             "image_description": "Machine Bomb"
@@ -193,8 +198,12 @@ export const portfolioItems:PortFolioItem[] = [{
         "tags": [
             PortfolioTag.Coding
         ],
-        "thumbnail": coding_icon,
-        "portFolioMedia": [],
+        "thumbnail": "https://img.youtube.com/vi/iTgGmqYT8Ys/maxresdefault.jpg",
+        "portFolioMedia": [{
+            "youtube_id": "https://youtube.com/shorts/iTgGmqYT8Ys",
+            "description": "Color filtering",
+            "thumbnail": "https://img.youtube.com/vi/iTgGmqYT8Ys/maxresdefault.jpg"
+        }],
         "title": "Computer vision",
         "description": "Here you will find some programs done while practicing computer vision.",
         "links": [
@@ -240,6 +249,25 @@ export const portfolioItems:PortFolioItem[] = [{
     },{
         "tags": [
             PortfolioTag.Electronics,
+            PortfolioTag.Coding
+        ],
+        "thumbnail": "https://img.youtube.com/vi/apyTDFR0g5s/maxresdefault.jpg",
+        "portFolioMedia": [{
+            "youtube_id": "https://youtu.be/apyTDFR0g5s",
+            "description": "Poteto process simulation",
+            "thumbnail": "https://img.youtube.com/vi/apyTDFR0g5s/maxresdefault.jpg"
+        }],
+        "title": "Poteto process simulation",
+        "description": <><p>In this project we simulated a chip poteto factory using PLC and ladder programming.</p><p>An electrical interface was develop to make the connection between the PLC and the platform.</p><p>It was done using Siemens' PLC</p></>,
+        "links": [
+            {
+                "link": "https://youtu.be/apyTDFR0g5s",
+                "icon": youtube_icon
+            }
+        ]
+    },{
+        "tags": [
+            PortfolioTag.Electronics,
             PortfolioTag.Robotics,
             PortfolioTag.Coding
         ],
@@ -269,9 +297,9 @@ export const portfolioItems:PortFolioItem[] = [{
             PortfolioTag.Coding
         ],
         "thumbnail": control_icon,
-        "portFolioMedia": [],
+        
         "title": "ARMAX simulation",
-        "description": <><p>Here is a ARMAX model simulation using python.</p><p></p><p></p><p>The ARMAX model is a type of time series model that combines autoregressive (AR), moving average (MA), and exogenous inputs to capture and predict the behavior of a system.</p><p></p><p>In an ARMAX model, the dependent variable is regressed on its own lagged values (autoregressive component), the lagged values of error terms (moving average component), and exogenous input variables. The ARMAX model is commonly used in econometrics and time series analysis to analyze and forecast the behavior of variables influenced by both their own past values and external factors.</p><p></p><p>The ARMAX model can be expressed as follows:</p><p></p><p>y(t) = c + \u03a3(\u03c6(i) * y(t-i)) + \u03a3(\u03b8(j) * \u03b5(t-j)) + \u03b2' * x(t)</p><p></p><p>where:</p><p></p><p>y(t) is the dependent variable at time t.</p><p>c is a constant term.</p><p>\u03c6(i) are the autoregressive coefficients.</p><p>\u03b5(t-j) are the error terms at time t-j.</p><p>\u03b8(j) are the moving average coefficients.</p><p>x(t) represents the exogenous input variables at time t.</p><p>\u03b2' is a vector of coefficients corresponding to the exogenous inputs.</p><p>The ARMAX model is useful in situations where the behavior of a system is influenced by both its own past values and external factors. By incorporating exogenous inputs, the model can account for the impact of these external factors on the system's behavior, improving the accuracy of predictions and control.</p></>,
+        "description": <><p>Here is a ARMAX model simulation using python.</p><p></p><p></p><p>The ARMAX model is a type of time series model that combines autoregressive (AR), moving average (MA), and exogenous inputs to capture and predict the behavior of a system.</p><p></p><p>In an ARMAX model, the dependent variable is regressed on its own lagged values (autoregressive component), the lagged values of error terms (moving average component), and exogenous input variables. The ARMAX model is commonly used in econometrics and time series analysis to analyze and forecast the behavior of variables influenced by both their own past values and external factors.</p><p></p><p>The ARMAX model is useful in situations where the behavior of a system is influenced by both its own past values and external factors. By incorporating exogenous inputs, the model can account for the impact of these external factors on the system's behavior, improving the accuracy of predictions and control.</p></>,
         "links": [
             {
                 "link": "https://github.com/yasuomaidana/proyectocontrol",
@@ -283,7 +311,7 @@ export const portfolioItems:PortFolioItem[] = [{
             PortfolioTag.Coding
         ],
         "thumbnail": coding_icon,
-        "portFolioMedia": [],
+        
         "title": "Backend Practice",
         "description": <><p>Here you can find some backend practicing projects some of them were made by using Java-Spring and the newest one was done by using Micronaut-Kotlin.</p><p>Here are other techonolgies used:</p><p>Databases: MySql, Postgress</p><p>Docker</p><p>Postman</p><p></p><p>I focused a bit on Spring-Security I developed processors to generate role base authentication and autorization automated security layers.</p><p></p></>,
         "links": [
@@ -384,7 +412,7 @@ export const portfolioItems:PortFolioItem[] = [{
             PortfolioTag.Robotics
         ],
         "thumbnail": control_icon,
-        "portFolioMedia": [],
+        
         "title": "Coppelia Simulation",
         "description": "In this project we simulated a line follower car by using coppelia simulator and a PID controller that ensure an steady velocity while following the line.",
         "links": [
@@ -398,7 +426,7 @@ export const portfolioItems:PortFolioItem[] = [{
             PortfolioTag.Coding
         ],
         "thumbnail": coding_icon,
-        "portFolioMedia": [],
+        
         "title": "Full Stack Practice",
         "description": <><p>Here you can find some projects where I have been practicing my full stack programming skills.</p><p>Some techonolgies used are:</p><p>No-relational databases: Mongo</p><p>Backend: Node - express</p><p>Frontend: Angular, React (Javascrpt, Typescript)</p><p>Docker</p></>,
         "links": [
@@ -416,7 +444,7 @@ export const portfolioItems:PortFolioItem[] = [{
             PortfolioTag.Coding
         ],
         "thumbnail": coding_icon,
-        "portFolioMedia": [],
+        
         "title": "Gimmel installer",
         "description": <><p>I generated an installer for GimmelStudio project. This installer was done for MacOs.</p><p>The installer is smart enough to check if it has all the requierements to run the program, if not, it install them.</p></>,
         "links": [
@@ -431,7 +459,7 @@ export const portfolioItems:PortFolioItem[] = [{
             PortfolioTag.Coding
         ],
         "thumbnail": control_icon,
-        "portFolioMedia": [],
+        
         "title": "Heat Simulator",
         "description": "In this I simulated a building and its interaction with outside environment. The temperature control will be done by opening and closing some windows. This program will be done using Matlab and MatlabSimulink",
         "links": [
@@ -485,7 +513,7 @@ export const portfolioItems:PortFolioItem[] = [{
             PortfolioTag.Coding
         ],
         "thumbnail": coding_icon,
-        "portFolioMedia": [],
+        
         "title": "Machine learning Practice",
         "description": "Here you can find my programs done while studying machine learning.",
         "links": [
@@ -541,21 +569,6 @@ export const portfolioItems:PortFolioItem[] = [{
         ]
     },{
         "tags": [
-            PortfolioTag.Electronics,
-            PortfolioTag.Coding
-        ],
-        "thumbnail": electronics_icon,
-        "portFolioMedia": [],
-        "title": "Poteto process simulation",
-        "description": <><p>In this project we simulated a chip poteto factory using PLC and ladder programming.</p><p>An electrical interface was develop to make the connection between the PLC and the platform.</p><p>It was done using Siemens' PLC</p></>,
-        "links": [
-            {
-                "link": "https://youtu.be/apyTDFR0g5s",
-                "icon": youtube_icon
-            }
-        ]
-    },{
-        "tags": [
             PortfolioTag.Other
         ],
         "thumbnail": race_participation_thumb_img,
@@ -604,7 +617,7 @@ export const portfolioItems:PortFolioItem[] = [{
             PortfolioTag.Robotics
         ],
         "thumbnail": coding_icon,
-        "portFolioMedia": [],
+        
         "title": "Rubick color detector and solver",
         "description": <><p>This project runs a rubick cube.</p><p>It is able to shuffle it, and then by computer vision solves it.</p><p></p></>,
         "links": [
@@ -619,7 +632,7 @@ export const portfolioItems:PortFolioItem[] = [{
             PortfolioTag.Coding
         ],
         "thumbnail": control_icon,
-        "portFolioMedia": [],
+        
         "title": "Space Vector Modulation Analysis and Explanation",
         "description": <><p>This project is still on development. I want to explain how PWM and Space vector modulation works.</p><p>Here I have been using Python, Ltspice, PSIM, and control theory.</p></>,
         "links": [
@@ -661,7 +674,7 @@ export const portfolioItems:PortFolioItem[] = [{
             PortfolioTag.Coding
         ],
         "thumbnail": coding_icon,
-        "portFolioMedia": [],
+        
         "title": "This website",
         "description": "This awesome website was done using react-typescript.",
         "links": [
