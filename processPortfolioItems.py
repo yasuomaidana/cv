@@ -45,6 +45,16 @@ def read_info(directory_root,filename):
     file.close()
     return(info)
 
+def process_text_file(directory_root):
+    
+    lines = read_info(directory_root,"description")
+    if len(lines) == 1:
+        return lines[0].strip()
+    elif len(lines) > 1:
+        processed_lines = ''.join(f'<p>{line.strip()}</p>' for line in lines)
+        return f'<>{processed_lines}</>'
+    return ''
+
 def is_image_file(filename):
     image_extensions = ['.jpg', '.jpeg', '.png', '.gif', '.bmp']
     _, ext = os.path.splitext(filename)
@@ -143,6 +153,10 @@ def select_thumbnail(yt_links, img_links, categories):
     
 links_collections = []
 
+
+print_import(images_paths)
+
+
 for root, directories, files in os.walk("src/assets/portfolio"):
     if os.path.basename(root) == "portfolio": continue
     print("--"*15)
@@ -154,6 +168,7 @@ for root, directories, files in os.walk("src/assets/portfolio"):
     print(f"title: {title}")
     print(f"tags:{tags}")
     print(f"links:{links}")
+    print(process_text_file(root))
 
     formated_links = None
     youtube_links = []
@@ -167,11 +182,11 @@ for root, directories, files in os.walk("src/assets/portfolio"):
     media += images_
     print("----Object----")
     
-    item = PortFolioItem(format_tag(tags), select_thumbnail(youtube_links, images_, tags),media,title,"descr", formated_links)
+    item = PortFolioItem(format_tag(tags), select_thumbnail(youtube_links, images_, tags),media,title,process_text_file(root), formated_links)
     item_dict = item._asdict()
     json_data = json.dumps(item_dict, cls=EnumEncoder, indent=4)
     print(json_data)
     print("--"*15)
     print('\n')
+    
 
-print_import(images_paths)
