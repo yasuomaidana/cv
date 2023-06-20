@@ -58,7 +58,7 @@ def get_images(root, files, project_name):
     filenames = map(lambda fn: fn.replace(" ", "_").lower(),image_descriptions)
     filenames = list(map(lambda fn : fn+"_img" if fn != "thumb" else project_name+"_thumb", filenames))
     image_paths_ = list(map(lambda file: os.path.join(root,file).replace("src","..").replace("\\","/"), files))
-    
+    images_paths.extend((fn,ip) for fn,ip in zip(filenames,image_paths_))
     return [ImageMedia(fn,ds)._asdict() for fn,ds in zip(filenames,image_descriptions)]
 
 def get_tags(directory_root):
@@ -122,6 +122,11 @@ def format_link(link):
     link_type =  "youtube_icon" if is_youtube_link(link) else extract_domain(link)+"_icon"
     return Link(link, link_type)._asdict()
 
+def print_import(images):
+    f = "import {} from \"{}\""
+    for i in images:
+        print(f.format(*i))
+
 links_collections = []
 
 for root, directories, files in os.walk("src/assets/portfolio"):
@@ -155,3 +160,5 @@ for root, directories, files in os.walk("src/assets/portfolio"):
     print("--"*15)
     print('\n')
     break
+
+print_import(images_paths)
