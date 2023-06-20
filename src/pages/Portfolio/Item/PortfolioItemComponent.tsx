@@ -5,11 +5,12 @@ import {
   CardMedia,
   Grid,
   Grow,
+  SvgIcon,
   Typography,
 } from "@mui/material";
 import React from "react";
 import { PortFolioItem } from "../../../utils/portfolio";
-import { Code, SvgIconComponent } from "@mui/icons-material";
+import { SvgIconComponent } from "@mui/icons-material";
 import "./PortfolioItemComponent.scss";
 
 interface PortfolioItemComponentProps {
@@ -32,9 +33,10 @@ const renderMedia = (
     />
   ) : (
     <CardMedia
-      component={Code}
-      sx={{ height: 140, margin: "auto", fontSize: "5rem" }}
-    />
+      className="portfolio_card_icon"
+      component={SvgIcon}
+      sx={{ height: 140, margin: "auto", fontSize: "5rem"}}
+    >{media_item}</CardMedia>
   );
 const PortfolioItemComponent: React.FC<PortfolioItemComponentProps> = (
   props,

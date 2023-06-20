@@ -19,6 +19,20 @@ const Portfolio = () => {
   const [selectedPortfolio, setselectedPortfolio] =
     useState<PortFolioItem | null>(null);
 
+  const sortByThumbnailPriority = (a:PortFolioItem, b:PortFolioItem) => {
+    // Check if 'thumbnail' is a string for both objects
+    const isStringA = typeof a.thumbnail === "string";
+    const isStringB = typeof b.thumbnail === "string";
+  
+    // Sort by priority: string value comes first
+    if (isStringA && !isStringB) {
+      return -1;
+    } else if (!isStringA && isStringB) {
+      return 1;
+    } else {
+      return 0; // Maintain the original order if both are strings or elements
+    }
+  };
   const handleProjectDialogToggle = () => {
     setProjectDialogOpen((prevOpen) => !prevOpen);
   };
@@ -58,11 +72,13 @@ const Portfolio = () => {
     />
   );
   const renderAll = () => {
-    return portfolioItems.map((item, key) => renderItem(item, key));
+
+    return portfolioItems.sort(sortByThumbnailPriority).map((item, key) => renderItem(item, key));
   };
 
   const renderByTag = (tag: string) => {
     return portfolioItems
+    .sort(sortByThumbnailPriority)
       .filter((item, index) =>
         item.tags
           .map((tagi) => tagi.valueOf().toLowerCase())

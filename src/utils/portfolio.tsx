@@ -1,4 +1,5 @@
-import { Article, Bolt, ControlCamera, GitHub, SvgIconComponent, YouTube } from "@mui/icons-material";
+import { Article, ControlCamera, GitHub, SvgIconComponent, YouTube } from "@mui/icons-material";
+//, Bolt
 import { Code } from "@mui/icons-material";
 import PrecisionManufacturingIcon from '@mui/icons-material/PrecisionManufacturing';
 // import RecordVoiceOverIcon from '@mui/icons-material/RecordVoiceOver';
@@ -34,7 +35,7 @@ const article = <Article/>;
 const control_icon = <ControlCamera/>;
 const coding_icon = <Code/>;
 // const speak_icon = <RecordVoiceOverIcon/>;
-const electronics_icon = <Bolt/>;
+// const electronics_icon = <Bolt/>;
 const robotics_icon = <PrecisionManufacturingIcon/>;
 
 export enum PortfolioTag{
@@ -279,7 +280,7 @@ export const portfolioItems:PortFolioItem[] = [{
                 "thumbnail": "https://i.ytimg.com/vi/sPqlvP9rh7g/maxresdefault.jpg"
             }
         ],
-        "title": "Arduino projects",
+        "title": "Arduino Projects",
         "description": <><p>In this repository you can find several programs done using arduino.</p><p></p><p>Some of them are:</p><p>Arduino cars</p><p>Arduino interfaces</p><p>An elevator</p><p>Servo motor controller</p></>,
         "links": [
             {
@@ -472,6 +473,20 @@ export const portfolioItems:PortFolioItem[] = [{
         "tags": [
             PortfolioTag.Other
         ],
+        "thumbnail": maes_nomination_thumb_img,
+        "portFolioMedia": [
+            {
+                "image_link":  maes_nomination_thumb_img,
+                "image_description": "Maes Nomination_thumb"
+            }
+        ],
+        "title": "Maes Nomination",
+        "description": "I was nominated as best Excellence Academic Mentor by my university Tec de Monterrey.",
+        
+    },{
+        "tags": [
+            PortfolioTag.Other
+        ],
         "thumbnail": inc_enterpreneour_participation_thumb_img,
         "portFolioMedia": [
             {
@@ -526,20 +541,6 @@ export const portfolioItems:PortFolioItem[] = [{
         "tags": [
             PortfolioTag.Other
         ],
-        "thumbnail": maes_nomination_thumb_img,
-        "portFolioMedia": [
-            {
-                "image_link":  maes_nomination_thumb_img,
-                "image_description": "Maes Nomination_thumb"
-            }
-        ],
-        "title": "Maes Nomination",
-        "description": "I was nominated as best Excellence Academic Mentor by my university Tec de Monterrey.",
-        
-    },{
-        "tags": [
-            PortfolioTag.Other
-        ],
         "thumbnail": position_algorithm_thumb_img,
         "portFolioMedia": [
             {
@@ -559,7 +560,7 @@ export const portfolioItems:PortFolioItem[] = [{
                 "image_description": "Position algorithm_thumb"
             }
         ],
-        "title": "Position algorithm",
+        "title": "Position algorithm development",
         "description": <><p>You can appreciate part of my work done in my publication with my university telecomunication department.</p><p>My contribuitons were data collection and a linear position localization algortihm development.</p><p>I did it using Matlab.</p></>,
         "links": [
             {
