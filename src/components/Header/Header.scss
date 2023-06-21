@@ -1,0 +1,132 @@
+@import "../../scss/colors";
+@import "../../scss/custom_tags.scss";
+.navbar{
+    padding: 0;
+  }
+.header {
+  background-color: $light;
+  border-radius: 10px;
+  padding-right: 1em;
+  
+  font-size: larger;
+  box-shadow: 0px 2px 92px 0px $gray-300;
+  margin-bottom: 1.5em;
+  height: 2.5em;
+  
+  .header_link {
+    
+    color: $dark;
+    border-radius: 10px;
+    &:hover {
+      color: $secondary;
+      background-color: $primary;
+    }
+    border-radius: 10px;
+    font-weight: 500;
+    text-decoration: none;
+    font-size: medium;
+    margin-left: 1em;
+    margin-right: 1em;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .header_active {
+    color: $light;
+    background-color: $dark;
+    border-radius: 10px;
+    font-weight: 500;
+    text-decoration: none;
+    font-size: medium;
+    margin-left: 1em;
+    margin-right: 1em;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .navbar-brand{
+    color: $dark;
+    display: flex;
+    justify-content: center; /* Horizontally center the icon */
+    align-items: center;
+    height: 2em;
+    padding-left: 0.5em;
+  }
+  .home_link_active{
+    .navbar-brand{
+        color: $light;
+    }
+    background-color: $dark;
+    border-radius: 10px;
+  }
+
+  .home_icon{
+    height: inherit;
+    display: flex;
+    justify-content: center; /* Horizontally center the icon */
+    align-items: center;
+    > span > svg{
+        font-size: 40px;
+    }
+  }
+  .header_left{
+    margin-right: auto;
+
+  }
+  .header_right{
+    display: flex;
+    align-items: center;
+    > a > .MuiSvgIcon-root{
+        font-size: 36px;
+        margin-right: 12px;
+        color: $primary;
+    }
+  }
+}
+
+@media (max-width: $md) {
+  .header {
+    margin-top: 2%;
+  }
+  .navbar-collapse{
+    padding-top: 1em;
+    text-align: center;
+    background-color: $dark;
+    padding-bottom: 1em;
+  }
+  .header {
+    background-color: $light;
+    .header_link {
+      color: $info;
+      padding: 6px;
+      &:hover {
+        color: $primary;
+        background-color: $light;
+      }
+    }
+    .header_active {
+      color: $white;
+      font-weight: bolder;
+      padding: 6px;
+    }
+  
+
+    .home_link_active{
+      .navbar-brand{
+          color: $light;
+      }
+      background-color: $dark;
+      border-radius: 10px;
+    }
+    .header_right{
+      display: block;
+      align-items: center !important;
+      > a > .MuiSvgIcon-root{
+          color: $info;
+      }
+    }
+    .menu_toggler{
+      border: 0;
+    }
+  }  
+
+}

@@ -1,0 +1,46 @@
+@import "../../../scss/colors";
+@import "../../../scss/custom_tags.scss";
+.project_dialog_title{
+    color: $primary !important;
+}
+
+.project_dialog_content{
+    font-size: larger !important;
+}
+.project_dialog_actions {
+    justify-content: center !important;
+
+    .project_dialog_icon{
+        color: $dark;
+        cursor: pointer;
+     .MuiSvgIcon-root{
+        font-size: 60px;
+     }
+     .MuiSvgIcon-root:hover{
+        color: $primary;
+     }   
+    }
+}
+
+@media (max-width: $sm){
+    .project_dialog_title{
+        .MuiTypography-root{
+            font-size: 1em !important;    
+        }
+    }
+    .project_dialog_content{
+        font-size: medium !important;
+    }
+    .project_dialog_actions {
+        
+    
+        .project_dialog_icon{
+        
+        
+         .MuiSvgIcon-root{
+            font-size: 45px;
+         }
+         
+        }
+    }
+}

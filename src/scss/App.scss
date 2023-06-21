@@ -1,0 +1,62 @@
+@import "../../node_modules/bootstrap/scss/bootstrap";
+@import "colors";
+@import "./custom_tags.scss";
+.AppContainer{
+    margin-top: 2%;
+    // max-width: 100% !important;
+    // padding-left: 5% !important;
+    // padding-right: 5% !important;
+}
+.Content{
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+}
+
+main{
+    background-color: $background;
+    min-height: 100vh;
+    margin-bottom: 2%;
+    border-radius: 10px;
+    // box-shadow: 0px 0px 5px rgba(100, 100, 255, 1);
+    box-shadow: 0px 0px 10px rgba($primary, .75);
+    padding: 1em;
+}
+
+.section_title{
+    position: relative;
+    display: inline-block;
+    padding: 0 3px;
+    .text{
+        font-size: 18px;
+        font-weight: 600;
+        position: relative;
+        margin: 0;
+        color: $dark;
+    }
+    span{
+        position: absolute;
+        width: 100%;
+        background-color: $primary;
+        opacity: 0.7;
+        height: 7px;
+        bottom: 0;
+        left: 0;
+        border-radius: 1px 1px 4px 4px;
+    }
+    margin-bottom: 30px;   
+}
+.about_me_text{
+    color: $primary;
+    line-height: 22px !important;
+    white-space: pre-line;
+    
+}
+
+@media (max-width: $md){
+    .AppContainer{
+        margin-top: 1%;
+    }
+    main{
+        margin-top: 2%;
+    }   
+}

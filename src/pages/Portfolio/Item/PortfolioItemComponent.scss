@@ -1,0 +1,19 @@
+@import "../../../scss/colors";
+.portfolio_card{
+    height: 100%;
+    max-width: 350px;
+    overflow: hidden;
+    outline-width: 0px !important;
+}
+.portfolio_title{
+    font-weight: bold !important;
+    text-align: center;
+    color: $primary;
+}
+.portfolio_description{
+    color: $primary;
+    font-weight: 400;
+}
+.portfolio_card_icon{
+    color: $dark;
+}

@@ -1,0 +1,7 @@
+In this project we replicated the characteristics shown in the small version. 
+Therefeore:
+In this project we use a raspberry pi 3B to control a car using wifi.
+We also used a H-Bridge board to control the weels.
+We controlled the car using voice commands by using google home and firebase platform.
+
+However we also added a servomotor.

@@ -1,0 +1,42 @@
+@mixin topMargin($number) {
+  .top_#{$number} {
+    margin-top: #{$number}px;
+  }
+}
+
+@mixin marginsB($number) {
+  .mb_#{$number} {
+    margin-bottom: #{$number}px;
+  }
+}
+
+@mixin paddingsB($number) {
+  .pb_#{$number} {
+    padding-bottom: #{$number}px;
+  }
+}
+@mixin paddingsT($number) {
+  .pt_#{$number} {
+    padding-top: #{$number}px;
+  }
+}
+@mixin paddings($number) {
+  .p_#{$number} {
+    padding: #{$number}px;
+  }
+}
+
+@each $value in (60, 30) {
+  @include topMargin($value);
+}
+
+@include paddingsB(45);
+@include paddingsT(45);
+@include paddings(30);
+@include marginsB(30);
+
+$xs: 0px;
+$sm: 600px;
+$md: 900px;
+$lg: 1200px;
+$xl: 1536px;

@@ -1,0 +1,57 @@
+@import "../../scss/colors";
+@import "../../scss/custom_tags.scss";
+
+.profile{
+    background-color: var(--light);
+    border-radius: 6px;
+    width: 100%;
+    display: inline-block;
+    text-overflow: clip;
+
+    @media (max-width: $md){
+        .timeline{
+            .first{
+                padding-left: 0px;
+            }
+            .separator_padding{
+                padding-left: 16px;
+            }
+        }   
+    }
+}
+
+.profile_name{
+    line-height: 18px;
+    padding: 20px;
+
+    .name{
+        text-transform: uppercase;
+        font-size: 17px;
+        font-weight: bolder;
+        color: var(--primary);
+    }
+
+    .title{
+        font-size: 15px;
+        font-weight: bold;
+        color: var(--dark);
+    }
+}
+.profile_image_frame{
+    padding: 1em !important;
+}
+.profile_image{
+    margin-top: -10px;
+    overflow: hidden;
+    border-radius: 6px;
+    img{
+        width: 100%;
+        transform: translate(-15%, 25%) scale(2.5);
+    }
+}
+
+#root > div > div > div.MuiGrid-root.MuiGrid-item.MuiGrid-grid-xs-12.MuiGrid-grid-sm-12.MuiGrid-grid-md-4.MuiGrid-grid-lg-3.css-3p2wky-MuiGrid-root > div > div.profile_information > ul > li:nth-child(5) > div.MuiTypography-root.MuiTypography-body1.MuiTimelineContent-root.MuiTimelineContent-positionRight.css-18y2uza-MuiTypography-root-MuiTimelineContent-root > a{
+    text-decoration: none;
+    color: var(--primary);
+}
+

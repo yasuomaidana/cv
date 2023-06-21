@@ -1,0 +1,8 @@
+Here you can find some backend practicing projects some of them were made by using Java-Spring and the newest one was done by using Micronaut-Kotlin.
+Here are other techonolgies used:
+Databases: MySql, Postgress
+Docker
+Postman
+
+I focused a bit on Spring-Security I developed processors to generate role base authentication and autorization automated security layers.
+

@@ -1,0 +1,2 @@
+This project is still on development. I want to explain how PWM and Space vector modulation works.
+Here I have been using Python, Ltspice, PSIM, and control theory.

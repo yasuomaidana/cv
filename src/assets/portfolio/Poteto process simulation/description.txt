@@ -1,0 +1,3 @@
+In this project we simulated a chip poteto factory using PLC and ladder programming.
+An electrical interface was develop to make the connection between the PLC and the platform.
+It was done using Siemens' PLC

@@ -1,0 +1,1 @@
+This was my graduation project. In this project we designed a 3D printer that has computer vision system. The computer vision system is able to detect the printed part and record a video of the selected region. The goal was to create a video database to train a NN. 

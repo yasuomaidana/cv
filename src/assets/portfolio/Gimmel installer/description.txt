@@ -1,0 +1,2 @@
+I generated an installer for GimmelStudio project. This installer was done for MacOs.
+The installer is smart enough to check if it has all the requierements to run the program, if not, it install them. 

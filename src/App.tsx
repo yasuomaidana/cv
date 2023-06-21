@@ -1,26 +1,59 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.scss';
-import { Container, Grid } from '@mui/material';
-import Profile from './components/Profile/Profile';
+import React, { useEffect, useState } from "react";
+import "./scss/App.scss";
+import { Container, Grid } from "@mui/material";
+import Profile from "./components/Profile/Profile";
+import Header from "./components/Header/Header";
+import Portfolio from "./pages/Portfolio/Portfolio";
+import Footer from "./components/Footer/Footer";
 
-function App() {
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home/Home";
+import Certifications from "./pages/Certifications/Certifications";
+import { md } from "./utils/breakpoints";
+
+const App: React.FC = () => {
+  const [isSmallScreen, setIsSmallScreen] = useState<boolean>(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      const screenWidth = window.innerWidth;
+      setIsSmallScreen(screenWidth <= md); // Adjust the screen size threshold as needed
+    };
+
+    window.addEventListener("resize", handleResize);
+    handleResize();
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, [isSmallScreen]);
+
   return (
-    <Container>
+    <Container className="AppContainer">
       <Grid container>
-        <Grid item xs={12} sm={12} md={4} lg={3} style={{backgroundColor:'blue'}}>
-          <Profile/>
-        </Grid>
-        <Grid item xs style={{backgroundColor:'red'}}>
-          Header<br/>
-          Porfolio
-          Resume<br/>
-          Footer
+        {!isSmallScreen && (
+          <Grid item xs={12} md={4}>
+            {" "}
+            <Profile />
+          </Grid>
+        )}
 
+        <Grid item xs className="Content">
+          <BrowserRouter>
+            <Header></Header>
+            <main>
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/portfolio" element={<Portfolio />} />
+                <Route path="/certifications" element={<Certifications />} />
+              </Routes>
+            </main>
+          </BrowserRouter>
+          <Footer></Footer>
         </Grid>
       </Grid>
     </Container>
   );
-}
+};
 
 export default App;

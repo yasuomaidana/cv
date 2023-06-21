@@ -1,0 +1,41 @@
+@import "../../../scss/colors";
+@import "../../../scss/custom_tags.scss";
+.certification_timeline{
+    .MuiTimelineOppositeContent-root{
+        flex: 0.2;
+        padding-left: 0;
+    }
+    .MuiTimelineDot-root{
+        border-color: var(--dark);
+        background-color: rgba(0,0,0 , 0);
+    }
+}
+
+.show_certificates_text {
+    padding-left: 0.5em !important;
+    color: rgba($primary,0.7);
+}
+
+.children_title{
+    color: rgba($primary,1);
+}
+
+.button_certificate{
+    margin-left: auto !important;
+    text-transform: none !important;
+    font-size: medium !important;
+}
+.children_see{
+    font-size: smaller !important;
+    text-transform: none !important;
+}
+
+@media (max-width: $md){
+    .show_certificates_text {
+        padding-left: 1em !important;
+    }   
+}
+// .withChildren{
+//     border-style: solid;
+//     border-color: rgba($primary,0.3);
+// }
