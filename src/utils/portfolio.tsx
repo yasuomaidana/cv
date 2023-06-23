@@ -474,15 +474,22 @@ export const portfolioItems: PortFolioItem[] = [
     title: "Car controlled by TCP-IP and Labview",
     description: (
       <>
-        <p>In this project we built a car that uses a NI-Myrio board.</p>
+        <p>In this project, we built a delivery car using a NI-myRIO board.</p>
         <p>
-          We used that board to get wireless connection by using wifi and
-          tcp-ip.
+          We used the myRIO board to get a wireless connection by wifi and
+          TCP-IP. We controlled the car using Nintendo Switch controllers.
+          <br />
+          Characteristics:
         </p>
-        <p>
-          We controlled the car using Nintendo switch controllers, and we also
-          controlled some servomotors to place some box in a given place.
-        </p>
+        <ul>
+          <li>
+            This robot has a servomotor and a piston used to deliver boxes.
+          </li>
+          <li>It also has a led display.</li>
+          <li>The motors are controlled by H-bridges.</li>
+          <li>It is powered by a Lithium battery.</li>
+        </ul>
+        <p>All the logic was done using LabView.</p>
       </>
     ),
     links: [
