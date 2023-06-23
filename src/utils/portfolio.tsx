@@ -675,9 +675,9 @@ export const portfolioItems: PortFolioItem[] = [
         image_description: "Maes Nomination_thumb",
       },
     ],
-    title: "Maes Nomination",
+    title: "Maes' Nomination",
     description:
-      "I was nominated as best Excellence Academic Mentor by my university Tec de Monterrey.",
+      "I was nominated as the best Excellence Academic Mentor by my university Tec de Monterrey.",
   },
   {
     tags: [PortfolioTag.Other],
