@@ -93,7 +93,7 @@ export const portfolioItems: PortFolioItem[] = [
       },
       {
         image_link: pick_and_place_machine_thumb_img,
-        image_description: "Pick and Place Machine_thumb",
+        image_description: "Pick and Place Machine",
       },
     ],
     title: "Pick and Place Machine",
@@ -144,7 +144,7 @@ export const portfolioItems: PortFolioItem[] = [
       },
       {
         image_link: d_printer_assembly_and_modification_thumb_img,
-        image_description: "3D Printer assembly and modification_thumb",
+        image_description: "3D Printer assembly and modification",
       },
       {
         image_link:
@@ -514,7 +514,7 @@ export const portfolioItems: PortFolioItem[] = [
     portFolioMedia: [
       {
         image_link: car_controlled_by_voice_thumb_img,
-        image_description: "Car controlled by voice_thumb",
+        image_description: "Car controlled by voice",
       },
     ],
     title: "Car controlled by voice",
@@ -557,24 +557,32 @@ export const portfolioItems: PortFolioItem[] = [
       },
       {
         image_link: car_controlled_by_voice_v2_thumb_img,
-        image_description: "Car controlled by voice v2_thumb",
+        image_description: "Car controlled by voice v2",
       },
     ],
     title: "Car controlled by voice v2",
     description: (
       <>
         <p>
-        In this project, we replicated the characteristics shown in the smaller version.
+          In this project, we replicated the characteristics shown in the
+          smaller version.
         </p>
         <p>Therefeore:</p>
         <ul>
-            <li>It was done with a Raspberry Pi 3B to control a car through wifi</li>
-            <li>The car was controlled using voice commands using google home and Firebase platforms</li>
+          <li>
+            It was done with a Raspberry Pi 3B to control a car through wifi
+          </li>
+          <li>
+            The car was controlled using voice commands using google home and
+            Firebase platforms
+          </li>
         </ul>
         <p>And we add the following changes:</p>
         <ul>
-            <li>H-Bridge boards were changed by Mosfet's H-Bridge done by ourselves</li>
-            <li>A servomotor was added</li>
+          <li>
+            H-Bridge boards were changed by Mosfet's H-Bridge done by ourselves
+          </li>
+          <li>A servomotor was added</li>
         </ul>
       </>
     ),
@@ -672,7 +680,7 @@ export const portfolioItems: PortFolioItem[] = [
     portFolioMedia: [
       {
         image_link: maes_nomination_thumb_img,
-        image_description: "Maes Nomination_thumb",
+        image_description: "Maes Nomination",
       },
     ],
     title: "Maes' Nomination",
@@ -685,19 +693,20 @@ export const portfolioItems: PortFolioItem[] = [
     portFolioMedia: [
       {
         image_link: inc_enterpreneour_participation_thumb_img,
-        image_description: "INC Enterpreneour Participation_thumb",
+        image_description: "INC Entrepreneur Participation",
       },
     ],
-    title: "INC Enterpreneour Participation",
+    title: "INC Entrepreneur Participation",
     description: (
       <>
         <p>
-          I had the opportunity to participate in the INCmty enterpreneurship
+          I had the opportunity to participate in the INCmty entrepreneurship
           conference.
         </p>
+        <p>I took business innovation workshops.</p>
         <p>
-          Here I took workshops related to innovaction, how to start bussiness,
-          price strategies and other interesting bussiness topics.
+          I also attended how to Start a business, price strategies, and
+          branding talks.
         </p>
       </>
     ),
@@ -717,7 +726,7 @@ export const portfolioItems: PortFolioItem[] = [
       },
       {
         image_link: line_follower_with_alcohol_sensor_car_thumb_img,
-        image_description: "Line follower with alcohol sensor car_thumb",
+        image_description: "Line follower with alcohol sensor car",
       },
     ],
     title: "Line follower with alcohol sensor car",
@@ -778,7 +787,7 @@ export const portfolioItems: PortFolioItem[] = [
       },
       {
         image_link: position_algorithm_thumb_img,
-        image_description: "Position algorithm_thumb",
+        image_description: "Position algorithm",
       },
     ],
     title: "Position algorithm development",
@@ -808,7 +817,7 @@ export const portfolioItems: PortFolioItem[] = [
     portFolioMedia: [
       {
         image_link: race_participation_thumb_img,
-        image_description: "Race participation_thumb",
+        image_description: "Race participation",
       },
     ],
     title: "Race participation",
@@ -907,7 +916,7 @@ export const portfolioItems: PortFolioItem[] = [
       },
       {
         image_link: talkshow_thumb_img,
-        image_description: "Talkshow_thumb",
+        image_description: "Talkshow",
       },
     ],
     title: "Talkshow",
