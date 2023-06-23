@@ -732,19 +732,26 @@ export const portfolioItems: PortFolioItem[] = [
     title: "Line follower with alcohol sensor car",
     description: (
       <>
-        <p>This prototype simulates a car that has an alcohol sensor.</p>
         <p>
-          Here when the alcohol sensor reaches a given threshold it will disable
-          manual control and will enter into automatic mode.
-        </p>
-        <p>In the automatic mode it will follow a given route.</p>
-        <p>
-          The concept is to design a car that detects when the driver has been
-          drinking and doesn't not allow him to drive.
+          This prototype simulates a car that has an alcohol sensor.The concept
+          is to design a car that detects when the driver has been drinking and
+          doesn't allow him to drive.
         </p>
         <p>
-          Personally, I think that this should be a MUST by law characteristic
-          when the autonomous vehicles technology has matured.
+          Here when the alcohol sensor reaches a given threshold, it will
+          disable manual control and will enter into automatic mode.
+        </p>
+        <p>
+          Here when the alcohol sensor reaches a given threshold, it will
+          disable manual control and will enter into automatic mode.
+        </p>
+        <p>
+          In the automatic mode, it will follow a given route. That simulates a
+          route provided by a map service.
+        </p>
+        <p>
+          I think this characteristic should be a MUST by law when autonomous
+          vehicle technology has matured.
         </p>
       </>
     ),
