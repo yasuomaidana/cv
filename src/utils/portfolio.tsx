@@ -801,12 +801,12 @@ export const portfolioItems: PortFolioItem[] = [
     description: (
       <>
         <p>
-          You can appreciate part of my work done in my publication with my
-          university telecomunication department.
+          You can appreciate part of my work in my publication with my
+          university telecommunication department.
         </p>
         <p>
-          My contribuitons were data collection and a linear position
-          localization algortihm development.
+          My contributions were data collection and linear position localization
+          algorithm development.
         </p>
         <p>I did it using Matlab.</p>
       </>
@@ -829,7 +829,7 @@ export const portfolioItems: PortFolioItem[] = [
     ],
     title: "Race participation",
     description:
-      "Not everything has to be soo serious. Sometimes, I also do excersice.",
+      "Not everything has to be soo serious. Sometimes, I also do exercise.",
   },
   {
     tags: [PortfolioTag.Robotics, PortfolioTag.Coding],
@@ -849,11 +849,8 @@ export const portfolioItems: PortFolioItem[] = [
     title: "Robostudio simulation",
     description: (
       <>
-        <p>In this project we are simulating a MacbookPro line assembly.</p>
-        <p>
-          We designed the tools used by ABB robots. We also designed the working
-          cell.
-        </p>
+        <p>In this project, we are simulating a MacbookPro line assembly.</p>
+        <p>We designed the tools and working cells used by ABB robots.</p>
         <p>You can also see another robot simulation.</p>
       </>
     ),
@@ -929,12 +926,12 @@ export const portfolioItems: PortFolioItem[] = [
     title: "Talkshow",
     description: (
       <>
-        <p>I presented a workshop about antennas and telecomunications.</p>
+        <p>I presented a workshop about antennas and telecommunications.</p>
         <p>
-          In that workshop I explained the key parts and process of a
-          telecomunication systems.
+          In that workshop, I explained the core parts and processes of
+          telecommunication systems.
         </p>
-        <p>As an excersice we sent a signal by using infrared leds.</p>
+        <p>As an exercise, we sent a signal by using infrared LEDs.</p>
       </>
     ),
     links: [
