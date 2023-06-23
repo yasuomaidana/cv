@@ -253,7 +253,8 @@ export const portfolioItems: PortFolioItem[] = [
       <>
         <p>
           Here you will find some programs done while practicing computer
-          vision.<br/>
+          vision.
+          <br />
           In the repos you can find:
         </p>
         <ul>
@@ -321,9 +322,13 @@ export const portfolioItems: PortFolioItem[] = [
     description: (
       <>
         <p>
-        This project simulates a chip potato factory using a Siemens PLC and ladder programming.</p>
+          This project simulates a chip potato factory using a Siemens PLC and
+          ladder programming.
+        </p>
         <p>
-        An electrical interface was developed to connect the PLC and the platform. The electrical interface converts the voltage levels, and all logic is handled in the PLC.
+          An electrical interface was developed to connect the PLC and the
+          platform. The electrical interface converts the voltage levels, and
+          all logic is handled in the PLC.
         </p>
       </>
     ),
@@ -516,12 +521,13 @@ export const portfolioItems: PortFolioItem[] = [
     description: (
       <>
         <p>
-          In this project we use a raspberry pi 3B to control a car using wifi.
+          The project was done with a Raspberry Pi 3B to control a car through
+          wifi.
         </p>
-        <p>We also used a H-Bridge board to control the weels.</p>
+        <p>H-Bridge boards were used to drive the wheels.</p>
         <p>
-          We controlled the car using voice commands by using google home and
-          firebase platform.
+          The car was controlled using voice commands using google home and
+          Firebase platforms.
         </p>
       </>
     ),
@@ -558,20 +564,18 @@ export const portfolioItems: PortFolioItem[] = [
     description: (
       <>
         <p>
-          In this project we replicated the characteristics shown in the small
-          version.
+        In this project, we replicated the characteristics shown in the smaller version.
         </p>
         <p>Therefeore:</p>
-        <p>
-          In this project we use a raspberry pi 3B to control a car using wifi.
-        </p>
-        <p>We also used a H-Bridge board to control the weels.</p>
-        <p>
-          We controlled the car using voice commands by using google home and
-          firebase platform.
-        </p>
-        <p></p>
-        <p>However we also added a servomotor.</p>
+        <ul>
+            <li>It was done with a Raspberry Pi 3B to control a car through wifi</li>
+            <li>The car was controlled using voice commands using google home and Firebase platforms</li>
+        </ul>
+        <p>And we add the following changes:</p>
+        <ul>
+            <li>H-Bridge boards were changed by Mosfet's H-Bridge done by ourselves</li>
+            <li>A servomotor was added</li>
+        </ul>
       </>
     ),
     links: [
