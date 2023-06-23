@@ -357,14 +357,16 @@ export const portfolioItems: PortFolioItem[] = [
     description: (
       <>
         <p>
-          In this repository you can find several programs done using arduino.
+          In these repositories, you can find several programs done using
+          Arduino.
         </p>
-        <p></p>
         <p>Some of them are:</p>
-        <p>Arduino cars</p>
-        <p>Arduino interfaces</p>
-        <p>An elevator</p>
-        <p>Servo motor controller</p>
+        <ul>
+          <li>Arduino cars</li>
+          <li>Arduino interfaces</li>
+          <li>An elevator</li>
+          <li>Servo motor controller</li>
+        </ul>
       </>
     ),
     links: [
@@ -427,20 +429,19 @@ export const portfolioItems: PortFolioItem[] = [
     description: (
       <>
         <p>
-          Here you can find some backend practicing projects some of them were
-          made by using Java-Spring and the newest one was done by using
-          Micronaut-Kotlin.
+          Here you can find some backend practicing projects. Some of them were
+          made using Java-Spring and Micronaut-Kotlin.
         </p>
-        <p>Here are other techonolgies used:</p>
-        <p>Databases: MySql, Postgress</p>
-        <p>Docker</p>
-        <p>Postman</p>
-        <p></p>
+        <p>Here are other technologies used:</p>
+        <ul>
+          <li>Databases: MySql, Postgres</li>
+          <li>Docker</li>
+          <li>Postman</li>
+        </ul>
         <p>
-          I focused a bit on Spring-Security I developed processors to generate
-          role base authentication and autorization automated security layers.
+          I focused a bit on Spring Security. I developed processors to generate
+          role-based authentication and authorization automated security layers.
         </p>
-        <p></p>
       </>
     ),
     links: [
@@ -599,7 +600,7 @@ export const portfolioItems: PortFolioItem[] = [
 
     title: "Coppelia Simulation",
     description:
-      "In this project we simulated a line follower car by using coppelia simulator and a PID controller that ensure an steady velocity while following the line.",
+      "We simulated a line-follower car using a Coppelia simulator and a PID controller to ensure a steady velocity while following the line.",
     links: [
       {
         link: "https://github.com/yasuomaidana/miniproyectoControl",
@@ -615,14 +616,16 @@ export const portfolioItems: PortFolioItem[] = [
     description: (
       <>
         <p>
-          Here you can find some projects where I have been practicing my full
-          stack programming skills.
+          Here are some projects where I have been practicing my full-stack
+          programming skills.
         </p>
         <p>Some techonolgies used are:</p>
-        <p>No-relational databases: Mongo</p>
-        <p>Backend: Node - express</p>
-        <p>Frontend: Angular, React (Javascrpt, Typescript)</p>
-        <p>Docker</p>
+        <ul>
+          <li>No-relational databases: Mongo</li>
+          <li>Backend: Node - express</li>
+          <li>Frontend: Angular, React (Javascript, Typescript)</li>
+          <li>Docker</li>
+        </ul>
       </>
     ),
     links: [
@@ -644,12 +647,12 @@ export const portfolioItems: PortFolioItem[] = [
     description: (
       <>
         <p>
-          I generated an installer for GimmelStudio project. This installer was
-          done for MacOs.
+          I generated an installer for the GimmelStudio project. This installer
+          was done for macOS.
         </p>
         <p>
-          The installer is smart enough to check if it has all the requierements
-          to run the program, if not, it install them.
+          The installer is smart enough to check if it has all the requirements
+          to run the program; if not, it installs them.
         </p>
       </>
     ),
@@ -996,39 +999,11 @@ export const portfolioItems: PortFolioItem[] = [
     description: (
       <>
         <p>
-          This is a Matlab program that simulates the water consumption of a
-          mexican house of 3 members. In this model we introduce an error then
-          using a machine learning algorithm we predict if there exist a leak
-        </p>
-        <p></p>
-        <p>To execute this program you need the following packages</p>
-        <p></p>
-        <p>Simulink</p>
-        <p>Simscape</p>
-        <p>A version of matlab that supports appdesigner</p>
-        <p>
-          To run this project please open from matlab 'Interface.mlapp' Then
-          from app designer run the program. After that you will see an
-          interface that allows you to run a previous simulation or if you
-          desire run a new one It is important to say that for several days it
-          could take some time for 7 days of simulation with my computer Lenovo
-          ideapad320 from 2017 it takes around 14 minutes to complete, if your
-          computer has more power it shouldn't be a problem
-        </p>
-        <p></p>
-        <p>
-          NOTE: If your matlab version NOT SUPPORT appdesigner or if you want to
-          execute manually the program, to do this you need to do the following
-          instruction Run [fug,info]=worktest(ndays,simulate,train,MB,PB,MS,PS)
-          where Outputs fug=a boolean that says if you have a leak
-          info=information of the leak Inputs ndays=Integer that says the number
-          of days to be simulate simulate=A boolean that activate the simulation
-          (1) or that load a previous simulation (0) train=Integer that says the
-          number of days used to train the model (it must be less than ndays)
-          MB=Magnitude of big leak (it control the area of aperture of the leak)
-          PB=Probability of that the big leak occurs MS=Magnitude of big leak
-          (it control the percentage of nominal aperture per house's element)
-          PB=Probability of MS occurs (per each element)
+          This Matlab program simulates the water consumption of Mexican houses.
+          This model can vary the number of house members and their consumption
+          behavior. Several scenarios were simulated to generate data to train a
+          machine learning model to predict if there was a water leak. It is
+          assumed that there is only one water sensor in the system.
         </p>
       </>
     ),
