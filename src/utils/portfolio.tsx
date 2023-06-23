@@ -971,13 +971,13 @@ export const portfolioItems: PortFolioItem[] = [
     description: (
       <>
         <p>
-          After my paper was published I had the opportunity of presenting it at
-          The University of Edinburgh.
+          After my paper was published, I had the opportunity of presenting it
+          at The University of Edinburgh.
         </p>
         <p>
-          Here I met extraordinary researchers and took workshops related to how
-          we can enhance society through science, and the responsability and
-          role of scientist.
+          Here I met extraordinary researchers and took workshops about how we
+          can enhance society through science and the responsibility and role of
+          scientists.
         </p>
       </>
     ),
