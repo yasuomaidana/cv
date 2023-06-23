@@ -215,8 +215,14 @@ export const portfolioItems: PortFolioItem[] = [
       },
     ],
     title: "3D Printer with computer vision system",
-    description:
-      "This was my graduation project. In this project we designed a 3D printer that has computer vision system. The computer vision system is able to detect the printed part and record a video of the selected region. The goal was to create a video database to train a NN.",
+    description: (
+      <p>
+        This was my graduation project. We designed a 3D printer with a computer
+        vision system. The computer vision system can detect the printed part
+        and record a video of the selected region. The goal was to create a
+        video database to train a NN.
+      </p>
+    ),
     links: [
       {
         link: "https://youtu.be/Sk8VfzU36gk",
@@ -243,8 +249,21 @@ export const portfolioItems: PortFolioItem[] = [
       },
     ],
     title: "Computer vision",
-    description:
-      "Here you will find some programs done while practicing computer vision.",
+    description: (
+      <>
+        <p>
+          Here you will find some programs done while practicing computer
+          vision.<br/>
+          In the repos you can find:
+        </p>
+        <ul>
+          <li>Video filters</li>
+          <li>Spam detector</li>
+          <li>Image classification</li>
+          <li>Web scrappers</li>
+        </ul>
+      </>
+    ),
     links: [
       {
         link: "https://youtu.be/iTgGmqYT8Ys",
@@ -276,7 +295,7 @@ export const portfolioItems: PortFolioItem[] = [
     ],
     title: "Arduino Bluetooth Controlled Car",
     description:
-      "In this project built and controlled a car using arduino uno and a bluetooth shield.",
+      "We built and controlled a car using arduino uno and a Bluetooth shield. We used AT commands to achieve communication.",
     links: [
       {
         link: "https://youtube.com/shorts/sPqlvP9rh7g",
@@ -294,22 +313,18 @@ export const portfolioItems: PortFolioItem[] = [
     portFolioMedia: [
       {
         youtube_id: "https://youtu.be/apyTDFR0g5s",
-        description: "Poteto process simulation",
+        description: "Potato process simulation",
         thumbnail: "https://img.youtube.com/vi/apyTDFR0g5s/maxresdefault.jpg",
       },
     ],
-    title: "Poteto process simulation",
+    title: "Chips potato process simulation",
     description: (
       <>
         <p>
-          In this project we simulated a chip poteto factory using PLC and
-          ladder programming.
-        </p>
+        This project simulates a chip potato factory using a Siemens PLC and ladder programming.</p>
         <p>
-          An electrical interface was develop to make the connection between the
-          PLC and the platform.
+        An electrical interface was developed to connect the PLC and the platform. The electrical interface converts the voltage levels, and all logic is handled in the PLC.
         </p>
-        <p>It was done using Siemens' PLC</p>
       </>
     ),
     links: [
