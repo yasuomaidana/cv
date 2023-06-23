@@ -669,7 +669,7 @@ export const portfolioItems: PortFolioItem[] = [
 
     title: "Heat Simulator",
     description:
-      "In this I simulated a building and its interaction with outside environment. The temperature control will be done by opening and closing some windows. This program will be done using Matlab and MatlabSimulink",
+      "I simulated a building and its interaction with the outside environment. The temperature control will be done by opening and closing some windows. This program will be done using Matlab and Matlab-Simulink",
     links: [
       {
         link: "https://github.com/yasuomaidana/heat_simulator",
@@ -771,7 +771,7 @@ export const portfolioItems: PortFolioItem[] = [
 
     title: "Machine learning Practice",
     description:
-      "Here you can find my programs done while studying machine learning.",
+      "Here you can find my programs while studying machine learning.",
     links: [
       {
         link: "https://github.com/yasuomaidana/introduction-to-machine-learning, https://github.com/yasuomaidana/MachineLearning",
@@ -875,9 +875,13 @@ export const portfolioItems: PortFolioItem[] = [
     title: "Rubick color detector and solver",
     description: (
       <>
-        <p>This project runs a rubick cube.</p>
-        <p>It is able to shuffle it, and then by computer vision solves it.</p>
-        <p></p>
+        <p>This project simulates a Rubik's cube.<br/>It does the following process:</p>
+        <ol>
+            <li>Shuffle the Rubik's cube</li>
+            <li>By using computer vision, it maps the current state of each face.</li>
+            <li>Generates the solution steps</li>
+            <li>Animates the solution</li>
+        </ol>
       </>
     ),
     links: [
