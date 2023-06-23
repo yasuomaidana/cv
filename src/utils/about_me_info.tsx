@@ -14,20 +14,22 @@ export const about_me = (
     </p>
     <ul>
       <li>
-        Science to understand how our world works, the reason why things are the
-        way they are, and how to control/enhance them.
+        Science, to understand how our world works, the reason why things are
+        the way they are, and how to control and enhance them.
       </li>
-      <li> And compassion to integrate ourselves and others into society.</li>
+      <li> And compassion, to integrate ourselves and others into society.</li>
     </ul>
     <p>
-      I enjoy programming too much that I worked professionally in that industry
+      I enjoy programming too much that I worked professionally in the industry
       for a while. My first contact with programming was through simulations,
       and since then it has become one of my favorite hobbies.
-      <br />I also love machine learning related topics, I find the analysis of our way of thinking and how to replace it very interesting.
+      <br />I also love machine-learning related topics, I find the analysis of
+      our way of thinking and how to replace it very interesting.
     </p>
 
     <p>
-    I'm always looking for opportunities/exciting projects where I can learn new thing and integrate my current knowledge
+      I'm always looking for opportunities and exciting projects where I can
+      learn new things and integrate my current knowledge
     </p>
   </Typography>
 );
