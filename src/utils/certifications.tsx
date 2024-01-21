@@ -1,11 +1,13 @@
-const university_of_michigan = "https://media.licdn.com/dms/image/C4E0BAQFGfERBPGurCg/company-logo_100_100/0/1519856309184?e=1695254400&v=beta&t=TOM6awRqwQTHTUoOJlRL1PPUIPreewQ3uVMM8TH-u9A";
-const university_of_california_santa_cruz = "https://media.licdn.com/dms/image/C4E0BAQEEdPQHFbiGrg/company-logo_100_100/0/1656436363111?e=1695254400&v=beta&t=9IImeTQKuLKhyJP7M3pN3kv5fnOvUAF4egRHt20QojA";
-const the_hong_kong_university_of_science_and_technology = "https://media.licdn.com/dms/image/C4E0BAQH4YoQ1L_piMg/company-logo_100_100/0/1624249048793?e=1695254400&v=beta&t=TvTALwGnIvpKx2Y1bKQPH6pR3BIwqCSOWQtsVrMpv7w";
-const google = "https://media.licdn.com/dms/image/C4D0BAQHiNSL4Or29cg/company-logo_100_100/0/1519856215226?e=1695254400&v=beta&t=wHcffrQQxq0oRlUxMKwSoGYcDVNMs8K7HSfRdigkF3c";
-const duke_university = "https://media.licdn.com/dms/image/C4E0BAQGXW0yOhYBbCg/company-logo_100_100/0/1547069414882?e=1695254400&v=beta&t=P-ir0BvGSOKLn8lCaWgK8kv_o4xWXNA6TF_dYeCDIYo";
-const deeplearning_ai = "https://media.licdn.com/dms/image/C560BAQEHKffoI8RwIQ/company-logo_100_100/0/1612806383093?e=1695254400&v=beta&t=8WBU1tggA4U93g51gRar6m1RxcyI8BHUV0duErGj9kI";
-const coursera = "https://media.licdn.com/dms/image/C4D0BAQGexnfBxeEG-g/company-logo_100_100/0/1608039227697?e=1695254400&v=beta&t=OYCt2ig-eU5YrkJ_uMhsesq41zSLqH8VmrKaxMiAunc";
-const university_of_colorado_boulder = "https://media.licdn.com/dms/image/C560BAQGueVr_GgFPZg/company-logo_100_100/0/1519856474347?e=1695254400&v=beta&t=HjhfpSdQpJFQ928ImqHjz0_WFRBGm6PYoQub-phSkAM";
+const university_of_michigan = "https://www.vulpuxmecatroncus.com/static/media/certifications_icons/University%20of%20Michigan.jpeg";
+const university_of_california_santa_cruz = "https://www.vulpuxmecatroncus.com/static/media/certifications_icons/University%20of%20California%2c%20Santa%20Cruz.jpeg";
+const the_hong_kong_university_of_science_and_technology = "https://www.vulpuxmecatroncus.com/static/media/certifications_icons/The%20Hong%20Kong%20University.jpeg";
+const google = "https://www.vulpuxmecatroncus.com/static/media/certifications_icons/Google.jpeg";
+const duke_university = "https://www.vulpuxmecatroncus.com/static/media/certifications_icons/Duke%20University.jpeg";
+const deeplearning_ai = "https://www.vulpuxmecatroncus.com/static/media/certifications_icons/deeplearningai_logo.jpeg";
+const coursera = "https://www.vulpuxmecatroncus.com/static/media/certifications_icons/coursera_logo.jpeg";
+const university_of_colorado_boulder = "https://www.vulpuxmecatroncus.com/static/media/certifications_icons/University%20of%20Colorado.jpeg";
+const university_of_alberta = "https://www.vulpuxmecatroncus.com/static/media/certifications_icons/University%20of%20Alberta.jpeg";
+const university_of_toronto = "https://www.vulpuxmecatroncus.com/static/media/certifications_icons/University%20of%20Toronto.jpeg"
 
 export interface Certification {
   title: string;
@@ -19,16 +21,15 @@ export interface MainCertification extends Certification {
 }
 export const certifications: MainCertification[] = [
   {
+    icon: university_of_toronto,
+    title: "Introduction to Self-Driving Cars",
+    date: "Nov 2023",
+    url: "https://coursera.org/share/b4d9b08722eded6769edcc0b615ef2bc",
+  },{
     icon: university_of_california_santa_cruz,
     title: "C++ For C Programmers, Part A",
     date: "May 2023",
     url: "https://coursera.org/verify/EPYKCM46VB6R",
-  },
-  {
-    icon: university_of_colorado_boulder,
-    title: "Introduction to Machine Learning: Supervised Learning",
-    date: "May 2023",
-    url: "https://www.coursera.org/account/accomplishments/certificate/ENQ32LC2A5VY",
   },
   {
     icon: university_of_california_santa_cruz,
@@ -72,6 +73,56 @@ export const certifications: MainCertification[] = [
     title: "Python Classes and Inheritance",
     date: "Jan 2021",
     url: "https://coursera.org/share/73910e24a4b2a790f6afd977feed9dc2",
+  },
+  {
+    icon: university_of_colorado_boulder,
+    title: "Machine Learning: Theory and Hands-on Practice with Python",
+    date: "August 2023",
+    url: "https://coursera.org/share/edfb3e5e54171b89765749664244b821",
+    child_certifications:[
+      {
+        title: "Introduction to Machine Learning: Supervised Learning",
+        date: "May 2023",
+        url: "https://www.coursera.org/account/accomplishments/certificate/ENQ32LC2A5VY",
+      },
+      {
+        title: "Unsupervised Algorithms in Machine Learning",
+        date: "Jun 2023",
+        url: "https://coursera.org/share/0b4c7ccbcac9d37a5c19a441b41ed70d",
+      },
+      {
+        title: "Introduction to Deep Learning",
+        date: "Aug 2023",
+        url: "https://coursera.org/share/ea11c7aa12a8202bb5bdd32b1aafbf1b",
+      }
+    ]
+  },{
+    icon: university_of_alberta,
+    title: "Reinforcement Learning",
+    date: "October 2023",
+    url: "https://coursera.org/share/4bb99c2b724f0c167aa1bf62383889dd",
+    child_certifications:[
+      {
+        title: "Fundamentals of Reinforcement Learning",
+        date: "Aug 2023",
+        url: "https://coursera.org/share/9b5316bb89141fab457da0adf663e121",
+      },
+      {
+        title: "Sample-based Learning Methods",
+        date: "Sep 2023",
+        url: "https://coursera.org/share/37113c7105c18f7c74b4b6185a8535ca",
+      },
+      {
+        title: "Prediction and Control with Function Approximation",
+        date: "Oct 2023",
+        url: "https://coursera.org/share/038bed176e7344a31d77b7fb2bd572ce",
+      },
+      {
+        title: "A Complete Reinforcement Learning System",
+        date: "Oct 2023",
+        url: "https://coursera.org/share/cb0017db7631cc38faee75bd0599dd5d",
+      }
+    ]
   },
   {
     icon: university_of_michigan,
