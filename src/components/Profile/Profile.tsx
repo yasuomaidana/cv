@@ -7,7 +7,7 @@ import { contact } from "../../utils/contact";
 const Profile = () => {
   const profile_info = [
     <ProfileInfo key={1} title="Name" content={<>{contact.full_name}</>} />,
-    <ProfileInfo key={2} title="Birthday" content={<>{contact.birthday}</>} />,
+    // <ProfileInfo key={2} title="Birthday" content={<>{contact.birthday}</>} />,
     <ProfileInfo key={3} title="Major" content={<>{contact.major}</>} />,
     <ProfileInfo
       key={4}
