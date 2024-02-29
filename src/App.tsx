@@ -6,7 +6,7 @@ import Header from "./components/Header/Header";
 import Portfolio from "./pages/Portfolio/Portfolio";
 import Footer from "./components/Footer/Footer";
 
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Home from "./pages/Home/Home";
 import Certifications from "./pages/Certifications/Certifications";
 import { md } from "./utils/breakpoints";
@@ -40,12 +40,15 @@ const App: React.FC = () => {
 
         <Grid item xs className="Content">
           <BrowserRouter>
-            <Header></Header>
+            <Header/>
             <main>
               <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/portfolio" element={<Portfolio />} />
-                <Route path="/certifications" element={<Certifications />} />
+                <Route path="/" element={<Navigate to="/yasuo_maidana" replace />} />
+                <Route path="/:profile_name/" >
+                  <Route path="" element={<Home />} />
+                  <Route path="portfolio" element={<Portfolio />} />
+                  <Route path="certifications" element={<Certifications />} />
+                </Route>
               </Routes>
             </main>
           </BrowserRouter>
