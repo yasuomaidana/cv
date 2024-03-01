@@ -14,6 +14,7 @@ const Header = () => {
   const [path, setPath] = useState(location.pathname);
   const [isHome, setIsHome] = useState(true);
   const [isSmallScreen, setIsSmallScreen] = useState<boolean>(false);
+  const profile = location.pathname.split('/')[1];
   const [expanded, setExpanded] = useState<boolean>(false);
   const tabRefColl = useRef<HTMLDivElement>(null);
   const tabRefTogg = useRef<HTMLButtonElement>(null);
@@ -45,12 +46,12 @@ const Header = () => {
   }, [isSmallScreen]);
 
   useEffect(() => {
-    if (location.pathname !== path) {
-      setPath(location.pathname);
-      setIsHome(location.pathname === "/");
+    if (location.pathname.split('/')[2] !== path) {
+      setPath(location.pathname.split('/')[2]);
+      setIsHome(location.pathname.split('/')[2] === undefined);
       // Path has changed, perform any additional actions here
     }
-  }, [location.pathname, path]);
+  }, [location.pathname, path, profile]);
 
 
   useEffect(() => {
@@ -74,9 +75,9 @@ const Header = () => {
     <>
       <Navbar sticky="top" expand="lg" className="header" expanded={expanded}>
         <NavLink
-          to="/"
+          to= {`/${profile}`}
           className={({ isActive, isPending }) =>
-            "home_icon " + (isActive ? "home_link_active" : "home_link")
+            "home_icon " + (isHome ? "home_link_active" : "home_link")
           }
           onClick={()=> setExpanded(false)}
         >
@@ -88,9 +89,9 @@ const Header = () => {
         <Navbar.Collapse ref={tabRefColl}>
           <Nav className="header_left">
             {/* <Navbar.Toggle className="menu_toggler"> */}
-            {SectionLink("Portfolio","/portfolio", isSmallScreen)}
+            {SectionLink("Portfolio",`/${profile}/portfolio`, isSmallScreen)}
             {/* </Navbar.Toggle> */}
-            {SectionLink("Certifications","/certifications", isSmallScreen)}
+            {SectionLink("Certifications",`/${profile}/certifications`, isSmallScreen)}
           </Nav>
           <div className="header_right">
             {Object.entries(socials).map(([k, v], i) => (

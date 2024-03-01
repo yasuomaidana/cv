@@ -6,7 +6,13 @@ import Resume from "./Resume/Resume";
 import Skills from "./Skills/SkillsComponent";
 import AchievementsComponent from "./Achievements/AchievementsComponent";
 import PublicationsComponent from "./Publications/PublicationsComponent";
-const Home = () => {
+import { useParams } from "react-router-dom";
+interface Props{
+
+}
+const Home = (props: Props) => {
+  const {profile_name} = useParams()
+  console.log(profile_name)
   return (
     <>
       <BoxWithTitle title="About me" content={about_me}/>
