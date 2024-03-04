@@ -14,7 +14,7 @@ const Footer = () => {
       </div>
       <div className='right'>
         <Typography className='footer_copyright'>
-          Designed and Developed by <a href='/'>Y.M.</a>
+          Designed and Developed by <a href='./'>Y.M.</a>
           <br/>
           Source code<a href='https://github.com/yasuomaidana/cv' target="_blank" rel="noopener noreferrer"><CodeIcon/>.</a>
         </Typography>
