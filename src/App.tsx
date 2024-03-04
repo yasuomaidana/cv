@@ -39,7 +39,7 @@ const App: React.FC = () => {
         )}
 
         <Grid item xs className="Content">
-          <BrowserRouter>
+          <BrowserRouter basename={process.env.PUBLIC_URL}>
             <Header/>
             <main>
               <Routes>
