@@ -60,6 +60,7 @@
   "devDependencies": {
     "@types/node-sass": "^4.11.3",
     "@types/react-image-gallery": "^1.2.0",
+    "env-cmd": "^10.1.0",
     "sass": "^1.62.1"
   }
 }
