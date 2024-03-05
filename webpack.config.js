@@ -9,11 +9,10 @@ module.exports = (env) => {
   const dotenvFilename  = env.NODE_ENV;
   const envPath = path.resolve(__dirname, dotenvFilename);
   const envVars = require('dotenv').config({ path: envPath }).parsed || {};
-  
 return {
   entry: "./src/index.tsx", // Replace with your entry point
   output: {
-    path: path.resolve(__dirname, "dist"), // Output directory for bundled files
+    path: path.resolve(__dirname, envVars.BUILD_PATH), // Output directory for bundled files
   },
   module: {
     rules: [
