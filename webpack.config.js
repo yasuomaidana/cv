@@ -20,6 +20,10 @@ return {
         test: /\.tsx?$/,
         use: "babel-loader",
         exclude: /node_modules/,
+      },{
+        test: /\.(ts|js)x?$/,
+        use: "babel-loader",
+        exclude: /node_modules/,
       },
       {
         test: /\.s[ac]ss$/i,
