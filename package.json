@@ -37,7 +37,7 @@
   },
   "scripts": {
     "start": "env-cmd -f .env.dev react-scripts start",
-    "start:web": "webpack --env NODE_ENV=.env.dev --mode development --watch",
+    "serve:web": "webpack serve --env NODE_ENV=.env.dev --mode development --open",
     "build": "react-scripts build",
     "build-dev": "env-cmd -f .env.dev react-scripts build",
     "build:dev": "webpack --env NODE_ENV=.env_django.dev --mode production",
