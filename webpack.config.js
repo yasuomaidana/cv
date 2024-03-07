@@ -8,7 +8,9 @@ const webpack = require('webpack');
 module.exports = (env) => {
   const dotenvFilename  = env.NODE_ENV;
   const envPath = path.resolve(__dirname, dotenvFilename);
-  const envVars = require('dotenv').config({ path: envPath }).parsed || {};
+  const dotenv = require('dotenv')
+  const dotenvExpand = require('dotenv-expand')
+  const envVars = dotenvExpand.expand(dotenv.config({ path: envPath })).parsed || {};
 return {
   entry: "./src/index.tsx", // Replace with your entry point
   output: {
