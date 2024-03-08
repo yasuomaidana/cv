@@ -51,6 +51,7 @@ return {
   plugins: [
     new HtmlWebpackPlugin({
       template: './public/index.html',
+      filename: envVars.BUILD_HTML+envVars.HTML_NAME+".html",
     }),
     new InterpolateHtmlPlugin({
       REACT_APP_PUBLIC_URL: envVars.REACT_APP_PUBLIC_URL,
