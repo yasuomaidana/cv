@@ -16,6 +16,9 @@ return {
   output: {
     path: path.resolve(__dirname, envVars.BUILD_PATH), // Output directory for bundled files
     publicPath: envVars.PUBLIC_PATH
+  },devServer: {
+    static: path.resolve(__dirname, envVars.BUILD_PATH),
+    port: 3000,
   },
   module: {
     rules: [
