@@ -38,11 +38,11 @@
   },
   "scripts": {
     "start": "env-cmd -f .env.dev react-scripts start",
-    "serve:web": "webpack serve --env NODE_ENV=.env.dev --mode development --open",
-    "build:web": "webpack --env NODE_ENV=.env.dev --mode development --watch",
+    "start:web": "webpack serve --env NODE_ENV=.env.dev --mode development --open",
     "build": "react-scripts build",
     "build-dev": "env-cmd -f .env.dev react-scripts build",
     "build:dev": "webpack --env NODE_ENV=.env_django.dev --mode production",
+    "build:dev:live": "webpack --env NODE_ENV=.env_django.dev --mode production",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
