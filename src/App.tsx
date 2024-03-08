@@ -39,12 +39,12 @@ const App: React.FC = () => {
         )}
 
         <Grid item xs className="Content">
-          <BrowserRouter basename={process.env.PUBLIC_URL}>
+          <BrowserRouter basename={process.env.PUBLIC_URL ?? process.env.REACT_APP_BASENAME}>
             <Header/>
             <main>
               <Routes>
-                <Route path="/" element={<Navigate to="/yasuo_maidana" replace />} />
-                <Route path="/:profile_name/" >
+                <Route path="/" element={<Navigate to="yasuo_maidana" replace />} />
+                <Route path="/:profile_name" >
                   <Route path="" element={<Home />} />
                   <Route path="portfolio" element={<Portfolio />} />
                   <Route path="certifications" element={<Certifications />} />
