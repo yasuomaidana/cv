@@ -15,7 +15,8 @@ return {
   entry: "./src/index.tsx", // Replace with your entry point
   output: {
     path: path.resolve(__dirname, envVars.BUILD_PATH), // Output directory for bundled files
-    publicPath: envVars.PUBLIC_PATH
+    publicPath: envVars.REACT_APP_STATIC_URL
+    
   },devServer: {
     static: path.resolve(__dirname, envVars.BUILD_PATH),
     port: 3000,
@@ -59,7 +60,8 @@ return {
     }),
     new InterpolateHtmlPlugin({
       REACT_APP_PUBLIC_URL: envVars.REACT_APP_PUBLIC_URL,
-      REACT_APP_STATIC_URL: envVars.REACT_APP_STATIC_URL
+      REACT_APP_STATIC_URL: envVars.REACT_APP_STATIC_URL,
+      PUBLIC_STATIC: envVars.PUBLIC_STATIC
   }),
     new webpack.DefinePlugin({
       'process.env': JSON.stringify(envVars),
