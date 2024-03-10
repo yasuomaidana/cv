@@ -4,7 +4,7 @@ export const contact = {
     short_name: "Yasuo I. Maidana P.",
     shortest_name: "Yasuo Maidana",
     email: "yasuo.maidana@vulpuxmecatroncus.com",
-    birthday: "22 June 1996",
+    // birthday: "",
     major: "Mechatronics Engineering",
     job: "Master's of Engineering (M1) \nShizuoka University, Japan",
     icon: <EngineeringIcon />
